@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Where to stay, eat, and shop in Laur, Nueva Ecija — resorts, restaurants, carinderias, sari-sari stores, pharmacies and more.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Where to Stay, Eat & Shop in Laur, Nueva Ecija">
+<link rel="canonical" href="https://laurtourism.vercel.app/visit.html">
+<title>Where to Stay, Eat &amp; Shop in Laur | Official Tourism Website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav" id="navbar">
+  <div class="nav-logo"><div class="nav-seal">LT</div><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija · Philippines</span></div></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a><a href="about.html">About</a>
+    <div class="dropdown"><a href="attractions.html">Explore &#9660;</a><div class="dropdown-menu"><a href="attractions.html">Attractions</a><a href="gallery.html">Photo Gallery</a></div></div>
+    <div class="dropdown"><a href="visit.html" class="active">Visit &#9660;</a><div class="dropdown-menu"><a href="visit.html#stay">Where to Stay</a><a href="visit.html#eat">Where to Eat</a><a href="visit.html#shops">Shops & Stores</a></div></div>
+    <a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+  </div>
+  <a href="contact.html" class="nav-cta">Plan Your Trip</a>
+  <button class="hamburger" onclick="toggleMobile()" id="ham"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-head"><div class="nav-logo"><div class="nav-seal">LT</div><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div></div><button class="mobile-menu-close" onclick="toggleMobile()">&#x2715;</button></div>
+  <div class="mobile-links"><a href="index.html">Home</a><a href="about.html">About Laur</a><a href="attractions.html">Attractions</a><a href="visit.html">Where to Stay / Eat / Shop</a><a href="gallery.html">Photo Gallery</a><a href="contact.html">Contact & Emergency</a></div>
+  <a href="https://facebook.com/laurtourism" class="mobile-fb" target="_blank" rel="noopener">Find us on Facebook</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-img" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1400&q=75')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="eyebrow" style="color:#E8A838">Plan Your Stay</div>
+    <h1>Stay, Eat &amp; <em>Explore</em></h1>
+    <p>Everything you need for a comfortable and memorable visit to Laur.</p>
+  </div>
+</div>
+
+<!-- WHERE TO STAY -->
+<section class="sec alt" id="stay">
+  <div class="sec-head">
+    <div class="eyebrow">Accommodations</div>
+    <h2 class="sec-title">Where to <em>Stay</em></h2>
+    <p class="sec-sub">Comfortable resorts, inns, and homestays waiting for you in Laur.</p>
+  </div>
+  <div class="grid3">
+    <article class="card" onclick="openModal('Laur Nature Resort','Resort','Brgy. San Marcos, Laur, Nueva Ecija','Check-in 2:00 PM · Check-out 12:00 PM','Starting at &#8369;800 / night','0917-XXX-XXXX','https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&q=75')">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=75')"><span class="cbadge">Resort</span></div>
+      <div class="card-body"><div class="card-title">Laur Nature Resort</div><div class="card-desc">Nestled in nature with pool, cottages, and scenic views.</div><div class="amenity-pills"><span class="amenity-pill">Pool</span><span class="amenity-pill">WiFi</span><span class="amenity-pill">Aircon</span><span class="amenity-pill">Parking</span></div></div>
+      <div class="card-foot"><span class="card-loc">From &#8369;800/night</span><button class="view-btn">View Info</button></div>
+    </article>
+    <article class="card" onclick="openModal('Green Hills Inn','Inn','Brgy. Poblacion, Laur, Nueva Ecija','Check-in 1:00 PM · Check-out 11:00 AM','Starting at &#8369;500 / night','0998-XXX-XXXX','https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&q=75')">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=75')"><span class="cbadge">Inn</span></div>
+      <div class="card-body"><div class="card-title">Green Hills Inn</div><div class="card-desc">Cozy and affordable inn near the town center.</div><div class="amenity-pills"><span class="amenity-pill">WiFi</span><span class="amenity-pill">Aircon</span><span class="amenity-pill">Parking</span></div></div>
+      <div class="card-foot"><span class="card-loc">From &#8369;500/night</span><button class="view-btn">View Info</button></div>
+    </article>
+    <article class="card" onclick="openModal('Laur Farmstay','Homestay','Brgy. Sapang, Laur, Nueva Ecija','Flexible · Inquire for details','Starting at &#8369;350 / night','0905-XXX-XXXX','https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=500&q=75')">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=400&q=75')"><span class="cbadge">Homestay</span></div>
+      <div class="card-body"><div class="card-title">Laur Farmstay</div><div class="card-desc">Authentic farm experience with warm Filipino hospitality.</div><div class="amenity-pills"><span class="amenity-pill">Breakfast</span><span class="amenity-pill">Family</span><span class="amenity-pill">Farm</span></div></div>
+      <div class="card-foot"><span class="card-loc">From &#8369;350/night</span><button class="view-btn">View Info</button></div>
+    </article>
+  </div>
+</section>
+
+<!-- WHERE TO EAT -->
+<section class="sec" id="eat">
+  <div class="sec-head">
+    <div class="eyebrow">Dining in Laur</div>
+    <h2 class="sec-title">Where to <em>Eat</em></h2>
+    <p class="sec-sub">From local carinderias to restaurants — taste the authentic flavors of Laur.</p>
+  </div>
+  <div class="grid3">
+    <article class="card" onclick="openModal('Laur Grill House','Filipino Restaurant','Brgy. Centro, Laur, Nueva Ecija','Open daily · 10:00 AM – 10:00 PM','&#8369;–&#8369;&#8369; Budget to Midrange','0998-XXX-XXXX','https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&q=75')">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=75')"><span class="cbadge">Grill</span></div>
+      <div class="card-body"><div class="card-title">Laur Grill House</div><div class="card-desc">Best ihaw-ihaw in town. Must try: Inihaw na Liempo at Bangus.</div></div>
+      <div class="card-foot"><span class="card-loc">&#8369; Budget Friendly</span><button class="view-btn">View Info</button></div>
+    </article>
+    <article class="card" onclick="openModal('Nanay\'s Carinderia','Carinderia','Brgy. Poblacion, Laur, Nueva Ecija','Open daily · 6:00 AM – 3:00 PM','&#8369; Very Affordable','0917-XXX-XXXX','https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&q=75')">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=75')"><span class="cbadge">Carinderia</span></div>
+      <div class="card-body"><div class="card-title">Nanay's Carinderia</div><div class="card-desc">Homestyle Filipino cooking loved by locals for generations.</div></div>
+      <div class="card-foot"><span class="card-loc">&#8369; Very Affordable</span><button class="view-btn">View Info</button></div>
+    </article>
+    <article class="card" onclick="openModal('Green Cafe Laur','Cafe','Brgy. Poblacion, Laur, Nueva Ecija','Open daily · 7:00 AM – 8:00 PM','&#8369;&#8369; Midrange','0905-XXX-XXXX','https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=500&q=75')">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=400&q=75')"><span class="cbadge">Cafe</span></div>
+      <div class="card-body"><div class="card-title">Green Cafe Laur</div><div class="card-desc">Cozy cafe with local coffee blends, pastries and light meals.</div></div>
+      <div class="card-foot"><span class="card-loc">&#8369;&#8369; Midrange</span><button class="view-btn">View Info</button></div>
+    </article>
+  </div>
+</section>
+
+<!-- SHOPS -->
+<section class="sec alt" id="shops">
+  <div class="sec-head">
+    <div class="eyebrow">Local Business Directory</div>
+    <h2 class="sec-title">Shops &amp; <em>Stores</em></h2>
+    <p class="sec-sub">Find sari-sari stores, pharmacies, bakeries, wet markets and more in Laur.</p>
+  </div>
+  <div class="pills" role="group">
+    <button class="pill on" onclick="filterCards(this,'shop','all')">All</button>
+    <button class="pill" onclick="filterCards(this,'shop','store')">Sari-Sari</button>
+    <button class="pill" onclick="filterCards(this,'shop','market')">Market</button>
+    <button class="pill" onclick="filterCards(this,'shop','bakery')">Bakery</button>
+    <button class="pill" onclick="filterCards(this,'shop','pharmacy')">Pharmacy</button>
+  </div>
+  <div class="grid4" id="shop-grid">
+    <div class="shop-card" data-cat="store" onclick="openModal('Aling Nena\'s Store','Sari-Sari Store','Brgy. Poblacion, Laur, Nueva Ecija','Open daily · 6:00 AM – 9:00 PM','—','0917-XXX-XXXX','https://images.unsplash.com/photo-1604719312566-8912e9c8a213?w=400&q=75')">
+      <div class="shop-icon">SS</div><div class="shop-name">Aling Nena's</div><div class="shop-type">Sari-Sari Store</div><div class="open-badge">Open Now</div>
+    </div>
+    <div class="shop-card" data-cat="market" onclick="openModal('Laur Wet Market','Palengke / Wet Market','Brgy. Centro, Laur, Nueva Ecija','Mon–Sat · 4:00 AM – 12:00 PM','—','—','https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=400&q=75')">
+      <div class="shop-icon">MK</div><div class="shop-name">Laur Wet Market</div><div class="shop-type">Palengke</div><div class="open-badge">Open Now</div>
+    </div>
+    <div class="shop-card" data-cat="bakery" onclick="openModal('Laur Bakery','Bakery','Brgy. Poblacion, Laur, Nueva Ecija','Mon–Sat · 5:00 AM – 7:00 PM','—','0905-XXX-XXXX','https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=75')">
+      <div class="shop-icon">BK</div><div class="shop-name">Laur Bakery</div><div class="shop-type">Bakery</div><div class="open-badge">Open Now</div>
+    </div>
+    <div class="shop-card" data-cat="pharmacy" onclick="openModal('Laur Pharmacy','Pharmacy','Brgy. Centro, Laur, Nueva Ecija','Open daily · 7:00 AM – 9:00 PM','—','0917-XXX-XXXX','https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&q=75')">
+      <div class="shop-icon">RX</div><div class="shop-name">Laur Pharmacy</div><div class="shop-type">Pharmacy</div><div class="open-badge">Open Now</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand"><strong>Laur Tourism</strong><span>Official Tourism Website</span><p>Promoting the natural beauty, culture, and heritage of Laur, Nueva Ecija, Philippines.</p><div class="social-row"><a href="https://facebook.com/laurtourism" class="social-btn" target="_blank" rel="noopener">FB</a><a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener">YT</a></div></div>
+    <nav class="footer-col"><h4>Explore</h4><a href="attractions.html">Attractions</a><a href="visit.html#stay">Where to Stay</a><a href="visit.html#eat">Where to Eat</a><a href="visit.html#shops">Shops &amp; Stores</a></nav>
+    <nav class="footer-col"><h4>Visit</h4><a href="about.html">About Laur</a><a href="contact.html#directions">How to Get There</a><a href="gallery.html">Photo Gallery</a></nav>
+    <nav class="footer-col"><h4>Contact</h4><a href="contact.html">Tourism Office</a><a href="contact.html#emergency">Emergency Numbers</a><a href="https://facebook.com/laurtourism" target="_blank" rel="noopener">Facebook Page</a><a href="tel:09XXXXXXXXX">Call Us</a></nav>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 Municipality of Laur, Nueva Ecija. All rights reserved.</span><span>Official Tourism Website</span></div>
+</footer>
+
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="modal-hd"><div><h3 id="modal-title">—</h3><small id="modal-type">—</small></div><button class="modal-close" onclick="closeModalBtn()">&#x2715;</button></div>
+    <div class="modal-photo" id="modal-photo"></div>
+    <div class="modal-body">
+      <div class="mrow"><div><div class="mlbl">Location</div><div class="mval" id="modal-loc">—</div></div></div>
+      <div class="mrow"><div><div class="mlbl">Hours</div><div class="mval" id="modal-hrs">—</div></div></div>
+      <div class="mrow"><div><div class="mlbl">Fee / Price</div><div class="mval" id="modal-fee">—</div></div></div>
+      <div class="mrow"><div><div class="mlbl">Contact</div><div class="mval" id="modal-tel">—</div></div></div>
+    </div>
+    <div class="modal-map">View on Google Maps</div>
+    <div class="modal-acts"><button class="m-fb">Facebook Page</button><button class="m-call" id="modal-call-btn">Call Now</button></div>
+  </div>
+</div>
+
+<div class="chat-wrap">
+  <div class="chat-popup" id="chatPopup">
+    <div class="chat-head"><div class="chat-av">LT</div><div class="chat-info"><strong>Laur Tourism</strong><span><span class="online"></span> We'll reply as soon as we can</span></div><button class="chat-x" onclick="toggleChat()">&#x2715;</button></div>
+    <div class="chat-body">
+      <div class="chat-time">Today</div>
+      <div class="chat-msg">Hello! Welcome to Laur Tourism. How can we help you today?</div>
+      <div class="qr-list"><button class="qr-btn" onclick="selectQ(this)">Accommodations in Laur</button><button class="qr-btn" onclick="selectQ(this)">How to get to Laur?</button><button class="qr-btn" onclick="selectQ(this)">Emergency Numbers</button></div>
+      <div class="chat-input-row"><input class="chat-input" type="text" placeholder="Write your message..."><button class="chat-send">&#9658;</button></div>
+    </div>
+  </div>
+  <button class="chat-toggle" onclick="toggleChat()" id="chatBtn">Chat<div class="chat-badge">1</div></button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

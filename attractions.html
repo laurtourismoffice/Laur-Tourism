@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Discover the best tourist attractions in Laur, Nueva Ecija — natural spots, heritage landmarks, and scenic views.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Attractions in Laur, Nueva Ecija | Official Tourism Website">
+<link rel="canonical" href="https://laurtourism.vercel.app/attractions.html">
+<title>Attractions in Laur, Nueva Ecija | Official Tourism Website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav" id="navbar">
+  <div class="nav-logo"><div class="nav-seal">LT</div><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija · Philippines</span></div></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a><a href="about.html">About</a>
+    <div class="dropdown"><a href="attractions.html" class="active">Explore &#9660;</a>
+      <div class="dropdown-menu"><a href="attractions.html">Attractions</a><a href="gallery.html">Photo Gallery</a></div>
+    </div>
+    <div class="dropdown"><a href="visit.html">Visit &#9660;</a>
+      <div class="dropdown-menu"><a href="visit.html#stay">Where to Stay</a><a href="visit.html#eat">Where to Eat</a><a href="visit.html#shops">Shops & Stores</a></div>
+    </div>
+    <a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+  </div>
+  <a href="contact.html" class="nav-cta">Plan Your Trip</a>
+  <button class="hamburger" onclick="toggleMobile()" id="ham"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-head"><div class="nav-logo"><div class="nav-seal">LT</div><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div></div><button class="mobile-menu-close" onclick="toggleMobile()">&#x2715;</button></div>
+  <div class="mobile-links"><a href="index.html">Home</a><a href="about.html">About Laur</a><a href="attractions.html">Attractions</a><a href="visit.html">Where to Stay / Eat / Shop</a><a href="gallery.html">Photo Gallery</a><a href="contact.html">Contact & Emergency</a></div>
+  <a href="https://facebook.com/laurtourism" class="mobile-fb" target="_blank" rel="noopener">Find us on Facebook</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-img" style="background-image:url('https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=1400&q=75')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="eyebrow" style="color:#E8A838">Explore Laur</div>
+    <h1>Tourist <em>Attractions</em></h1>
+    <p>Natural wonders and man-made landmarks waiting to be discovered.</p>
+  </div>
+</div>
+
+<section class="sec alt">
+  <div class="sec-head">
+    <div class="eyebrow">All Attractions</div>
+    <h2 class="sec-title">Discover <em>Laur</em></h2>
+    <p class="sec-sub">Click any card to see full details — location, hours, entrance fee, contact, and Google Maps.</p>
+  </div>
+  <div class="pills" role="group">
+    <button class="pill on" onclick="filterCards(this,'attr','all')">All</button>
+    <button class="pill" onclick="filterCards(this,'attr','natural')">Natural Attractions</button>
+    <button class="pill" onclick="filterCards(this,'attr','manmade')">Man-made Attractions</button>
+  </div>
+  <div class="grid3" id="attr-grid">
+    <article class="card" data-cat="natural" onclick="openModal('Sierra Madre View','Natural Attraction','Brgy. Poblacion, Laur, Nueva Ecija','Open daily · 6:00 AM – 6:00 PM','Free entrance','0998-XXX-XXXX','https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=500&q=75')">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=400&q=75')"><span class="cbadge">Natural</span></div>
+      <div class="card-body"><div class="card-title">Sierra Madre View</div><div class="card-desc">Breathtaking panoramic mountain views overlooking the entire Laur valley.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. Poblacion</span><button class="view-btn">View Info</button></div>
+    </article>
+    <article class="card" data-cat="natural" onclick="openModal('Laur River Park','Natural Attraction','Brgy. San Marcos, Laur, Nueva Ecija','Open daily · 7:00 AM – 5:00 PM','&#8369;20 / person','0917-XXX-XXXX','https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&q=75')">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=75')"><span class="cbadge">Natural</span></div>
+      <div class="card-body"><div class="card-title">Laur River Park</div><div class="card-desc">A peaceful riverside escape ideal for picnics, family outings, and photography.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. San Marcos</span><button class="view-btn">View Info</button></div>
+    </article>
+    <article class="card" data-cat="manmade" onclick="openModal('Heritage Church of Laur','Man-made Attraction','Brgy. Poblacion, Laur, Nueva Ecija','Open daily · 6:00 AM – 8:00 PM','Free entrance','0905-XXX-XXXX','https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=500&q=75')">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=400&q=75')"><span class="cbadge">Man-made</span></div>
+      <div class="card-body"><div class="card-title">Heritage Church of Laur</div><div class="card-desc">A centuries-old Spanish-era church standing as a proud cultural landmark.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. Poblacion</span><button class="view-btn">View Info</button></div>
+    </article>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand"><strong>Laur Tourism</strong><span>Official Tourism Website</span><p>Promoting the natural beauty, culture, and heritage of Laur, Nueva Ecija, Philippines.</p><div class="social-row"><a href="https://facebook.com/laurtourism" class="social-btn" target="_blank" rel="noopener">FB</a><a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener">YT</a></div></div>
+    <nav class="footer-col"><h4>Explore</h4><a href="attractions.html">Attractions</a><a href="visit.html#stay">Where to Stay</a><a href="visit.html#eat">Where to Eat</a><a href="visit.html#shops">Shops &amp; Stores</a></nav>
+    <nav class="footer-col"><h4>Visit</h4><a href="about.html">About Laur</a><a href="contact.html#directions">How to Get There</a><a href="gallery.html">Photo Gallery</a></nav>
+    <nav class="footer-col"><h4>Contact</h4><a href="contact.html">Tourism Office</a><a href="contact.html#emergency">Emergency Numbers</a><a href="https://facebook.com/laurtourism" target="_blank" rel="noopener">Facebook Page</a><a href="tel:09XXXXXXXXX">Call Us</a></nav>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 Municipality of Laur, Nueva Ecija. All rights reserved.</span><span>Official Tourism Website</span></div>
+</footer>
+
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="modal-hd"><div><h3 id="modal-title">—</h3><small id="modal-type">—</small></div><button class="modal-close" onclick="closeModalBtn()">&#x2715;</button></div>
+    <div class="modal-photo" id="modal-photo"></div>
+    <div class="modal-body">
+      <div class="mrow"><div><div class="mlbl">Location</div><div class="mval" id="modal-loc">—</div></div></div>
+      <div class="mrow"><div><div class="mlbl">Hours</div><div class="mval" id="modal-hrs">—</div></div></div>
+      <div class="mrow"><div><div class="mlbl">Fee / Price</div><div class="mval" id="modal-fee">—</div></div></div>
+      <div class="mrow"><div><div class="mlbl">Contact</div><div class="mval" id="modal-tel">—</div></div></div>
+    </div>
+    <div class="modal-map">View on Google Maps</div>
+    <div class="modal-acts"><button class="m-fb">Facebook Page</button><button class="m-call" id="modal-call-btn">Call Now</button></div>
+  </div>
+</div>
+
+<div class="chat-wrap">
+  <div class="chat-popup" id="chatPopup">
+    <div class="chat-head"><div class="chat-av">LT</div><div class="chat-info"><strong>Laur Tourism</strong><span><span class="online"></span> We'll reply as soon as we can</span></div><button class="chat-x" onclick="toggleChat()">&#x2715;</button></div>
+    <div class="chat-body">
+      <div class="chat-time">Today</div>
+      <div class="chat-msg">Hello! Welcome to Laur Tourism. How can we help you today?</div>
+      <div class="qr-list"><button class="qr-btn" onclick="selectQ(this)">Attractions in Laur</button><button class="qr-btn" onclick="selectQ(this)">How to get to Laur?</button><button class="qr-btn" onclick="selectQ(this)">Emergency Numbers</button></div>
+      <div class="chat-input-row"><input class="chat-input" type="text" placeholder="Write your message..."><button class="chat-send">&#9658;</button></div>
+    </div>
+  </div>
+  <button class="chat-toggle" onclick="toggleChat()" id="chatBtn">Chat<div class="chat-badge">1</div></button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
