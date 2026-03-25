@@ -10,45 +10,67 @@
 <title>About Laur, Nueva Ecija | Official Tourism Website</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+*,body{font-family:'DM Sans',sans-serif;}
+.nav-logo-img{width:44px;height:44px;border-radius:50%;object-fit:cover;}
+.nav-brand strong,.nav-brand span,.nav-links a,.dropdown-menu a,.mobile-links a,.mobile-fb{font-family:'DM Sans',sans-serif;}
+h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Display',serif!important;letter-spacing:0;}
+.card-loc{display:flex;align-items:center;gap:5px;}
+.card-loc::before{content:'📍';font-size:13px;line-height:1;}
+</style>
 </head>
 <body>
 
+<!-- ===== NAV ===== -->
 <nav class="nav" id="navbar">
   <div class="nav-logo">
-    <!-- LOGO: Replace with your image: <img src="your-logo.png" alt="Laur Tourism Logo" class="nav-logo-img"> -->
-    <div class="nav-seal nav-seal-placeholder"><span>LT</span></div>
+    <img src="images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img">
     <div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija · Philippines</span></div>
   </div>
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="about.html" class="active">About</a>
-    <div class="dropdown"><a href="attractions.html">Explore &#9660;</a>
-      <div class="dropdown-menu"><a href="attractions.html">Attractions</a><a href="gallery.html">Photo Gallery</a></div>
+    <div class="dropdown">
+      <a href="attractions.html">I-Explore &#9660;</a>
+      <div class="dropdown-menu">
+        <a href="attractions.html">Attractions</a>
+        <a href="gallery.html">Photo Gallery</a>
+      </div>
     </div>
-    <div class="dropdown"><a href="visit.html">Visit &#9660;</a>
-      <div class="dropdown-menu"><a href="visit.html#stay">Where to Stay</a><a href="visit.html#eat">Where to Eat</a><a href="visit.html#shops">Shops & Stores</a></div>
+    <div class="dropdown">
+      <a href="visit.html">Visit &#9660;</a>
+      <div class="dropdown-menu">
+        <a href="visit.html#stay">Where to Stay</a>
+        <a href="visit.html#eat">Where to Eat</a>
+        <a href="visit.html#shops">Shops &amp; Stores</a>
+      </div>
     </div>
     <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html">Makipag-ugnayan</a>
   </div>
-  <!-- Plan Your Trip button removed -->
   <button class="hamburger" onclick="toggleMobile()" id="ham"><span></span><span></span><span></span></button>
 </nav>
 
+<!-- ===== MOBILE MENU ===== -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-head">
-    <div class="nav-logo"><div class="nav-seal">LT</div><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div></div>
+    <div class="nav-logo"><img src="images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img"><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div></div>
     <button class="mobile-menu-close" onclick="toggleMobile()">&#x2715;</button>
   </div>
   <div class="mobile-links">
-    <a href="index.html">Home</a><a href="about.html">About Laur</a><a href="attractions.html">Attractions</a>
-    <a href="visit.html">Where to Stay / Eat / Shop</a><a href="gallery.html">Photo Gallery</a><a href="contact.html">Contact & Emergency</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Laur</a>
+    <a href="attractions.html">Attractions</a>
+    <a href="visit.html">Where to Stay / Eat / Shop</a>
+    <a href="gallery.html">Photo Gallery</a>
+    <a href="contact.html">Makipag-ugnayan &amp; Emergency</a>
   </div>
-  <a href="https://facebook.com/laurtourism" class="mobile-fb" target="_blank" rel="noopener">Find us on Facebook</a>
+  <a href="https://www.facebook.com/profile.php?id=61580579025346" class="mobile-fb" target="_blank" rel="noopener">Find us on Facebook</a>
 </div>
 
+<!-- ===== PAGE HERO ===== -->
 <div class="page-hero">
   <div class="page-hero-img" style="background-image:url('https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1400&q=75')"></div>
   <div class="page-hero-overlay"></div>
@@ -59,6 +81,7 @@
   </div>
 </div>
 
+<!-- ===== OUR STORY ===== -->
 <section class="sec">
   <div class="about-grid">
     <div class="about-img">
@@ -73,20 +96,8 @@
   </div>
 </section>
 
+<!-- ===== WHY VISIT ===== -->
 <section class="sec alt">
-  <div class="sec-head">
-    <div class="eyebrow">Quick Facts</div>
-    <h2 class="sec-title">Laur at a <em>Glance</em></h2>
-  </div>
-  <div class="grid4">
-    <div class="fact-card"><div class="fact-num">17</div><div class="fact-label">Barangays</div></div>
-    <div class="fact-card"><div class="fact-num">1st</div><div class="fact-label">Class Municipality</div></div>
-    <div class="fact-card"><div class="fact-num">NE</div><div class="fact-label">Nueva Ecija Province</div></div>
-    <div class="fact-card"><div class="fact-num">PH</div><div class="fact-label">Philippines</div></div>
-  </div>
-</section>
-
-<section class="sec">
   <div class="sec-head">
     <div class="eyebrow">Why Visit</div>
     <h2 class="sec-title">What Makes Laur <em>Special</em></h2>
@@ -101,24 +112,53 @@
   </div>
 </section>
 
+<!-- ===== CONTACT STRIP ===== -->
 <section class="contact-strip">
   <div class="contact-strip-inner">
     <div><h3>Plan Your Visit to Laur</h3><p>Our tourism office is ready to help you make the most of your trip.</p></div>
     <div class="contact-strip-btns">
-      <a href="https://facebook.com/laurtourism" target="_blank" rel="noopener" class="btn-fb">Message on Facebook</a>
-      <a href="contact.html" class="btn-yellow">Contact Us</a>
+      <a href="https://www.facebook.com/profile.php?id=61580579025346" target="_blank" rel="noopener" class="btn-fb">Message on Facebook</a>
+      <a href="contact.html" class="btn-yellow">Makipag-ugnayan</a>
     </div>
   </div>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="footer-top">
-    <div class="footer-brand"><strong>Laur Tourism</strong><span>Official Tourism Website</span><p>Promoting the natural beauty, culture, and heritage of Laur, Nueva Ecija, Philippines.</p><div class="social-row"><a href="https://facebook.com/laurtourism" class="social-btn" target="_blank" rel="noopener">FB</a><a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener">YT</a></div></div>
-    <nav class="footer-col"><h4>Explore</h4><a href="attractions.html">Attractions</a><a href="visit.html#stay">Where to Stay</a><a href="visit.html#eat">Where to Eat</a><a href="visit.html#shops">Shops &amp; Stores</a></nav>
-    <nav class="footer-col"><h4>Visit</h4><a href="about.html">About Laur</a><a href="contact.html#directions">How to Get There</a><a href="gallery.html">Photo Gallery</a></nav>
-    <nav class="footer-col"><h4>Contact</h4><a href="contact.html">Tourism Office</a><a href="contact.html#emergency">Emergency Numbers</a><a href="https://facebook.com/laurtourism" target="_blank" rel="noopener">Facebook Page</a><a href="tel:09XXXXXXXXX">Call Us</a></nav>
+    <div class="footer-brand">
+      <strong>Laur Tourism</strong>
+      <span>Official Laur Tourism Website</span>
+      <p>Promoting the natural beauty, culture, and heritage of Laur, Nueva Ecija, Philippines.</p>
+      <div class="social-row">
+        <a href="https://www.facebook.com/profile.php?id=61580579025346" class="social-btn" target="_blank" rel="noopener">FB</a>
+        <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener">YT</a>
+      </div>
+    </div>
+    <nav class="footer-col">
+      <h4>Explore</h4>
+      <a href="attractions.html">Attractions</a>
+      <a href="visit.html#stay">Where to Stay</a>
+      <a href="visit.html#eat">Where to Eat</a>
+      <a href="visit.html#shops">Shops &amp; Stores</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Visit</h4>
+      <a href="about.html">About Laur</a>
+      <a href="contact.html#directions">How to Get There</a>
+      <a href="gallery.html">Photo Gallery</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Contact</h4>
+      <a href="contact.html">Tourism Office</a>
+      <a href="contact.html#emergency">Emergency Numbers</a>
+      <a href="https://www.facebook.com/profile.php?id=61580579025346" target="_blank" rel="noopener">Facebook Page</a>
+    </nav>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 Municipality of Laur, Nueva Ecija, Philippines. All rights reserved.</span><span>Official Tourism Website</span></div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Municipality of Laur, Nueva Ecija, Philippines. All rights reserved.</span>
+    <span>Official Laur Tourism Website</span>
+  </div>
 </footer>
 
 <script src="script.js"></script>

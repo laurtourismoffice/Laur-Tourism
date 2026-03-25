@@ -10,172 +10,81 @@
 <title>Photo Gallery — Laur, Nueva Ecija | Official Tourism Website</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-/* ── LIGHTBOX ── */
-.lb-overlay{
-  display:none;position:fixed;inset:0;z-index:900;
-  background:rgba(5,18,8,.92);
-  align-items:center;justify-content:center;
-  padding:1.5rem;
-  backdrop-filter:blur(8px);
-  animation:lbFadeIn .25s ease;
-}
-.lb-overlay.open{display:flex}
-@keyframes lbFadeIn{from{opacity:0}to{opacity:1}}
-
-.lb-box{
-  position:relative;
-  max-width:1000px;width:100%;
-  display:flex;flex-direction:column;
-  gap:0;
-  animation:lbSlideUp .28s ease;
-}
-@keyframes lbSlideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
-
-/* Close button */
-.lb-close{
-  position:absolute;top:-48px;right:0;
-  background:rgba(255,255,255,.12);
-  border:1.5px solid rgba(255,255,255,.22);
-  color:#fff;
-  width:40px;height:40px;border-radius:50%;
-  font-size:18px;line-height:1;
-  cursor:pointer;
-  transition:all .2s;
-  display:flex;align-items:center;justify-content:center;
-  z-index:10;
-}
-.lb-close:hover{background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.4)}
-
-/* Image area */
-.lb-img{
-  width:100%;
-  max-height:72vh;
-  object-fit:contain;
-  border-radius:16px 16px 0 0;
-  display:block;
-  background:#0a2a14;
-}
-.lb-img-bg{
-  width:100%;max-height:72vh;
-  border-radius:16px 16px 0 0;
-  background-size:cover;background-position:center;
-  background-color:#0a2a14;
-  min-height:300px;
-}
-
-/* Caption bar */
-.lb-caption{
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.1);
-  border-top:none;
-  border-radius:0 0 16px 16px;
-  padding:1rem 1.4rem;
-  display:flex;align-items:center;justify-content:space-between;
-  gap:1rem;
-  flex-wrap:wrap;
-}
-.lb-caption-text{
-  font-family:'DM Sans',sans-serif;
-  font-size:14px;color:rgba(255,255,255,.85);
-  font-weight:500;letter-spacing:.3px;
-}
-.lb-caption-cat{
-  font-size:11px;
-  background:rgba(75,173,113,.25);
-  border:1px solid rgba(75,173,113,.35);
-  color:#6BC98A;
-  padding:4px 14px;border-radius:50px;
-  letter-spacing:1px;text-transform:uppercase;
-  font-weight:600;white-space:nowrap;
-}
-
-/* Prev / Next arrows */
-.lb-arr{
-  position:fixed;top:50%;transform:translateY(-50%);
-  background:rgba(255,255,255,.1);
-  border:1.5px solid rgba(255,255,255,.2);
-  color:#fff;width:48px;height:48px;border-radius:50%;
-  font-size:22px;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;
-  transition:all .2s;z-index:10;
-}
-.lb-arr:hover{background:rgba(245,200,66,.25);border-color:rgba(245,200,66,.5)}
-.lb-prev{left:1rem}
-.lb-next{right:1rem}
-
-/* Counter */
-.lb-counter{
-  position:absolute;top:-48px;left:0;
-  font-family:'DM Sans',sans-serif;
-  font-size:13px;color:rgba(255,255,255,.5);
-  letter-spacing:.5px;
-}
-.lb-counter b{color:#F5C842}
-
-/* Gallery cards get pointer + zoom hint */
-.gimg{cursor:pointer}
-.gimg::after{
-  content:'+ View';
-  position:absolute;bottom:12px;right:12px;
-  background:rgba(245,200,66,.9);
-  color:#1A3A10;font-size:11px;font-weight:700;
-  padding:4px 12px;border-radius:50px;
-  opacity:0;transition:opacity .25s;
-  letter-spacing:.5px;text-transform:uppercase;
-  font-family:'DM Sans',sans-serif;
-  pointer-events:none;
-}
-.gimg:hover::after{opacity:1}
-
-@media(max-width:768px){
-  .lb-arr{display:none}
-  .lb-close{top:-44px}
-  .lb-img-bg{min-height:220px;max-height:55vh}
-}
+*,body{font-family:'DM Sans',sans-serif;}
+.nav-logo-img{width:44px;height:44px;border-radius:50%;object-fit:cover;}
+.nav-brand strong,.nav-brand span,.nav-links a,.dropdown-menu a,.mobile-links a,.mobile-fb{font-family:'DM Sans',sans-serif;}
+h1,h2,h3,.sec-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Display',serif!important;letter-spacing:0;}
 </style>
 </head>
 <body>
 
+<!-- ===== NAV ===== -->
 <nav class="nav" id="navbar">
   <div class="nav-logo">
-    <!-- LOGO: Replace with your image: <img src="your-logo.png" alt="Laur Tourism Logo" class="nav-logo-img"> -->
-    <div class="nav-seal nav-seal-placeholder"><span>LT</span></div>
+    <img src="images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img">
     <div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija · Philippines</span></div>
   </div>
   <div class="nav-links">
-    <a href="index.html">Home</a><a href="about.html">About</a>
-    <div class="dropdown"><a href="attractions.html">Explore &#9660;</a><div class="dropdown-menu"><a href="attractions.html">Attractions</a><a href="gallery.html">Photo Gallery</a></div></div>
-    <div class="dropdown"><a href="visit.html">Visit &#9660;</a><div class="dropdown-menu"><a href="visit.html#stay">Where to Stay</a><a href="visit.html#eat">Where to Eat</a><a href="visit.html#shops">Shops & Stores</a></div></div>
-    <a href="gallery.html" class="active">Gallery</a><a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="dropdown">
+      <a href="attractions.html">I-Explore &#9660;</a>
+      <div class="dropdown-menu">
+        <a href="attractions.html">Attractions</a>
+        <a href="gallery.html">Photo Gallery</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="visit.html">Visit &#9660;</a>
+      <div class="dropdown-menu">
+        <a href="visit.html#stay">Where to Stay</a>
+        <a href="visit.html#eat">Where to Eat</a>
+        <a href="visit.html#shops">Shops &amp; Stores</a>
+      </div>
+    </div>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="contact.html">Makipag-ugnayan</a>
   </div>
-  <!-- Plan Your Trip button removed -->
   <button class="hamburger" onclick="toggleMobile()" id="ham"><span></span><span></span><span></span></button>
 </nav>
 
+<!-- ===== MOBILE MENU ===== -->
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-head"><div class="nav-logo"><div class="nav-seal">LT</div><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div></div><button class="mobile-menu-close" onclick="toggleMobile()">&#x2715;</button></div>
-  <div class="mobile-links"><a href="index.html">Home</a><a href="about.html">About Laur</a><a href="attractions.html">Attractions</a><a href="visit.html">Where to Stay / Eat / Shop</a><a href="gallery.html">Photo Gallery</a><a href="contact.html">Contact & Emergency</a></div>
-  <a href="https://facebook.com/laurtourism" class="mobile-fb" target="_blank" rel="noopener">Find us on Facebook</a>
+  <div class="mobile-menu-head">
+    <div class="nav-logo"><img src="images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img"><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div></div>
+    <button class="mobile-menu-close" onclick="toggleMobile()">&#x2715;</button>
+  </div>
+  <div class="mobile-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Laur</a>
+    <a href="attractions.html">Attractions</a>
+    <a href="visit.html">Where to Stay / Eat / Shop</a>
+    <a href="gallery.html">Photo Gallery</a>
+    <a href="contact.html">Makipag-ugnayan &amp; Emergency</a>
+  </div>
+  <a href="https://www.facebook.com/profile.php?id=61580579025346" class="mobile-fb" target="_blank" rel="noopener">Find us on Facebook</a>
 </div>
 
+<!-- ===== PAGE HERO ===== -->
 <div class="page-hero">
   <div class="page-hero-img" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1400&q=75')"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
     <div class="eyebrow" style="color:#E8A838">Photo Gallery</div>
     <h1>Beautiful <em>Laur</em></h1>
-    <p>Click any photo to view it in full screen.</p>
+    <p>Close-up and wide shots of every location in Laur, Nueva Ecija.</p>
   </div>
 </div>
 
+<!-- ===== GALLERY ===== -->
 <section class="sec alt">
   <div class="sec-head">
     <div class="eyebrow">Gallery</div>
     <h2 class="sec-title">Explore Through <em>Photos</em></h2>
-    <p class="sec-sub">Each location features a close-up shot and a wide/far shot — click any image to view it fully.</p>
+    <p class="sec-sub">Each location features close-up and wide shots — 8 photos per page.</p>
   </div>
   <div class="pills" role="group">
     <button class="pill on" onclick="filterGallery(this,'all')">All</button>
@@ -184,80 +93,16 @@
     <button class="pill" onclick="filterGallery(this,'culture')">Culture</button>
     <button class="pill" onclick="filterGallery(this,'food')">Food</button>
   </div>
-
-  <!--
-    data-img   = full-resolution image URL shown in lightbox
-    data-cap   = caption text
-    data-cat   = filter category
-  -->
   <div class="gallery-grid" id="galleryGrid">
-
-    <div class="gimg" data-cat="natural"
-         data-img="https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=1400&q=90"
-         data-cap="Sierra Madre mountain range — wide shot"
-         onclick="openLightbox(this)">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=700&q=75')"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">Sierra Madre — wide shot</span></div>
-    </div>
-
-    <div class="gimg" data-cat="natural"
-         data-img="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1400&q=90"
-         data-cap="Lush forest close-up — Laur, Nueva Ecija"
-         onclick="openLightbox(this)">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=400&q=75');min-height:130px;"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">Forest — close-up</span></div>
-    </div>
-
-    <div class="gimg" data-cat="natural"
-         data-img="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1400&q=90"
-         data-cap="River wide shot — scenic countryside of Laur"
-         onclick="openLightbox(this)">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=75');min-height:130px;"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">River — wide shot</span></div>
-    </div>
-
-    <div class="gimg" data-cat="natural"
-         data-img="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1400&q=90"
-         data-cap="Nature close-up — flora and landscape of Laur"
-         onclick="openLightbox(this)">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&q=75');min-height:130px;"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">Nature — close-up</span></div>
-    </div>
-
-    <div class="gimg" data-cat="manmade"
-         data-img="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=1400&q=90"
-         data-cap="Heritage church — wide shot, Laur, Nueva Ecija"
-         onclick="openLightbox(this)">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=400&q=75');min-height:130px;"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">Heritage church — wide shot</span></div>
-    </div>
-
-    <div class="gimg" data-cat="culture"
-         data-img="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=90"
-         data-cap="Local food close-up — authentic flavors of Laur"
-         onclick="openLightbox(this)">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=75');min-height:130px;"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">Local food — close-up</span></div>
-    </div>
-
-    <div class="gimg" data-cat="food"
-         data-img="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1400&q=90"
-         data-cap="Local restaurant — wide shot, dining in Laur"
-         onclick="openLightbox(this)">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=75');min-height:130px;"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">Local restaurant — wide shot</span></div>
-    </div>
-
-    <div class="gimg" data-cat="natural"
-         data-img="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=1400&q=90"
-         data-cap="Countryside wide shot — peaceful Laur landscape"
-         onclick="openLightbox(this)">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=400&q=75');min-height:130px;"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">Countryside — wide shot</span></div>
-    </div>
-
+    <div class="gimg" data-cat="natural"><div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=700&q=75')"></div><div class="gimg-overlay"><span class="gimg-caption">Sierra Madre — wide shot</span></div></div>
+    <div class="gimg" data-cat="natural"><div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=400&q=75');min-height:130px;"></div><div class="gimg-overlay"><span class="gimg-caption">Forest — close-up</span></div></div>
+    <div class="gimg" data-cat="natural"><div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=75');min-height:130px;"></div><div class="gimg-overlay"><span class="gimg-caption">River — wide shot</span></div></div>
+    <div class="gimg" data-cat="natural"><div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&q=75');min-height:130px;"></div><div class="gimg-overlay"><span class="gimg-caption">Nature — close-up</span></div></div>
+    <div class="gimg" data-cat="manmade"><div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=400&q=75');min-height:130px;"></div><div class="gimg-overlay"><span class="gimg-caption">Heritage Church — wide shot</span></div></div>
+    <div class="gimg" data-cat="culture"><div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=75');min-height:130px;"></div><div class="gimg-overlay"><span class="gimg-caption">Local food — close-up</span></div></div>
+    <div class="gimg" data-cat="food"><div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=75');min-height:130px;"></div><div class="gimg-overlay"><span class="gimg-caption">Local restaurant — wide shot</span></div></div>
+    <div class="gimg" data-cat="natural"><div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=400&q=75');min-height:130px;"></div><div class="gimg-overlay"><span class="gimg-caption">Farmland — wide shot</span></div></div>
   </div>
-
   <nav class="pagination">
     <button class="pg-btn" onclick="changePage(-1)">&#8249;</button>
     <button class="pg-btn active" onclick="goPage(1)" aria-current="page">1</button>
@@ -268,101 +113,44 @@
   </nav>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="footer-top">
-    <div class="footer-brand"><strong>Laur Tourism</strong><span>Official Tourism Website</span><p>Promoting the natural beauty, culture, and heritage of Laur, Nueva Ecija, Philippines.</p><div class="social-row"><a href="https://facebook.com/laurtourism" class="social-btn" target="_blank" rel="noopener">FB</a><a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener">YT</a></div></div>
-    <nav class="footer-col"><h4>Explore</h4><a href="attractions.html">Attractions</a><a href="visit.html#stay">Where to Stay</a><a href="visit.html#eat">Where to Eat</a><a href="visit.html#shops">Shops &amp; Stores</a></nav>
-    <nav class="footer-col"><h4>Visit</h4><a href="about.html">About Laur</a><a href="contact.html#directions">How to Get There</a><a href="gallery.html">Photo Gallery</a></nav>
-    <nav class="footer-col"><h4>Contact</h4><a href="contact.html">Tourism Office</a><a href="contact.html#emergency">Emergency Numbers</a><a href="https://facebook.com/laurtourism" target="_blank" rel="noopener">Facebook Page</a><a href="tel:09XXXXXXXXX">Call Us</a></nav>
+    <div class="footer-brand">
+      <strong>Laur Tourism</strong>
+      <span>Official Laur Tourism Website</span>
+      <p>Promoting the natural beauty, culture, and heritage of Laur, Nueva Ecija, Philippines.</p>
+      <div class="social-row">
+        <a href="https://www.facebook.com/profile.php?id=61580579025346" class="social-btn" target="_blank" rel="noopener">FB</a>
+        <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener">YT</a>
+      </div>
+    </div>
+    <nav class="footer-col">
+      <h4>Explore</h4>
+      <a href="attractions.html">Attractions</a>
+      <a href="visit.html#stay">Where to Stay</a>
+      <a href="visit.html#eat">Where to Eat</a>
+      <a href="visit.html#shops">Shops &amp; Stores</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Visit</h4>
+      <a href="about.html">About Laur</a>
+      <a href="contact.html#directions">How to Get There</a>
+      <a href="gallery.html">Photo Gallery</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Contact</h4>
+      <a href="contact.html">Tourism Office</a>
+      <a href="contact.html#emergency">Emergency Numbers</a>
+      <a href="https://www.facebook.com/profile.php?id=61580579025346" target="_blank" rel="noopener">Facebook Page</a>
+    </nav>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 Municipality of Laur, Nueva Ecija. All rights reserved.</span><span>Official Tourism Website</span></div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Municipality of Laur, Nueva Ecija, Philippines. All rights reserved.</span>
+    <span>Official Laur Tourism Website</span>
+  </div>
 </footer>
 
-<!-- ── LIGHTBOX ── -->
-<div class="lb-overlay" id="lightbox" onclick="lbBgClick(event)">
-  <button class="lb-arr lb-prev" onclick="lbNav(-1)" aria-label="Previous photo">&#8249;</button>
-  <button class="lb-arr lb-next" onclick="lbNav(1)"  aria-label="Next photo">&#8250;</button>
-  <div class="lb-box">
-    <div class="lb-counter"><b id="lb-cur">1</b> / <span id="lb-tot">8</span></div>
-    <button class="lb-close" onclick="closeLightbox()" aria-label="Close">&#x2715;</button>
-    <div class="lb-img-bg" id="lb-img"></div>
-    <div class="lb-caption">
-      <span class="lb-caption-text" id="lb-cap">—</span>
-      <span class="lb-caption-cat" id="lb-cat">Natural</span>
-    </div>
-  </div>
-</div>
-
 <script src="script.js"></script>
-<script>
-/* ── LIGHTBOX LOGIC ── */
-var lbItems = [];
-var lbIndex = 0;
-
-function buildLbItems() {
-  var visible = Array.from(document.querySelectorAll('#galleryGrid .gimg'))
-    .filter(function(el){ return el.style.display !== 'none'; });
-  lbItems = visible.map(function(el){
-    return {
-      img: el.getAttribute('data-img'),
-      cap: el.getAttribute('data-cap'),
-      cat: el.getAttribute('data-cat')
-    };
-  });
-}
-
-function openLightbox(el) {
-  buildLbItems();
-  var allVisible = Array.from(document.querySelectorAll('#galleryGrid .gimg'))
-    .filter(function(e){ return e.style.display !== 'none'; });
-  lbIndex = allVisible.indexOf(el);
-  renderLb();
-  document.getElementById('lightbox').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function renderLb() {
-  var item = lbItems[lbIndex];
-  if (!item) return;
-  document.getElementById('lb-img').style.backgroundImage = "url('" + item.img + "')";
-  document.getElementById('lb-cap').textContent = item.cap;
-  document.getElementById('lb-cat').textContent = item.cat.charAt(0).toUpperCase() + item.cat.slice(1);
-  document.getElementById('lb-cur').textContent = lbIndex + 1;
-  document.getElementById('lb-tot').textContent = lbItems.length;
-}
-
-function lbNav(dir) {
-  lbIndex = (lbIndex + dir + lbItems.length) % lbItems.length;
-  var box = document.getElementById('lightbox').querySelector('.lb-box');
-  box.style.animation = 'none';
-  void box.offsetWidth;
-  box.style.animation = 'lbSlideUp .22s ease';
-  renderLb();
-}
-
-function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-function lbBgClick(e) {
-  if (e.target.id === 'lightbox') closeLightbox();
-}
-
-document.addEventListener('keydown', function(e) {
-  var lb = document.getElementById('lightbox');
-  if (!lb.classList.contains('open')) return;
-  if (e.key === 'Escape')      closeLightbox();
-  if (e.key === 'ArrowLeft')   lbNav(-1);
-  if (e.key === 'ArrowRight')  lbNav(1);
-});
-
-/* Rebuild items list when filter changes so navigation stays consistent */
-var origFilter = window.filterGallery;
-window.filterGallery = function(btn, cat) {
-  if (origFilter) origFilter(btn, cat);
-  buildLbItems();
-};
-</script>
 </body>
 </html>

@@ -10,72 +10,103 @@
 <title>Contact &amp; Emergency Numbers — Laur, Nueva Ecija | Official Tourism Website</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-  .em-grid-new{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:1.5rem}
-  .em-card{background:#fff;border-radius:18px;padding:1.4rem 1rem 1.2rem;text-align:center;border:1px solid rgba(75,173,113,.12);box-shadow:0 4px 18px rgba(0,0,0,.05);transition:all .22s;display:flex;flex-direction:column;align-items:center;gap:10px}
-  .em-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(45,145,88,.12);border-color:rgba(75,173,113,.25)}
-  .em-logo{width:56px;height:56px;border-radius:14px;overflow:hidden;background:#F0FDF4;border:1px solid rgba(75,173,113,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-  .em-logo img{width:100%;height:100%;object-fit:cover}
-  .em-logo-placeholder{font-size:11px;font-weight:700;color:#4BAD71;letter-spacing:.5px;text-align:center;line-height:1.3;padding:4px}
-  .em-name{font-size:13px;font-weight:600;color:#333;line-height:1.3}
-  .em-num{font-size:13px;font-weight:700;color:#2D9158}
-  .em-num a{color:#2D9158}
-  .em-num a:hover{text-decoration:underline}
-  .contact-simple{background:#fff;border-radius:20px;border:1px solid rgba(75,173,113,.12);padding:2.2rem 2.5rem;box-shadow:0 6px 24px rgba(45,145,88,.07);display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
-  .contact-simple h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:#2D9158;margin-bottom:.5rem}
-  .contact-simple p{font-size:14px;color:#888;line-height:1.8;margin-bottom:1.4rem}
-  .contact-map-side{border-radius:14px;overflow:hidden;height:220px;background:#F0FDF4;border:1px solid rgba(75,173,113,.15)}
-  .contact-map-side iframe{width:100%;height:100%;border:none;display:block}
-  @media(max-width:768px){.contact-simple{grid-template-columns:1fr}}
-  @media(max-width:768px){.em-grid-new{grid-template-columns:repeat(2,1fr)}}
+*,body{font-family:'DM Sans',sans-serif;}
+.nav-logo-img{width:44px;height:44px;border-radius:50%;object-fit:cover;}
+.nav-brand strong,.nav-brand span,.nav-links a,.dropdown-menu a,.mobile-links a,.mobile-fb{font-family:'DM Sans',sans-serif;}
+h1,h2,h3,.sec-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Display',serif!important;letter-spacing:0;}
+.em-grid-new{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:1.5rem}
+.em-card{background:#fff;border-radius:18px;padding:1.4rem 1rem 1.2rem;text-align:center;border:1px solid rgba(75,173,113,.12);box-shadow:0 4px 18px rgba(0,0,0,.05);transition:all .22s;display:flex;flex-direction:column;align-items:center;gap:10px}
+.em-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(45,145,88,.12);border-color:rgba(75,173,113,.25)}
+.em-logo{width:56px;height:56px;border-radius:14px;overflow:hidden;background:#F0FDF4;border:1px solid rgba(75,173,113,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.em-logo img{width:100%;height:100%;object-fit:cover}
+.em-logo-placeholder{font-size:11px;font-weight:700;color:#4BAD71;letter-spacing:.5px;text-align:center;line-height:1.3;padding:4px;font-family:'DM Sans',sans-serif;}
+.em-name{font-size:13px;font-weight:600;color:#333;line-height:1.3;font-family:'DM Sans',sans-serif;}
+.em-num{font-size:13px;font-weight:700;color:#2D9158;font-family:'DM Sans',sans-serif;}
+.em-num a{color:#2D9158}
+.em-num a:hover{text-decoration:underline}
+.contact-simple{background:#fff;border-radius:20px;border:1px solid rgba(75,173,113,.12);padding:2.2rem 2.5rem;box-shadow:0 6px 24px rgba(45,145,88,.07);display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+.contact-simple h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:#2D9158;margin-bottom:.5rem;letter-spacing:0;}
+.contact-simple p{font-size:14px;color:#888;line-height:1.8;margin-bottom:1.4rem;font-family:'DM Sans',sans-serif;}
+.contact-map-side{border-radius:14px;overflow:hidden;height:220px;background:#F0FDF4;border:1px solid rgba(75,173,113,.15)}
+.contact-map-side iframe{width:100%;height:100%;border:none;display:block}
+@media(max-width:768px){.contact-simple{grid-template-columns:1fr}}
+@media(max-width:768px){.em-grid-new{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
 
+<!-- ===== NAV ===== -->
 <nav class="nav" id="navbar">
   <div class="nav-logo">
-    <!-- LOGO: Replace with your image: <img src="your-logo.png" alt="Laur Tourism Logo" class="nav-logo-img"> -->
-    <div class="nav-seal nav-seal-placeholder"><span>LT</span></div>
+    <img src="images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img">
     <div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija · Philippines</span></div>
   </div>
   <div class="nav-links">
-    <a href="index.html">Home</a><a href="about.html">About</a>
-    <div class="dropdown"><a href="attractions.html">Explore &#9660;</a><div class="dropdown-menu"><a href="attractions.html">Attractions</a><a href="gallery.html">Photo Gallery</a></div></div>
-    <div class="dropdown"><a href="visit.html">Visit &#9660;</a><div class="dropdown-menu"><a href="visit.html#stay">Where to Stay</a><a href="visit.html#eat">Where to Eat</a><a href="visit.html#shops">Shops & Stores</a></div></div>
-    <a href="gallery.html">Gallery</a><a href="contact.html" class="active">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="dropdown">
+      <a href="attractions.html">I-Explore &#9660;</a>
+      <div class="dropdown-menu">
+        <a href="attractions.html">Attractions</a>
+        <a href="gallery.html">Photo Gallery</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="visit.html">Visit &#9660;</a>
+      <div class="dropdown-menu">
+        <a href="visit.html#stay">Where to Stay</a>
+        <a href="visit.html#eat">Where to Eat</a>
+        <a href="visit.html#shops">Shops &amp; Stores</a>
+      </div>
+    </div>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="active">Makipag-ugnayan</a>
   </div>
-  <!-- Plan Your Trip button removed -->
   <button class="hamburger" onclick="toggleMobile()" id="ham"><span></span><span></span><span></span></button>
 </nav>
 
+<!-- ===== MOBILE MENU ===== -->
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-head"><div class="nav-logo"><div class="nav-seal">LT</div><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div></div><button class="mobile-menu-close" onclick="toggleMobile()">&#x2715;</button></div>
-  <div class="mobile-links"><a href="index.html">Home</a><a href="about.html">About Laur</a><a href="attractions.html">Attractions</a><a href="visit.html">Where to Stay / Eat / Shop</a><a href="gallery.html">Photo Gallery</a><a href="contact.html">Contact & Emergency</a></div>
-  <a href="https://facebook.com/laurtourism" class="mobile-fb" target="_blank" rel="noopener">Find us on Facebook</a>
+  <div class="mobile-menu-head">
+    <div class="nav-logo"><img src="images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img"><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div></div>
+    <button class="mobile-menu-close" onclick="toggleMobile()">&#x2715;</button>
+  </div>
+  <div class="mobile-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Laur</a>
+    <a href="attractions.html">Attractions</a>
+    <a href="visit.html">Where to Stay / Eat / Shop</a>
+    <a href="gallery.html">Photo Gallery</a>
+    <a href="contact.html">Makipag-ugnayan &amp; Emergency</a>
+  </div>
+  <a href="https://www.facebook.com/profile.php?id=61580579025346" class="mobile-fb" target="_blank" rel="noopener">Find us on Facebook</a>
 </div>
 
+<!-- ===== PAGE HERO ===== -->
 <div class="page-hero">
   <div class="page-hero-img" style="background-image:url('https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1400&q=75')"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
-    <div class="eyebrow" style="color:#E8A838">Get in Touch</div>
+    <div class="eyebrow" style="color:#E8A838">Makipag-ugnayan</div>
     <h1>Contact &amp; <em>Emergency</em></h1>
-    <p>Reach the Laur Tourism Office or find emergency numbers fast.</p>
+    <p>Reach the Laur Tourism Office or find emergency numbers right away.</p>
   </div>
 </div>
 
+<!-- ===== TOURISM OFFICE ===== -->
 <section class="sec alt">
   <div class="sec-head">
     <div class="eyebrow">Tourism Office</div>
-    <h2 class="sec-title">Contact <em>Us</em></h2>
+    <h2 class="sec-title">Get in <em>Touch</em></h2>
   </div>
   <div class="contact-simple">
     <div>
       <h3>Laur Tourism Office</h3>
       <p>Tablang - Gabaldon Road, Brgy III<br>Laur, Nueva Ecija, Philippines<br>Monday–Friday · 8:00 AM – 5:00 PM</p>
-      <a href="https://facebook.com/laurtourism" target="_blank" rel="noopener" class="btn-fb">Message us on Facebook</a>
+      <a href="https://www.facebook.com/profile.php?id=61580579025346" target="_blank" rel="noopener" class="btn-fb">Message on Facebook</a>
     </div>
     <div class="contact-map-side">
       <!-- Paste your Google Maps iframe embed here -->
@@ -83,45 +114,75 @@
   </div>
 </section>
 
+<!-- ===== EMERGENCY NUMBERS ===== -->
 <section class="sec" id="emergency">
   <div class="sec-head">
     <div class="eyebrow">Emergency Contacts</div>
     <h2 class="sec-title">Emergency <em>Numbers</em></h2>
-    <p class="sec-sub">Tap any number to call directly on your phone.</p>
+    <p class="sec-sub">Tap any number to call directly from your phone.</p>
   </div>
   <div class="em-grid-new">
     <div class="em-card"><div class="em-logo"><span class="em-logo-placeholder">RHU</span></div><div class="em-name">RHU (Doctor)</div><div class="em-num"><a href="tel:09815164728">0981-516-4728</a></div></div>
-    <div class="em-card"><div class="em-logo"><span class="em-logo-placeholder">MDRRMO</span></div><div class="em-name">MDRRMO (Rescue)</div><div class="em-num"><a href="tel:08981001380">0998-100-1380</a></div></div>
-    <div class="em-card"><div class="em-logo"><span class="em-logo-placeholder">MENRO</span></div><div class="em-name">MENRO (Basura)</div><div class="em-num"><a href="tel:09362900527">0936-290-0527</a></div></div>
+    <div class="em-card"><div class="em-logo"><span class="em-logo-placeholder">MDRRMO</span></div><div class="em-name">MDRRMO (Rescue)</div><div class="em-num"><a href="tel:09981001380">0998-100-1380</a></div></div>
+    <div class="em-card"><div class="em-logo"><span class="em-logo-placeholder">MENRO</span></div><div class="em-name">MENRO (Waste)</div><div class="em-num"><a href="tel:09362900527">0936-290-0527</a></div></div>
     <div class="em-card"><div class="em-logo"><span class="em-logo-placeholder">AMB</span></div><div class="em-name">Ambulance</div><div class="em-num"><a href="tel:09815164728">0981-516-4728</a></div></div>
     <div class="em-card"><div class="em-logo"><span class="em-logo-placeholder">MSWDO</span></div><div class="em-name">MSWDO</div><div class="em-num"><a href="tel:09616082331">0961-608-2331</a></div></div>
-    <div class="em-card"><div class="em-logo"><span class="em-logo-placeholder">PNP</span></div><div class="em-name">PNP (Pulis)</div><div class="em-num"><a href="tel:09985985429">0998-598-5429</a></div></div>
-    <div class="em-card"><div class="em-logo"><span class="em-logo-placeholder">BFP</span></div><div class="em-name">BFP (Bumbero)</div><div class="em-num"><a href="tel:09425516197">0942-551-6197</a></div></div>
-    <div class="em-card"><div class="em-logo"><span class="em-logo-placeholder">NEECO</span></div><div class="em-name">NEECO</div><div class="em-num"><a href="tel:09285524681">0928-552-4681</a></div></div>
+    <div class="em-card"><div class="em-logo"><span class="em-logo-placeholder">PNP</span></div><div class="em-name">PNP (Police)</div><div class="em-num"><a href="tel:09985985429">0998-598-5429</a></div></div>
+    <div class="em-card"><div class="em-logo"><span class="em-logo-placeholder">BFP</span></div><div class="em-name">BFP (Fire)</div><div class="em-num"><a href="tel:09425516197">0942-551-6197</a></div></div>
+    <div class="em-card"><div class="em-logo"><span class="em-logo-placeholder">NEECO</span></div><div class="em-name">NEECO (Electric)</div><div class="em-num"><a href="tel:09285524681">0928-552-4681</a></div></div>
   </div>
 </section>
 
+<!-- ===== HOW TO GET THERE ===== -->
 <section class="sec alt" id="directions">
   <div class="sec-head">
-    <div class="eyebrow">Getting Here</div>
-    <h2 class="sec-title">How to <em>Get There</em></h2>
+    <div class="eyebrow">How to Get There</div>
+    <h2 class="sec-title">Getting to <em>Laur</em></h2>
     <p class="sec-sub">Laur is easily accessible from Manila and nearby cities in Nueva Ecija.</p>
   </div>
   <div class="route-grid">
-    <div class="route-card"><div class="route-title">From Manila</div><p class="route-desc">Take a bus from Cubao or Araneta to Cabanatuan City, then ride a jeepney or tricycle heading to Laur.</p><span class="route-time">Approx. 3–4 hours</span></div>
-    <div class="route-card"><div class="route-title">From Cabanatuan City</div><p class="route-desc">Drive via General Tinio Street heading east towards Laur. Follow road signs for Laur, Nueva Ecija.</p><span class="route-time">Approx. 1–1.5 hours</span></div>
-    <div class="route-card"><div class="route-title">From Nearby Towns</div><p class="route-desc">Tricycles and jeepneys are available from Gabaldon, Bongabon, and neighboring municipalities.</p><span class="route-time">Approx. 20–40 minutes</span></div>
+    <div class="route-card"><div class="route-title">From Manila</div><p class="route-desc">Take a bus from Cubao or Araneta to Cabanatuan City, then ride a jeepney or tricycle to Laur.</p><span class="route-time">About 3–4 hours</span></div>
+    <div class="route-card"><div class="route-title">From Cabanatuan City</div><p class="route-desc">Drive via General Tinio Street heading east toward Laur. Follow road signs for Laur, Nueva Ecija.</p><span class="route-time">About 1–1.5 hours</span></div>
+    <div class="route-card"><div class="route-title">From Nearby Towns</div><p class="route-desc">Tricycles and jeepneys are available from Gabaldon, Bongabon, and nearby municipalities.</p><span class="route-time">About 20–40 minutes</span></div>
   </div>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="footer-top">
-    <div class="footer-brand"><strong>Laur Tourism</strong><span>Official Tourism Website</span><p>Promoting the natural beauty, culture, and heritage of Laur, Nueva Ecija, Philippines.</p><div class="social-row"><a href="https://facebook.com/laurtourism" class="social-btn" target="_blank" rel="noopener">FB</a><a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener">YT</a></div></div>
-    <nav class="footer-col"><h4>Explore</h4><a href="attractions.html">Attractions</a><a href="visit.html#stay">Where to Stay</a><a href="visit.html#eat">Where to Eat</a><a href="visit.html#shops">Shops &amp; Stores</a></nav>
-    <nav class="footer-col"><h4>Visit</h4><a href="about.html">About Laur</a><a href="contact.html#directions">How to Get There</a><a href="gallery.html">Photo Gallery</a></nav>
-    <nav class="footer-col"><h4>Contact</h4><a href="contact.html">Tourism Office</a><a href="contact.html#emergency">Emergency Numbers</a><a href="https://facebook.com/laurtourism" target="_blank" rel="noopener">Facebook Page</a></nav>
+    <div class="footer-brand">
+      <strong>Laur Tourism</strong>
+      <span>Official Laur Tourism Website</span>
+      <p>Promoting the natural beauty, culture, and heritage of Laur, Nueva Ecija, Philippines.</p>
+      <div class="social-row">
+        <a href="https://www.facebook.com/profile.php?id=61580579025346" class="social-btn" target="_blank" rel="noopener">FB</a>
+        <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener">YT</a>
+      </div>
+    </div>
+    <nav class="footer-col">
+      <h4>Explore</h4>
+      <a href="attractions.html">Attractions</a>
+      <a href="visit.html#stay">Where to Stay</a>
+      <a href="visit.html#eat">Where to Eat</a>
+      <a href="visit.html#shops">Shops &amp; Stores</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Visit</h4>
+      <a href="about.html">About Laur</a>
+      <a href="contact.html#directions">How to Get There</a>
+      <a href="gallery.html">Photo Gallery</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Contact</h4>
+      <a href="contact.html">Tourism Office</a>
+      <a href="contact.html#emergency">Emergency Numbers</a>
+      <a href="https://www.facebook.com/profile.php?id=61580579025346" target="_blank" rel="noopener">Facebook Page</a>
+    </nav>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 Municipality of Laur, Nueva Ecija. All rights reserved.</span><span>Official Tourism Website</span></div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Municipality of Laur, Nueva Ecija, Philippines. All rights reserved.</span>
+    <span>Official Laur Tourism Website</span>
+  </div>
 </footer>
 
 <script src="script.js"></script>

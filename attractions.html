@@ -10,15 +10,19 @@
 <title>Attractions in Laur, Nueva Ecija | Official Tourism Website</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
+*,body{font-family:'DM Sans',sans-serif;}
+.nav-logo-img{width:44px;height:44px;border-radius:50%;object-fit:cover;}
+.nav-brand strong,.nav-brand span,.nav-links a,.dropdown-menu a,.mobile-links a,.mobile-fb{font-family:'DM Sans',sans-serif;}
+h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Display',serif!important;letter-spacing:0;}
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(10,42,20,.6);z-index:600;align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(6px)}
 .modal-overlay.open{display:flex}
 .modal-box{background:#fff;border-radius:24px;width:100%;max-width:820px;overflow:hidden;max-height:92vh;display:flex;flex-direction:column;box-shadow:0 32px 80px rgba(0,0,0,.22)}
 .modal-hd{background:linear-gradient(135deg,#2D9158,#4BAD71);padding:1.3rem 1.8rem;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
-.modal-hd h3{color:#fff;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;margin:0}
-.modal-hd small{color:rgba(255,255,255,.75);font-size:11px;letter-spacing:1px;text-transform:uppercase;display:block;margin-top:2px}
+.modal-hd h3{color:#fff;font-family:'Playfair Display',serif;font-size:1.25rem;margin:0;letter-spacing:0;}
+.modal-hd small{color:rgba(255,255,255,.75);font-size:11px;letter-spacing:1px;text-transform:uppercase;display:block;margin-top:2px;font-family:'DM Sans',sans-serif;}
 .modal-close{background:rgba(255,255,255,.18);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:16px;flex-shrink:0;cursor:pointer;transition:background .2s}
 .modal-close:hover{background:rgba(255,255,255,.3)}
 .modal-inner{display:grid;grid-template-columns:1fr 1fr;flex:1;min-height:0}
@@ -26,146 +30,204 @@
 .modal-right{display:flex;flex-direction:column;overflow-y:auto}
 .modal-body{padding:1.8rem 1.8rem 1rem;flex:1}
 .mrow{margin-bottom:1.1rem}
-.mlbl{font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;font-weight:600}
-.mval{font-size:14px;color:#333;line-height:1.6}
-.modal-map{margin:0 1.8rem 1rem;background:linear-gradient(135deg,#F0FDF4,#FFFBEB);border-radius:14px;height:90px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(139,200,58,.2);font-size:13px;color:#2D9158;cursor:pointer;transition:all .2s;gap:6px}
+.mlbl{font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;font-weight:600;font-family:'DM Sans',sans-serif;}
+.mval{font-size:14px;color:#333;line-height:1.6;font-family:'DM Sans',sans-serif;}
+.modal-map{margin:0 1.8rem 1rem;background:linear-gradient(135deg,#F0FDF4,#FFFBEB);border-radius:14px;height:90px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(139,200,58,.2);font-size:13px;color:#2D9158;cursor:pointer;transition:all .2s;gap:6px;font-family:'DM Sans',sans-serif;}
 .modal-map:hover{background:linear-gradient(135deg,#dcfce7,#fef9c3);box-shadow:0 4px 14px rgba(45,145,88,.1)}
 .modal-acts{padding:0 1.8rem 1.8rem}
-.m-fb{background:linear-gradient(135deg,#1877f2,#0d5dbf);color:#fff;border:none;padding:11px 24px;border-radius:50px;font-size:13px;font-weight:500;cursor:pointer;width:100%;transition:all .2s}
+.m-fb{background:linear-gradient(135deg,#1877f2,#0d5dbf);color:#fff;border:none;padding:11px 24px;border-radius:50px;font-size:13px;font-weight:500;cursor:pointer;width:100%;transition:all .2s;font-family:'DM Sans',sans-serif;}
 .m-fb:hover{opacity:.9;transform:translateY(-1px)}
 .see-more-wrap{text-align:center;margin-top:2rem}
 .btn-see-more{background:#fff;color:#2D9158;border:2px solid rgba(75,173,113,.3);padding:12px 36px;border-radius:50px;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;box-shadow:0 4px 14px rgba(45,145,88,.08)}
 .btn-see-more:hover{background:linear-gradient(135deg,#4BAD71,#2D9158);color:#fff;border-color:transparent;box-shadow:0 6px 20px rgba(45,145,88,.25);transform:translateY(-2px)}
+.card-loc{display:flex;align-items:center;gap:5px;}
+.card-loc::before{content:'📍';font-size:13px;line-height:1;}
 @media(max-width:640px){.modal-inner{grid-template-columns:1fr;grid-template-rows:240px auto}.modal-photo{min-height:240px}.modal-body{padding:1.2rem 1.2rem .8rem}.modal-map{margin:0 1.2rem .8rem}.modal-acts{padding:0 1.2rem 1.2rem}}
 </style>
 </head>
 <body>
 
+<!-- ===== NAV ===== -->
 <nav class="nav" id="navbar">
   <div class="nav-logo">
-    <!-- LOGO: Replace with your image: <img src="your-logo.png" alt="Laur Tourism Logo" class="nav-logo-img"> -->
-    <div class="nav-seal nav-seal-placeholder"><span>LT</span></div>
+    <img src="images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img">
     <div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija · Philippines</span></div>
   </div>
   <div class="nav-links">
-    <a href="index.html">Home</a><a href="about.html">About</a>
-    <div class="dropdown"><a href="attractions.html" class="active">Explore &#9660;</a><div class="dropdown-menu"><a href="attractions.html">Attractions</a><a href="gallery.html">Photo Gallery</a></div></div>
-    <div class="dropdown"><a href="visit.html">Visit &#9660;</a><div class="dropdown-menu"><a href="visit.html#stay">Where to Stay</a><a href="visit.html#eat">Where to Eat</a><a href="visit.html#shops">Shops & Stores</a></div></div>
-    <a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="dropdown">
+      <a href="attractions.html" class="active">I-Explore &#9660;</a>
+      <div class="dropdown-menu">
+        <a href="attractions.html">Attractions</a>
+        <a href="gallery.html">Photo Gallery</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="visit.html">Visit &#9660;</a>
+      <div class="dropdown-menu">
+        <a href="visit.html#stay">Where to Stay</a>
+        <a href="visit.html#eat">Where to Eat</a>
+        <a href="visit.html#shops">Shops &amp; Stores</a>
+      </div>
+    </div>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Makipag-ugnayan</a>
   </div>
-  <!-- Plan Your Trip button removed -->
   <button class="hamburger" onclick="toggleMobile()" id="ham"><span></span><span></span><span></span></button>
 </nav>
 
+<!-- ===== MOBILE MENU ===== -->
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-head"><div class="nav-logo"><div class="nav-seal">LT</div><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div></div><button class="mobile-menu-close" onclick="toggleMobile()">&#x2715;</button></div>
-  <div class="mobile-links"><a href="index.html">Home</a><a href="about.html">About Laur</a><a href="attractions.html">Attractions</a><a href="visit.html">Where to Stay / Eat / Shop</a><a href="gallery.html">Photo Gallery</a><a href="contact.html">Contact & Emergency</a></div>
-  <a href="https://facebook.com/laurtourism" class="mobile-fb" target="_blank" rel="noopener">Find us on Facebook</a>
+  <div class="mobile-menu-head">
+    <div class="nav-logo"><img src="images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img"><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div></div>
+    <button class="mobile-menu-close" onclick="toggleMobile()">&#x2715;</button>
+  </div>
+  <div class="mobile-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Laur</a>
+    <a href="attractions.html">Attractions</a>
+    <a href="visit.html">Where to Stay / Eat / Shop</a>
+    <a href="gallery.html">Photo Gallery</a>
+    <a href="contact.html">Makipag-ugnayan &amp; Emergency</a>
+  </div>
+  <a href="https://www.facebook.com/profile.php?id=61580579025346" class="mobile-fb" target="_blank" rel="noopener">Find us on Facebook</a>
 </div>
 
+<!-- ===== PAGE HERO ===== -->
 <div class="page-hero">
   <div class="page-hero-img" style="background-image:url('https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=1400&q=75')"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
     <div class="eyebrow" style="color:#E8A838">Explore Laur</div>
     <h1>Tourist <em>Attractions</em></h1>
-    <p>Natural wonders and man-made landmarks waiting to be discovered.</p>
+    <p>Natural wonders and man-made landmarks — waiting to be discovered.</p>
   </div>
 </div>
 
+<!-- ===== ATTRACTIONS GRID ===== -->
 <section class="sec alt">
   <div class="sec-head">
     <div class="eyebrow">All Attractions</div>
     <h2 class="sec-title">Discover <em>Laur</em></h2>
-    <p class="sec-sub">Click any card to see full details — location, hours, entrance fee, and Google Maps.</p>
+    <p class="sec-sub">Click any card to see full details — location, hours, fees, and Google Maps.</p>
   </div>
   <div class="pills" role="group">
     <button class="pill on" onclick="filterCards(this,'attr','all')">All</button>
     <button class="pill" onclick="filterCards(this,'attr','natural')">Natural Attractions</button>
-    <button class="pill" onclick="filterCards(this,'attr','manmade')">Man-made Attractions</button>
+    <button class="pill" onclick="filterCards(this,'attr','manmade')">Man-Made Attractions</button>
   </div>
   <div class="grid3" id="attr-grid">
-    <article class="card" data-cat="natural" onclick="openModal('Seminublan Falls','Natural Attraction','Brgy. San Fernando, Laur, Nueva Ecija','Open daily · Daylight hours','Free entrance','https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=800&q=80')">
+    <article class="card" data-cat="natural" onclick="openModal('Seminublan Falls','Natural Attraction','Brgy. San Fernando, Laur, Nueva Ecija','Open daily · Daytime hours','Free admission','https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=800&q=80')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=400&q=75')"><span class="cbadge">Natural</span></div>
-      <div class="card-body"><div class="card-title">Seminublan Falls</div><div class="card-desc">A stunning natural waterfall nestled in the heart of Brgy. San Fernando.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. San Fernando</span><button class="view-btn">View Info</button></div>
+      <div class="card-body"><div class="card-title">Seminublan Falls</div><div class="card-desc">A stunning natural waterfall in the heart of Brgy. San Fernando.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. San Fernando</span><button class="view-btn">View</button></div>
     </article>
-    <article class="card" data-cat="natural" onclick="openModal('Bato Ferry','Natural Attraction','Brgy. San Felipe, Laur, Nueva Ecija','Open daily · Daylight hours','Free entrance','https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80')">
+    <article class="card" data-cat="natural" onclick="openModal('Bato Ferry','Natural Attraction','Brgy. San Felipe, Laur, Nueva Ecija','Open daily · Daytime hours','Free admission','https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=75')"><span class="cbadge">Natural</span></div>
-      <div class="card-body"><div class="card-title">Bato Ferry</div><div class="card-desc">A scenic ferry crossing along the river of Brgy. San Felipe — a unique local experience.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. San Felipe</span><button class="view-btn">View Info</button></div>
+      <div class="card-body"><div class="card-title">Bato Ferry</div><div class="card-desc">A scenic river crossing in Brgy. San Felipe — a unique local experience.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. San Felipe</span><button class="view-btn">View</button></div>
     </article>
-    <article class="card" data-cat="natural" onclick="openModal('Hidden Falls','Natural Attraction','Brgy. San Fernando, Laur, Nueva Ecija','Open daily · Daylight hours','Free entrance','https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80')">
+    <article class="card" data-cat="natural" onclick="openModal('Hidden Falls','Natural Attraction','Brgy. San Fernando, Laur, Nueva Ecija','Open daily · Daytime hours','Free admission','https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=400&q=75')"><span class="cbadge">Natural</span></div>
-      <div class="card-body"><div class="card-title">Hidden Falls</div><div class="card-desc">A secluded waterfall waiting to be discovered deep in Brgy. San Fernando.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. San Fernando</span><button class="view-btn">View Info</button></div>
+      <div class="card-body"><div class="card-title">Hidden Falls</div><div class="card-desc">A hidden waterfall waiting deep within Brgy. San Fernando.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. San Fernando</span><button class="view-btn">View</button></div>
     </article>
-    <article class="card" data-cat="natural" onclick="openModal('Jampol River','Natural Attraction','Brgy. San Juan, Laur, Nueva Ecija','Open daily · Daylight hours','Free entrance','https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&q=80')">
+    <article class="card" data-cat="natural" onclick="openModal('Jampol River','Natural Attraction','Brgy. San Juan, Laur, Nueva Ecija','Open daily · Daytime hours','Free admission','https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&q=80')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&q=75')"><span class="cbadge">Natural</span></div>
-      <div class="card-body"><div class="card-title">Jampol River</div><div class="card-desc">A peaceful river in Brgy. San Juan perfect for relaxation and nature walks.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. San Juan</span><button class="view-btn">View Info</button></div>
+      <div class="card-body"><div class="card-title">Jampol River</div><div class="card-desc">A peaceful river in Brgy. San Juan — perfect for relaxation and nature walks.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. San Juan</span><button class="view-btn">View</button></div>
     </article>
     <article class="card" data-cat="manmade" onclick="openModal('Casa Celestine','Private Resort','Brgy. Siclong, Laur, Nueva Ecija','Inquire for schedule','Inquire for rates','https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=75')"><span class="cbadge">Man-made</span></div>
-      <div class="card-body"><div class="card-title">Casa Celestine</div><div class="card-desc">A charming private resort in Brgy. Siclong — perfect for relaxation and events.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. Siclong</span><button class="view-btn">View Info</button></div>
+      <div class="card-body"><div class="card-title">Casa Celestine</div><div class="card-desc">A beautiful private resort in Brgy. Siclong — perfect for relaxation and events.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. Siclong</span><button class="view-btn">View</button></div>
     </article>
     <article class="card" data-cat="manmade" onclick="openModal('Green House Private Pool','Private Pool Resort','Brgy. San Josep, Laur, Nueva Ecija','Inquire for schedule','Inquire for rates','https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=75')"><span class="cbadge">Man-made</span></div>
-      <div class="card-body"><div class="card-title">Green House Private Pool</div><div class="card-desc">A private pool resort in Brgy. San Josep ideal for group outings and celebrations.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. San Josep</span><button class="view-btn">View Info</button></div>
+      <div class="card-body"><div class="card-title">Green House Private Pool</div><div class="card-desc">Private pool resort in Brgy. San Josep — ideal for group outings and celebrations.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. San Josep</span><button class="view-btn">View</button></div>
     </article>
     <article class="card attr-hidden" style="display:none" data-cat="manmade" onclick="openModal('Sunsetpeak Nature Camp','Nature Camp','Brgy. Nauzon, Laur, Nueva Ecija','Inquire for schedule','Inquire for rates','https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=800&q=80')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=400&q=75')"><span class="cbadge">Man-made</span></div>
       <div class="card-body"><div class="card-title">Sunsetpeak Nature Camp</div><div class="card-desc">Experience nature camping with stunning sunset views in Brgy. Nauzon.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. Nauzon</span><button class="view-btn">View Info</button></div>
+      <div class="card-foot"><span class="card-loc">Brgy. Nauzon</span><button class="view-btn">View</button></div>
     </article>
     <article class="card attr-hidden" style="display:none" data-cat="manmade" onclick="openModal('Sierran Resort','Resort','Brgy. Siclong, Laur, Nueva Ecija','Inquire for schedule','Inquire for rates','https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=800&q=80')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=400&q=75')"><span class="cbadge">Man-made</span></div>
-      <div class="card-body"><div class="card-title">Sierran Resort</div><div class="card-desc">A relaxing resort destination in Brgy. Siclong with scenic mountain surroundings.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. Siclong</span><button class="view-btn">View Info</button></div>
+      <div class="card-body"><div class="card-title">Sierran Resort</div><div class="card-desc">A relaxing resort in Brgy. Siclong with beautiful mountain surroundings.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. Siclong</span><button class="view-btn">View</button></div>
     </article>
     <article class="card attr-hidden" style="display:none" data-cat="manmade" onclick="openModal('Mountain View Resort','Resort','Brgy. Siclong, Laur, Nueva Ecija','Inquire for schedule','Inquire for rates','https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=800&q=80')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=400&q=75')"><span class="cbadge">Man-made</span></div>
-      <div class="card-body"><div class="card-title">Mountain View Resort</div><div class="card-desc">Enjoy breathtaking mountain views and resort facilities in Brgy. Siclong.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. Siclong</span><button class="view-btn">View Info</button></div>
+      <div class="card-body"><div class="card-title">Mountain View Resort</div><div class="card-desc">Enjoy stunning mountain views and resort facilities in Brgy. Siclong.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. Siclong</span><button class="view-btn">View</button></div>
     </article>
     <article class="card attr-hidden" style="display:none" data-cat="manmade" onclick="openModal('Camila Farm Resort','Farm Resort','Brgy. Betania, Laur, Nueva Ecija','Inquire for schedule','Inquire for rates','https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800&q=80')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=400&q=75')"><span class="cbadge">Man-made</span></div>
-      <div class="card-body"><div class="card-title">Camila Farm Resort</div><div class="card-desc">A farm resort experience in Brgy. Betania offering nature, relaxation, and fresh air.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. Betania</span><button class="view-btn">View Info</button></div>
+      <div class="card-body"><div class="card-title">Camila Farm Resort</div><div class="card-desc">Farm resort experience in Brgy. Betania — offering nature, rest, and fresh air.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. Betania</span><button class="view-btn">View</button></div>
     </article>
     <article class="card attr-hidden" style="display:none" data-cat="manmade" onclick="openModal('Four Queens Private Resort','Private Resort','Brgy. Siclong, Laur, Nueva Ecija','Inquire for schedule','Inquire for rates','https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=75')"><span class="cbadge">Man-made</span></div>
-      <div class="card-body"><div class="card-title">Four Queens Private Resort</div><div class="card-desc">A private resort in Brgy. Siclong ideal for family gatherings and special occasions.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. Siclong</span><button class="view-btn">View Info</button></div>
+      <div class="card-body"><div class="card-title">Four Queens Private Resort</div><div class="card-desc">Private resort in Brgy. Siclong — ideal for family gatherings and special occasions.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. Siclong</span><button class="view-btn">View</button></div>
     </article>
     <article class="card attr-hidden" style="display:none" data-cat="manmade" onclick="openModal('Lelo\'s Mountain Resort','Mountain Resort','Brgy. San Isidro, Laur, Nueva Ecija','Inquire for schedule','Inquire for rates','https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=75')"><span class="cbadge">Man-made</span></div>
-      <div class="card-body"><div class="card-title">Lelo's Mountain Resort</div><div class="card-desc">A scenic mountain resort in Brgy. San Isidro with beautiful natural surroundings.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. San Isidro</span><button class="view-btn">View Info</button></div>
+      <div class="card-body"><div class="card-title">Lelo's Mountain Resort</div><div class="card-desc">A beautiful mountain resort in Brgy. San Isidro with stunning natural surroundings.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. San Isidro</span><button class="view-btn">View</button></div>
     </article>
     <article class="card attr-hidden" style="display:none" data-cat="manmade" onclick="openModal('Clareng\'s Farm Resort','Farm Resort','Brgy. Sagana, Laur, Nueva Ecija','Inquire for schedule','Inquire for rates','https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&q=80')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&q=75')"><span class="cbadge">Man-made</span></div>
-      <div class="card-body"><div class="card-title">Clareng's Farm Resort</div><div class="card-desc">A charming farm resort in Brgy. Sagana offering a genuine farm-to-table experience.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. Sagana</span><button class="view-btn">View Info</button></div>
+      <div class="card-body"><div class="card-title">Clareng's Farm Resort</div><div class="card-desc">A beautiful farm resort in Brgy. Sagana — offering a true farm-to-table experience.</div></div>
+      <div class="card-foot"><span class="card-loc">Brgy. Sagana</span><button class="view-btn">View</button></div>
     </article>
   </div>
   <div class="see-more-wrap" id="attr-more-wrap">
-    <button class="btn-see-more" onclick="showMore('attr')">See More Attractions &#8595;</button>
+    <button class="btn-see-more" onclick="showMore('attr')">View More Attractions &#8595;</button>
   </div>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="footer-top">
-    <div class="footer-brand"><strong>Laur Tourism</strong><span>Official Tourism Website</span><p>Promoting the natural beauty, culture, and heritage of Laur, Nueva Ecija, Philippines.</p><div class="social-row"><a href="https://facebook.com/laurtourism" class="social-btn" target="_blank" rel="noopener">FB</a><a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener">YT</a></div></div>
-    <nav class="footer-col"><h4>Explore</h4><a href="attractions.html">Attractions</a><a href="visit.html#stay">Where to Stay</a><a href="visit.html#eat">Where to Eat</a><a href="visit.html#shops">Shops &amp; Stores</a></nav>
-    <nav class="footer-col"><h4>Visit</h4><a href="about.html">About Laur</a><a href="contact.html#directions">How to Get There</a><a href="gallery.html">Photo Gallery</a></nav>
-    <nav class="footer-col"><h4>Contact</h4><a href="contact.html">Tourism Office</a><a href="contact.html#emergency">Emergency Numbers</a><a href="https://facebook.com/laurtourism" target="_blank" rel="noopener">Facebook Page</a></nav>
+    <div class="footer-brand">
+      <strong>Laur Tourism</strong>
+      <span>Official Laur Tourism Website</span>
+      <p>Promoting the natural beauty, culture, and heritage of Laur, Nueva Ecija, Philippines.</p>
+      <div class="social-row">
+        <a href="https://www.facebook.com/profile.php?id=61580579025346" class="social-btn" target="_blank" rel="noopener">FB</a>
+        <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener">YT</a>
+      </div>
+    </div>
+    <nav class="footer-col">
+      <h4>Explore</h4>
+      <a href="attractions.html">Attractions</a>
+      <a href="visit.html#stay">Where to Stay</a>
+      <a href="visit.html#eat">Where to Eat</a>
+      <a href="visit.html#shops">Shops &amp; Stores</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Visit</h4>
+      <a href="about.html">About Laur</a>
+      <a href="contact.html#directions">How to Get There</a>
+      <a href="gallery.html">Photo Gallery</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Contact</h4>
+      <a href="contact.html">Tourism Office</a>
+      <a href="contact.html#emergency">Emergency Numbers</a>
+      <a href="https://www.facebook.com/profile.php?id=61580579025346" target="_blank" rel="noopener">Facebook Page</a>
+    </nav>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 Municipality of Laur, Nueva Ecija. All rights reserved.</span><span>Official Tourism Website</span></div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Municipality of Laur, Nueva Ecija, Philippines. All rights reserved.</span>
+    <span>Official Laur Tourism Website</span>
+  </div>
 </footer>
 
+<!-- ===== MODAL ===== -->
 <div class="modal-overlay" id="modal" onclick="closeModal(event)">
   <div class="modal-box">
     <div class="modal-hd">
@@ -182,7 +244,7 @@
         </div>
         <div class="modal-map">&#128205; View on Google Maps</div>
         <div class="modal-acts">
-          <button class="m-fb" onclick="window.open('https://facebook.com/laurtourism','_blank')">Facebook Page</button>
+          <button class="m-fb" onclick="window.open('https://www.facebook.com/profile.php?id=61580579025346','_blank')">Facebook Page</button>
         </div>
       </div>
     </div>
