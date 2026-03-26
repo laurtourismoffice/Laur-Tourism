@@ -23,32 +23,142 @@
 .nav-logo-img{width:44px;height:44px;border-radius:50%;object-fit:cover;}
 .nav-brand strong,.nav-brand span,.nav-links a,.dropdown-menu a,.mobile-links a,.mobile-fb{font-family:'DM Sans',sans-serif;}
 h1,h2,h3,.sec-title,.slide-content h1,.card-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Display',serif!important;letter-spacing:0;}
+
+/* ===== SOCIAL ICONS (footer) ===== */
+.social-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;overflow:hidden;background:#f0f0f0;transition:opacity .2s;}
+.social-btn:hover{opacity:.8;}
+.social-btn img{width:22px;height:22px;object-fit:contain;display:block;}
+
+/* ===== CARD LOCATION ICON ===== */
+.card-loc{display:flex;align-items:center;gap:5px;}
+.card-loc img{width:13px;height:13px;object-fit:contain;flex-shrink:0;}
+
+/* ===== MAP LINK ICON ===== */
+.modal-map-link img{width:15px;height:15px;object-fit:contain;}
+
+/* ===== SECTION DIVIDER ===== */
+.sec-divider{border:none;border-top:1px solid #e5e5e5;margin:0 auto;max-width:1140px;padding:0 24px;}
+
+/* =====================================================
+   SCROLL / ENTRANCE ANIMATIONS — Professional & Subtle
+   ===================================================== */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Base: hidden until observed */
+.anim-block { opacity: 0; }
+
+/* When JS marks element as visible */
+.anim-up.in-view    { animation: fadeUp   .65s both cubic-bezier(.22,.68,0,1.05); }
+.anim-fade.in-view  { animation: fadeIn   .65s both cubic-bezier(.22,.68,0,1.05); }
+.anim-left.in-view  { animation: slideLeft  .7s both cubic-bezier(.22,.68,0,1.05); }
+.anim-right.in-view { animation: slideRight .7s both cubic-bezier(.22,.68,0,1.05); }
+.anim-scale.in-view { animation: scaleIn  .55s both cubic-bezier(.22,.68,0,1.05); }
+
+/* Stagger delays */
+.delay-1 { animation-delay:  80ms !important; }
+.delay-2 { animation-delay: 160ms !important; }
+.delay-3 { animation-delay: 240ms !important; }
+.delay-4 { animation-delay: 320ms !important; }
+.delay-5 { animation-delay: 400ms !important; }
+.delay-6 { animation-delay: 480ms !important; }
+
+/* Eyebrow underline accent */
+.eyebrow { position: relative; display: inline-block; }
+.eyebrow::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -3px;
+  width: 100%; height: 1.5px;
+  background: linear-gradient(90deg, #2D9158, #8BC83A);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .55s ease .25s;
+}
+.eyebrow.line-visible::after { transform: scaleX(1); }
+
+/* =====================================================
+   MODAL
+   ===================================================== */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(10,42,20,.6);z-index:600;align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(6px)}
 .modal-overlay.open{display:flex}
 .modal-box{background:#fff;border-radius:24px;width:100%;max-width:820px;overflow:hidden;max-height:92vh;display:flex;flex-direction:column;box-shadow:0 32px 80px rgba(0,0,0,.22)}
-.modal-hd{background:linear-gradient(135deg,#2D9158,#4BAD71);padding:1.3rem 1.8rem;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+
+/* MODAL HEADER — three-column so title is perfectly centered */
+.modal-hd{background:linear-gradient(135deg,#2D9158,#4BAD71);padding:1.3rem 1.8rem;display:flex;align-items:center;flex-shrink:0;}
+.modal-hd-left{flex:1;}
+.modal-hd-center{flex:2;text-align:center;}
+.modal-hd-right{flex:1;display:flex;justify-content:flex-end;}
 .modal-hd h3{color:#fff;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;margin:0;letter-spacing:0;}
-.modal-hd small{color:rgba(255,255,255,.75);font-size:11px;letter-spacing:1px;text-transform:uppercase;display:block;margin-top:2px;font-family:'DM Sans',sans-serif;}
-.modal-close{background:rgba(255,255,255,.18);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:16px;flex-shrink:0;cursor:pointer;transition:background .2s}
+.modal-hd small{color:rgba(255,255,255,.75);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-top:3px;font-family:'DM Sans',sans-serif;}
+.modal-close{background:rgba(255,255,255,.18);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:16px;flex-shrink:0;cursor:pointer;transition:background .2s;display:flex;align-items:center;justify-content:center;}
 .modal-close:hover{background:rgba(255,255,255,.3)}
-.modal-inner{display:grid;grid-template-columns:1fr 1fr;flex:1;min-height:0}
-.modal-photo{background-size:cover;background-position:center;background-color:#e8f5ec;min-height:340px}
+
+.modal-inner{display:grid;grid-template-columns:1fr 1fr;min-height:420px;}
+
+/* IMAGE COLUMN — vertically & horizontally centered */
+.modal-photo {
+  overflow: hidden;
+  background: #e8f5ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-photo img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
 .modal-right{display:flex;flex-direction:column;overflow-y:auto}
 .modal-body{padding:1.8rem 1.8rem 1rem;flex:1}
 .mrow{margin-bottom:1.1rem}
 .mlbl{font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;font-weight:600;font-family:'DM Sans',sans-serif;}
 .mval{font-size:14px;color:#333;line-height:1.6;font-family:'DM Sans',sans-serif;}
-.modal-map{margin:0 1.8rem 1rem;background:linear-gradient(135deg,#F0FDF4,#FFFBEB);border-radius:14px;height:90px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(139,200,58,.2);font-size:13px;color:#2D9158;cursor:pointer;transition:all .2s;gap:6px;font-family:'DM Sans',sans-serif;}
-.modal-map:hover{background:linear-gradient(135deg,#dcfce7,#fef9c3);box-shadow:0 4px 14px rgba(45,145,88,.1)}
+.modal-map-embed{margin:0 1.8rem 1rem;border-radius:14px;overflow:hidden;border:1px solid rgba(139,200,58,.2);height:200px;position:relative;}
+.modal-map-embed iframe{width:100%;height:100%;border:none;display:block;}
+.modal-map-link{display:flex;align-items:center;justify-content:center;gap:6px;margin:0 1.8rem .5rem;background:linear-gradient(135deg,#F0FDF4,#FFFBEB);border-radius:10px;padding:8px 12px;font-size:12px;color:#2D9158;text-decoration:none;border:1px solid rgba(139,200,58,.2);transition:all .2s;font-family:'DM Sans',sans-serif;font-weight:500;}
+.modal-map-link:hover{background:linear-gradient(135deg,#dcfce7,#fef9c3);box-shadow:0 4px 14px rgba(45,145,88,.1);color:#1e6b40;}
 .modal-acts{padding:0 1.8rem 1.8rem}
-.m-fb{background:linear-gradient(135deg,#1877f2,#0d5dbf);color:#fff;border:none;padding:11px 24px;border-radius:50px;font-size:13px;font-weight:500;cursor:pointer;width:100%;transition:all .2s;font-family:'DM Sans',sans-serif;}
-.m-fb:hover{opacity:.9;transform:translateY(-1px)}
-.card-loc{display:flex;align-items:center;gap:5px;}
-.card-loc::before{content:'📍';font-size:13px;line-height:1;}
-/* Hide hours/fee rows by default; show only when data present */
-#modal-hrs-row, #modal-fee-row { display: none; }
-#modal-hrs-row.visible, #modal-fee-row.visible { display: block; }
-@media(max-width:640px){.modal-inner{grid-template-columns:1fr;grid-template-rows:240px auto}.modal-photo{min-height:240px}.modal-body{padding:1.2rem 1.2rem .8rem}.modal-map{margin:0 1.2rem .8rem}.modal-acts{padding:0 1.2rem 1.2rem}}
+
+/* FACEBOOK BUTTON */
+.m-fb{background:#fff;color:#1877f2;border:1.5px solid rgba(24,119,242,.3);padding:11px 24px;border-radius:50px;font-size:13px;font-weight:500;cursor:pointer;width:100%;transition:all .2s;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px;}
+.m-fb:hover{background:#f0f6ff;border-color:#1877f2;}
+.m-fb svg{flex-shrink:0;}
+
+#modal-hrs-row,#modal-fee-row{display:none}
+#modal-hrs-row.visible,#modal-fee-row.visible{display:block}
+
+@media(max-width:640px){
+  .modal-inner{grid-template-columns:1fr;grid-template-rows:260px auto}
+  .modal-photo{min-height:260px}
+  .modal-body{padding:1.2rem 1.2rem .8rem}
+  .modal-map-embed{margin:0 1.2rem .5rem;height:140px;}
+  .modal-map-link{margin:0 1.2rem .5rem;}
+  .modal-acts{padding:0 1.2rem 1.2rem}
+}
 </style>
 </head>
 <body>
@@ -103,54 +213,54 @@ h1,h2,h3,.sec-title,.slide-content h1,.card-title,.footer-brand strong,.footer-c
 <!-- ===== HERO ===== -->
 <section class="hero" id="home" role="banner">
   <div class="slide s1 active">
-    <div class="slide-img" style="background-image:url('https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=1400&q=75')" role="img" aria-label="Beautiful mountain view of Laur"></div>
+    <div class="slide-img" style="background-image:url('https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=1400&q=75')" role="img" aria-label="Magandang tanawin ng Laur"></div>
     <div class="slide-overlay"></div>
     <div class="slide-content">
       <div class="slide-tag">Official Tourism Website</div>
-      <h1>Discover <em>Laur</em><br>Nueva Ecija</h1>
-      <p>Where nature, culture, and history meet — in the heart of Nueva Ecija, Philippines.</p>
+      <h1>Tuklasin ang <em>Laur</em><br>Nueva Ecija</h1>
+      <p>Dito nagtatagpo ang kalikasan, kultura, at kasaysayan — sa puso ng Nueva Ecija, Pilipinas.</p>
       <div class="slide-btns">
-        <a href="attractions.html" class="btn-yellow">Explore Attractions</a>
-        <a href="contact.html#directions" class="btn-ghost">How to Get There</a>
+        <a href="attractions.html" class="btn-yellow">I-Explore ang mga Attraction</a>
+        <a href="contact.html#directions" class="btn-ghost">Paano Pumunta</a>
       </div>
     </div>
   </div>
   <div class="slide s2">
-    <div class="slide-img" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1400&q=75')" role="img" aria-label="Lush forest landscape"></div>
+    <div class="slide-img" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1400&q=75')" role="img" aria-label="Sariwang kagubatan"></div>
     <div class="slide-overlay"></div>
     <div class="slide-content">
       <div class="slide-tag">Natural Attractions</div>
-      <h1>Breathtaking<br><em>Nature</em></h1>
-      <p>Explore forests, rivers, and stunning mountain views found only in Laur.</p>
+      <h1>Kamangha-manghang<br><em>Kalikasan</em></h1>
+      <p>Tuklasin ang mga kagubatan, ilog, at magandang tanawin ng bundok na makikita lamang sa Laur.</p>
       <div class="slide-btns">
-        <a href="attractions.html" class="btn-yellow">View Nature Spots</a>
-        <a href="about.html" class="btn-ghost">Learn More</a>
+        <a href="attractions.html" class="btn-yellow">Tingnan ang Nature Spots</a>
+        <a href="about.html" class="btn-ghost">Alamin Pa</a>
       </div>
     </div>
   </div>
   <div class="slide s3">
-    <div class="slide-img" style="background-image:url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=1400&q=75')" role="img" aria-label="Cultural heritage"></div>
+    <div class="slide-img" style="background-image:url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=1400&q=75')" role="img" aria-label="Mayamang kultura at pamana"></div>
     <div class="slide-overlay"></div>
     <div class="slide-content">
       <div class="slide-tag">Man-Made Attractions</div>
-      <h1>Rich <em>Culture</em><br>&amp; Heritage</h1>
-      <p>Experience historic sites, local traditions, and warm hospitality of the people of Laur.</p>
+      <h1>Mayamang <em>Kultura</em><br>at Pamana</h1>
+      <p>Maranasan ang mga makasaysayang lugar, lokal na tradisyon, at mainit na pagtanggap ng mga taga-Laur.</p>
       <div class="slide-btns">
-        <a href="attractions.html" class="btn-yellow">Explore Heritage</a>
-        <a href="contact.html" class="btn-ghost">Plan Your Trip</a>
+        <a href="attractions.html" class="btn-yellow">I-Explore ang Pamana</a>
+        <a href="contact.html" class="btn-ghost">Planuhin ang Biyahe</a>
       </div>
     </div>
   </div>
   <div class="slide s4">
-    <div class="slide-img" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1400&q=75')" role="img" aria-label="Peaceful river and farmland"></div>
+    <div class="slide-img" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1400&q=75')" role="img" aria-label="Mapayapang ilog at bukid"></div>
     <div class="slide-overlay"></div>
     <div class="slide-content">
       <div class="slide-tag">Stay &amp; Relax</div>
-      <h1>Your Perfect<br>Retreat in <em>Laur</em></h1>
-      <p>Find comfortable resorts, cozy inns, and friendly homestays for your stay.</p>
+      <h1>Ang Perpektong<br>Pahinga sa <em>Laur</em></h1>
+      <p>Makahanap ng komportableng resort, cozy na inn, at magiliw na homestay para sa iyong pananatili.</p>
       <div class="slide-btns">
-        <a href="visit.html#stay" class="btn-yellow">Find Accommodations</a>
-        <a href="contact.html#directions" class="btn-ghost">View Map</a>
+        <a href="visit.html#stay" class="btn-yellow">Hanapin ang Accommodation</a>
+        <a href="contact.html#directions" class="btn-ghost">Tingnan ang Mapa</a>
       </div>
     </div>
   </div>
@@ -167,10 +277,10 @@ h1,h2,h3,.sec-title,.slide-content h1,.card-title,.footer-brand strong,.footer-c
 
 <!-- ===== STATS BAR ===== -->
 <div class="stats-bar">
-  <div class="stat"><div class="stat-n">17</div><div class="stat-l">Barangays</div></div>
-  <div class="stat"><div class="stat-n" id="stat-attractions">13+</div><div class="stat-l">Attractions</div></div>
-  <div class="stat"><div class="stat-n" id="stat-stays">9+</div><div class="stat-l">Resorts &amp; Stays</div></div>
-  <div class="stat"><div class="stat-n">1.5hr</div><div class="stat-l">From Cabanatuan</div></div>
+  <div class="stat anim-block anim-scale delay-1"><div class="stat-n">17</div><div class="stat-l">Barangay</div></div>
+  <div class="stat anim-block anim-scale delay-2"><div class="stat-n" id="stat-attractions">13+</div><div class="stat-l">Attractions</div></div>
+  <div class="stat anim-block anim-scale delay-3"><div class="stat-n" id="stat-stays">9+</div><div class="stat-l">Resort at Accommodation</div></div>
+  <div class="stat anim-block anim-scale delay-4"><div class="stat-n">1.5hr</div><div class="stat-l">Mula Cabanatuan</div></div>
 </div>
 
 <!-- ===== BANNER STRIP ===== -->
@@ -179,88 +289,110 @@ h1,h2,h3,.sec-title,.slide-content h1,.card-title,.footer-brand strong,.footer-c
 <!-- ===== ABOUT ===== -->
 <section class="sec" id="about">
   <div class="about-grid">
-    <div class="about-img">
-      <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=700&q=75" alt="Beautiful landscape of Laur, Nueva Ecija" loading="lazy" width="700" height="300" style="width:100%;height:100%;object-fit:cover;">
+    <div class="about-img anim-block anim-left">
+      <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=700&q=75" alt="Magandang tanawin ng Laur, Nueva Ecija" loading="lazy" width="700" height="300" style="width:100%;height:100%;object-fit:cover;">
     </div>
     <div class="about-body">
-      <div class="eyebrow">About Laur</div>
-      <h2 class="sec-title">The Heart of <em>Nueva Ecija</em></h2>
-      <p>Laur is a first-class municipality in Nueva Ecija, Philippines — known for its rich natural landscapes, warm community, and deep cultural heritage at the foot of the Sierra Madre mountain range.</p>
-      <p>Whether you seek adventure in nature, a glimpse of local history, or simply a peaceful escape — Laur has something for every traveler.</p>
-      <a href="about.html" class="btn-outline" style="display:inline-block;margin-top:1.5rem">Read More About Laur</a>
+      <div class="eyebrow anim-block anim-up">Tungkol sa Laur</div>
+      <h2 class="sec-title anim-block anim-up delay-1">Tara sa Laur — The Heart of <em>Nueva Ecija</em></h2>
+      <p class="anim-block anim-up delay-2">Ang Laur ay isang first-class municipality sa Nueva Ecija na matatagpuan sa paanan ng Sierra Madre mountain range. Kilala ito sa likas na ganda ng kalikasan, mayamang kultura, at magiliw na komunidad.</p>
+      <p class="anim-block anim-up delay-3">Maraming pwedeng puntahan dito tulad ng nature attractions, local food spots, at iba pang lugar na nagpapakita ng tunay na ganda ng Laur. Inaanyayahan ka naming tuklasin at maranasan kung bakit espesyal ang bayan ng Laur.</p>
+      <a href="about.html" class="btn-outline anim-block anim-up delay-4" style="display:inline-block;margin-top:1.5rem">Basahin ang Buong Kwento ng Laur</a>
     </div>
   </div>
 </section>
+
+<!-- ===== SECTION DIVIDER ===== -->
+<div style="padding:48px 24px 0;max-width:1140px;margin:0 auto;"><hr class="sec-divider"></div>
 
 <!-- ===== FEATURED ATTRACTIONS ===== -->
 <section class="sec alt">
   <div class="sec-head">
-    <div class="eyebrow">Explore Laur</div>
-    <h2 class="sec-title">Featured <em>Attractions</em></h2>
-    <p class="sec-sub">A glimpse of what awaits you in Laur, Nueva Ecija.</p>
+    <div class="eyebrow anim-block anim-up">I-Explore ang Laur</div>
+    <h2 class="sec-title anim-block anim-up delay-1">Mga Piling <em>Attraction</em></h2>
+    <p class="sec-sub anim-block anim-up delay-2">Isang sulyap sa naghihintay sa iyo sa Laur, Nueva Ecija.</p>
   </div>
   <div class="grid3">
-    <!-- Natural attractions: no contact number, no hours/fee -->
-    <article class="card" onclick="openModal('Seminublan Falls','Natural Attraction','Brgy. San Fernando, Laur, Nueva Ecija','','','https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=800&q=80')">
+    <article class="card anim-block anim-fade delay-1" onclick="openModal('Seminublan Falls','Natural Attraction','Brgy. San Fernando, Laur, Nueva Ecija','','','https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=800&q=80','','15.595597,121.215297','Seminublan+Falls+Laur+Nueva+Ecija')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=400&q=75')"><span class="cbadge">Natural</span></div>
-      <div class="card-body"><div class="card-title">Seminublan Falls</div><div class="card-desc">A stunning waterfall in Brgy. San Fernando — one of Laur's most beautiful natural treasures.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. San Fernando</span><button class="view-btn">View</button></div>
+      <div class="card-body"><div class="card-title">Seminublan Falls</div><div class="card-desc">Isang kamangha-manghang talon sa Brgy. San Fernando — isa sa pinakamagandang natural na kayamanan ng Laur.</div></div>
+      <div class="card-foot">
+        <span class="card-loc"><img src="images/location.webp" alt="location"> Brgy. San Fernando</span>
+        <button class="view-btn">Tingnan</button>
+      </div>
     </article>
-    <article class="card" onclick="openModal('Hidden Falls','Natural Attraction','Brgy. San Fernando, Laur, Nueva Ecija','','','https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80')">
+    <article class="card anim-block anim-fade delay-2" onclick="openModal('Hidden Falls','Natural Attraction','Brgy. San Fernando, Laur, Nueva Ecija','','','https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80','','15.595597,121.215297','Hidden+Falls+Laur+Nueva+Ecija')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=75')"><span class="cbadge">Natural</span></div>
-      <div class="card-body"><div class="card-title">Hidden Falls</div><div class="card-desc">A hidden waterfall waiting deep within Brgy. San Fernando.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. San Marcos</span><button class="view-btn">View</button></div>
+      <div class="card-body"><div class="card-title">Hidden Falls</div><div class="card-desc">Isang nakatagong talon na naghihintay sa kaibuturan ng Brgy. San Fernando.</div></div>
+      <div class="card-foot">
+        <span class="card-loc"><img src="images/location.webp" alt="location"> Brgy. San Fernando</span>
+        <button class="view-btn">Tingnan</button>
+      </div>
     </article>
-    <!-- Man-made: contact number, no hours/fee -->
-    <article class="card" onclick="openModal('Casa Celestine','Private Resort','Brgy. Siclong, Laur, Nueva Ecija','','','https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80','09317275295')">
+    <article class="card anim-block anim-fade delay-3" onclick="openModal('Casa Celestine','Private Resort','Brgy. Siclong, Laur, Nueva Ecija','','','https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80','09317275295','15.570000,121.230000','Casa+Celestine+Siclong+Laur')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=75')"><span class="cbadge">Man-made</span></div>
-      <div class="card-body"><div class="card-title">Casa Celestine</div><div class="card-desc">A beautiful private resort in Brgy. Siclong — perfect for relaxation and events.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. Siclong</span><button class="view-btn">View</button></div>
+      <div class="card-body"><div class="card-title">Casa Celestine</div><div class="card-desc">Isang magandang private resort sa Brgy. Siclong — perpekto para sa pahinga at mga event.</div></div>
+      <div class="card-foot">
+        <span class="card-loc"><img src="images/location.webp" alt="location"> Brgy. Siclong</span>
+        <button class="view-btn">Tingnan</button>
+      </div>
     </article>
   </div>
-  <div style="text-align:center;margin-top:2.5rem">
-    <a href="attractions.html" class="btn-green">View All Attractions</a>
+  <div class="anim-block anim-up delay-4" style="text-align:center;margin-top:2.5rem">
+    <a href="attractions.html" class="btn-green">Tingnan Lahat ng Attraction</a>
   </div>
 </section>
+
+<!-- ===== SECTION DIVIDER ===== -->
+<div style="padding:8px 24px 0;max-width:1140px;margin:0 auto;"><hr class="sec-divider"></div>
 
 <!-- ===== WHERE TO STAY ===== -->
 <section class="sec">
   <div class="sec-head">
-    <div class="eyebrow">Accommodations</div>
-    <h2 class="sec-title">Where to <em>Stay</em></h2>
-    <p class="sec-sub">Comfortable resorts, inns, and homestays — waiting for you in Laur.</p>
+    <div class="eyebrow anim-block anim-up">Accommodation</div>
+    <h2 class="sec-title anim-block anim-up delay-1">Saan <em>Matutulog</em></h2>
+    <p class="sec-sub anim-block anim-up delay-2">Komportableng resort, inn, at homestay — naghihintay sa iyo sa Laur.</p>
   </div>
   <div class="grid3">
-    <article class="card" onclick="openModal('Sierran Resort','Resort','Brgy. Siclong, Laur, Nueva Ecija','','','https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80','09484172382')">
+    <article class="card anim-block anim-fade delay-1" onclick="openModal('Sierran Resort','Resort','Brgy. Siclong, Laur, Nueva Ecija','','','https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80','09484172382','15.574997,121.230000','Sierran+Resort+Siclong+Laur')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=75')"><span class="cbadge">Resort</span></div>
-      <div class="card-body"><div class="card-title">Sierran Resort</div><div class="card-desc">A relaxing resort in Brgy. Siclong with beautiful mountain views.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. Siclong</span><button class="view-btn">View</button></div>
+      <div class="card-body"><div class="card-title">Sierran Resort</div><div class="card-desc">Isang nakakarelax na resort sa Brgy. Siclong na may magandang tanawin ng bundok.</div></div>
+      <div class="card-foot">
+        <span class="card-loc"><img src="images/location.webp" alt="location"> Brgy. Siclong</span>
+        <button class="view-btn">Tingnan</button>
+      </div>
     </article>
-    <article class="card" onclick="openModal('Mountain View Resort','Resort','Brgy. Siclong, Laur, Nueva Ecija','','','https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80','09386293261')">
+    <article class="card anim-block anim-fade delay-2" onclick="openModal('Mountain View Resort','Resort','Brgy. Siclong, Laur, Nueva Ecija','','','https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80','09386293261','15.573000,121.232000','Mountain+View+Resort+Siclong+Laur')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=75')"><span class="cbadge">Inn</span></div>
-      <div class="card-body"><div class="card-title">Mountain View Resort</div><div class="card-desc">Enjoy stunning mountain views and great facilities in Brgy. Siclong.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. Siclong</span><button class="view-btn">View</button></div>
+      <div class="card-body"><div class="card-title">Mountain View Resort</div><div class="card-desc">Mag-enjoy ng magandang tanawin ng bundok at magagandang pasilidad sa Brgy. Siclong.</div></div>
+      <div class="card-foot">
+        <span class="card-loc"><img src="images/location.webp" alt="location"> Brgy. Siclong</span>
+        <button class="view-btn">Tingnan</button>
+      </div>
     </article>
-    <article class="card" onclick="openModal('Camila Farm Resort','Farm Resort','Brgy. Betania, Laur, Nueva Ecija','','','https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=800&q=80','09176388948')">
+    <article class="card anim-block anim-fade delay-3" onclick="openModal('Camila Farm Resort','Farm Resort','Brgy. Betania, Laur, Nueva Ecija','','','https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=800&q=80','09176388948','15.560000,121.250000','Camila+Farm+Resort+Betania+Laur')">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=400&q=75')"><span class="cbadge">Homestay</span></div>
-      <div class="card-body"><div class="card-title">Camila Farm Resort</div><div class="card-desc">Farm resort in Brgy. Betania — offering nature, rest, and fresh air.</div></div>
-      <div class="card-foot"><span class="card-loc">Brgy. Betania</span><button class="view-btn">View</button></div>
+      <div class="card-body"><div class="card-title">Camila Farm Resort</div><div class="card-desc">Farm resort sa Brgy. Betania — nag-aalok ng kalikasan, pahinga, at sariwang hangin.</div></div>
+      <div class="card-foot">
+        <span class="card-loc"><img src="images/location.webp" alt="location"> Brgy. Betania</span>
+        <button class="view-btn">Tingnan</button>
+      </div>
     </article>
   </div>
-  <div style="text-align:center;margin-top:2.5rem">
-    <a href="visit.html#stay" class="btn-green">View All Accommodations</a>
+  <div class="anim-block anim-up delay-4" style="text-align:center;margin-top:2.5rem">
+    <a href="visit.html#stay" class="btn-green">Tingnan Lahat ng Accommodation</a>
   </div>
 </section>
 
 <!-- ===== CONTACT STRIP ===== -->
 <section class="contact-strip">
   <div class="contact-strip-inner">
-    <div>
-      <h3>Ready to Visit Laur?</h3>
-      <p>Contact our tourism office — we'd love to help you plan your trip.</p>
+    <div class="anim-block anim-left">
+      <h3>Handa na Bang Bumisita sa Laur?</h3>
+      <p>Makipag-ugnayan sa aming tourism office — ikinatutuwa naming tulungan kang mag-plano ng biyahe.</p>
     </div>
-    <div class="contact-strip-btns">
-      <a href="https://www.facebook.com/profile.php?id=61580579025346" target="_blank" rel="noopener" class="btn-fb">Message on Facebook</a>
+    <div class="contact-strip-btns anim-block anim-right delay-1">
+      <a href="https://www.facebook.com/profile.php?id=61580579025346" target="_blank" rel="noopener" class="btn-fb">Message sa Facebook</a>
       <a href="contact.html" class="btn-yellow">Makipag-ugnayan</a>
     </div>
   </div>
@@ -274,8 +406,12 @@ h1,h2,h3,.sec-title,.slide-content h1,.card-title,.footer-brand strong,.footer-c
       <span>Official Laur Tourism Website</span>
       <p>Promoting the natural beauty, culture, and heritage of Laur, Nueva Ecija, Philippines.</p>
       <div class="social-row">
-        <a href="https://www.facebook.com/profile.php?id=61580579025346" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
-        <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+        <a href="https://www.facebook.com/profile.php?id=61580579025346" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="images/facebook.webp" alt="Facebook">
+        </a>
+        <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener" aria-label="YouTube">
+          <img src="images/youtube.webp" alt="YouTube">
+        </a>
       </div>
     </div>
     <nav class="footer-col">
@@ -307,20 +443,55 @@ h1,h2,h3,.sec-title,.slide-content h1,.card-title,.footer-brand strong,.footer-c
 <!-- ===== MODAL ===== -->
 <div class="modal-overlay" id="modal" onclick="closeModal(event)">
   <div class="modal-box">
+
+    <!-- HEADER: three-column flex — title perfectly centered, close button right -->
     <div class="modal-hd">
-      <div><h3 id="modal-title">—</h3><small id="modal-type">—</small></div>
-      <button class="modal-close" onclick="closeModalBtn()">&#x2715;</button>
+      <div class="modal-hd-left"></div>
+      <div class="modal-hd-center">
+        <h3 id="modal-title">—</h3>
+        <small id="modal-type">—</small>
+      </div>
+      <div class="modal-hd-right">
+        <button class="modal-close" onclick="closeModalBtn()">&#x2715;</button>
+      </div>
     </div>
+
     <div class="modal-inner">
-      <div class="modal-photo" id="modal-photo"></div>
+
+      <!-- LEFT: centered image -->
+      <div class="modal-photo" id="modal-photo-wrap">
+        <img id="modal-photo-img" src="" alt="Attraction photo">
+      </div>
+
       <div class="modal-right">
         <div class="modal-body">
           <div class="mrow"><div class="mlbl">Location</div><div class="mval" id="modal-loc">—</div></div>
-          <div class="mrow" id="modal-contact-row" style="display:none"><div class="mlbl">Contact Number</div><div class="mval" id="modal-contact">—</div></div>
+          <div class="mrow" id="modal-contact-row" style="display:none">
+            <div class="mlbl">Contact Number</div>
+            <div class="mval" id="modal-contact">—</div>
+          </div>
+          <div class="mrow" id="modal-hrs-row">
+            <div class="mlbl">Oras</div>
+            <div class="mval" id="modal-hrs">—</div>
+          </div>
+          <div class="mrow" id="modal-fee-row">
+            <div class="mlbl">Entrance Fee</div>
+            <div class="mval" id="modal-fee">—</div>
+          </div>
         </div>
-        <div class="modal-map">&#128205; View on Google Maps</div>
+        <div class="modal-map-embed">
+          <iframe id="modal-map-iframe" src="https://maps.google.com/maps?q=15.557711,121.226314&z=15&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Location Map"></iframe>
+        </div>
+        <a id="modal-map-link" class="modal-map-link" href="https://www.google.com/maps?q=15.557711,121.226314" target="_blank" rel="noopener">
+          <img src="images/location.webp" alt=""> Buksan sa Google Maps
+        </a>
         <div class="modal-acts">
-          <button class="m-fb" onclick="window.open('https://www.facebook.com/profile.php?id=61580579025346','_blank')">Facebook Page</button>
+          <button class="m-fb" onclick="window.open('https://www.facebook.com/profile.php?id=61580579025346','_blank')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#1877f2" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 12.073C24 5.406 18.627 0 12 0S0 5.406 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+            </svg>
+            View more sa FB Page
+          </button>
         </div>
       </div>
     </div>
@@ -330,30 +501,61 @@ h1,h2,h3,.sec-title,.slide-content h1,.card-title,.footer-brand strong,.footer-c
 <script src="data.js"></script>
 <script src="script.js"></script>
 <script>
-function openModal(title, type, loc, hrs, fee, img, contact) {
-  document.getElementById('modal-title').textContent = title;
-  document.getElementById('modal-type').textContent = type;
-  document.getElementById('modal-loc').textContent = loc;
-  document.getElementById('modal-photo').style.backgroundImage = "url('" + img + "')";
+/* =====================================================
+   MODAL
+   ===================================================== */
+function openModal(title,type,loc,hrs,fee,img,contact,coords,searchQuery){
+  document.getElementById('modal-title').textContent=title;
+  document.getElementById('modal-type').textContent=type;
+  document.getElementById('modal-loc').textContent=loc;
 
-  // Show contact number only if provided
-  var contactRow = document.getElementById('modal-contact-row');
-  if (contact) {
-    document.getElementById('modal-contact').textContent = contact;
-    contactRow.style.display = 'block';
-  } else {
-    contactRow.style.display = 'none';
-  }
+  var photoImg=document.getElementById('modal-photo-img');
+  photoImg.src=img;
+  photoImg.alt=title;
 
+  var contactRow=document.getElementById('modal-contact-row');
+  if(contact){document.getElementById('modal-contact').textContent=contact;contactRow.style.display='block';}
+  else{contactRow.style.display='none';}
+  var hrsRow=document.getElementById('modal-hrs-row');
+  if(hrs){document.getElementById('modal-hrs').textContent=hrs;hrsRow.style.display='block';}
+  else{hrsRow.style.display='none';}
+  var feeRow=document.getElementById('modal-fee-row');
+  if(fee){document.getElementById('modal-fee').textContent=fee;feeRow.style.display='block';}
+  else{feeRow.style.display='none';}
+  var latLng=coords||'15.557711,121.226314';
+  var zoom=coords?16:14;
+  document.getElementById('modal-map-iframe').src='https://maps.google.com/maps?q='+latLng+'&z='+zoom+'&t=m&output=embed&iwloc=near';
+  document.getElementById('modal-map-link').href='https://www.google.com/maps?q='+latLng;
   document.getElementById('modal').classList.add('open');
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflow='hidden';
 }
-function closeModalBtn() {
-  document.getElementById('modal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-function closeModal(e) { if (e.target.id === 'modal') closeModalBtn(); }
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalBtn(); });
+function closeModalBtn(){document.getElementById('modal').classList.remove('open');document.body.style.overflow='';}
+function closeModal(e){if(e.target.id==='modal')closeModalBtn();}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModalBtn();});
+
+/* =====================================================
+   SCROLL ANIMATIONS — IntersectionObserver
+   Fires once per element as it enters the viewport.
+   Stagger delays are set via .delay-N classes in HTML.
+   ===================================================== */
+(function(){
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        /* Trigger eyebrow underline line */
+        if(entry.target.classList.contains('eyebrow')){
+          entry.target.classList.add('line-visible');
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.14});
+
+  document.querySelectorAll('.anim-block').forEach(function(el){
+    observer.observe(el);
+  });
+})();
 </script>
 </body>
 </html>

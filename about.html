@@ -19,6 +19,18 @@
 h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Display',serif!important;letter-spacing:0;}
 .card-loc{display:flex;align-items:center;gap:5px;}
 .card-loc::before{content:'📍';font-size:13px;line-height:1;}
+
+/* ===== PAGULYAS FESTIVAL SECTION ===== */
+.festival-section{padding:80px 0;background:#fff;}
+.festival-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:360px 1fr;gap:64px;align-items:center;}
+.festival-portrait{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px;display:block;box-shadow:0 20px 60px rgba(0,0,0,0.15);}
+.festival-body .eyebrow{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#E8A838;margin-bottom:12px;}
+.festival-body h2{font-family:'Playfair Display',serif!important;font-size:clamp(28px,4vw,42px);color:#1a1a1a;margin:0 0 20px;line-height:1.2;}
+.festival-body h2 em{font-style:italic;color:#E8A838;}
+.festival-body p{font-size:16px;line-height:1.8;color:#444;margin-bottom:16px;}
+.festival-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;}
+.festival-tags span{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#7a5c10;border:1px solid #e0c46a;padding:6px 14px;}
+@media(max-width:800px){.festival-inner{grid-template-columns:1fr;gap:36px;}}
 </style>
 </head>
 <body>
@@ -95,6 +107,20 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
       <h2 class="sec-title">Welcome to <em>Laur</em></h2>
       <p>Laur is a first-class municipality in the province of Nueva Ecija, Philippines. It is situated at the eastern part of the province, bordering the Sierra Madre mountain range.</p>
       <p>Known for its agricultural heritage and rich natural landscapes, Laur is home to warm and welcoming communities that take pride in their local culture and traditions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGULYAS FESTIVAL ===== -->
+<section class="festival-section" id="pagulyas">
+  <div class="festival-inner">
+    <img src="images/pagulyas.webp" alt="Pagulyas Festival, Laur Nueva Ecija" class="festival-portrait" loading="lazy">
+    <div class="festival-body">
+      <div class="eyebrow">Annual Celebration</div>
+      <h2>Ang <em>Pagulyas Festival</em></h2>
+      <p>Ang Pagulyas Festival ay isa sa mga pangunahing kaganapan sa turismo ng Laur na dinarayo ng mga lokal at bisita mula sa iba't ibang lugar. Ang pangalang Pagulyas ay nagmula sa pinagsamang salita na Pa (palay), Gul (gulay), at Yas (sibuyas), na sumasagisag sa pangunahing ani ng bayan. Tampok dito ang makukulay na parada, masasarap na pagkain, at ang mainit na pagtanggap ng mga taga-Laur. Nakatutulong ito sa pagpapalago ng turismo at pagpapakilala ng mayamang kulturang agrikultural ng lugar.</p>
+      <p>Isa sa pinakaaabangan ang street dance competition, kung saan ang mga kalahok mula sa paaralan at barangay ay nagsusuot ng makukulay na kasuotan at nagpapakita ng masiglang sayaw sa kalsada.</p>
+
     </div>
   </div>
 </section>
