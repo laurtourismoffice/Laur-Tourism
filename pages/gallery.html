@@ -11,28 +11,74 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../assets/css/style.css">
 <style>
 *,body{font-family:'DM Sans',sans-serif;}
 .nav-logo-img{width:44px;height:44px;border-radius:50%;object-fit:cover;}
-h1,h2,h3,.sec-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Display',serif!important;}
+.nav-brand strong,.nav-brand span,.nav-links a,.dropdown-menu a,.mobile-links a,.mobile-fb{font-family:'DM Sans',sans-serif;}
+h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Display',serif!important;letter-spacing:0;}
+.card-loc{display:flex;align-items:center;gap:5px;}
+.card-loc img{width:13px;height:13px;object-fit:contain;flex-shrink:0;}
+
+/* ===== SOCIAL ICONS (footer) ===== */
 .social-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;overflow:hidden;background:#f0f0f0;transition:opacity .2s;}
 .social-btn:hover{opacity:.8;}
 .social-btn img{width:22px;height:22px;object-fit:contain;display:block;}
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-@keyframes lbIn{from{opacity:0}to{opacity:1}}
-@keyframes imgPop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
-.anim-block{opacity:0;}
-.anim-up.in-view{animation:fadeUp .65s both cubic-bezier(.22,.68,0,1.05);}
-.anim-fade.in-view{animation:fadeIn .65s both cubic-bezier(.22,.68,0,1.05);}
-.delay-1{animation-delay:80ms!important;}.delay-2{animation-delay:160ms!important;}
-.delay-3{animation-delay:240ms!important;}.delay-4{animation-delay:320ms!important;}
+/* =====================================================
+   SCROLL / ENTRANCE ANIMATIONS
+   ===================================================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes lbIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes imgPop { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
 
-.eyebrow{position:relative;display:inline-block;}
-.eyebrow::after{content:'';position:absolute;left:0;bottom:-3px;width:100%;height:1.5px;background:linear-gradient(90deg,#2D9158,#8BC83A);transform:scaleX(0);transform-origin:left;transition:transform .55s ease .25s;}
-.eyebrow.line-visible::after{transform:scaleX(1);}
+.anim-block { opacity: 0; }
+
+.anim-up.in-view    { animation: fadeUp   .65s both cubic-bezier(.22,.68,0,1.05); }
+.anim-fade.in-view  { animation: fadeIn   .65s both cubic-bezier(.22,.68,0,1.05); }
+.anim-left.in-view  { animation: slideLeft  .7s both cubic-bezier(.22,.68,0,1.05); }
+.anim-right.in-view { animation: slideRight .7s both cubic-bezier(.22,.68,0,1.05); }
+.anim-scale.in-view { animation: scaleIn  .55s both cubic-bezier(.22,.68,0,1.05); }
+
+.delay-1 { animation-delay:  80ms !important; }
+.delay-2 { animation-delay: 160ms !important; }
+.delay-3 { animation-delay: 240ms !important; }
+.delay-4 { animation-delay: 320ms !important; }
+.delay-5 { animation-delay: 400ms !important; }
+.delay-6 { animation-delay: 480ms !important; }
+
+/* Eyebrow underline accent */
+.eyebrow { position: relative; display: inline-block; }
+.eyebrow::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -3px;
+  width: 100%; height: 1.5px;
+  background: linear-gradient(90deg, #2D9158, #8BC83A);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .55s ease .25s;
+}
+.eyebrow.line-visible::after { transform: scaleX(1); }
 
 /* ── GALLERY GRID ── */
 .gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:1.5rem;}
@@ -63,14 +109,10 @@ h1,h2,h3,.sec-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Di
 
 /* image stage */
 .lb-stage{flex:1;display:flex;align-items:center;justify-content:center;width:100%;padding:70px 80px;position:relative;}
-/* photo wrapper — holds image + overlay text */
 .lb-photo-wrap{position:relative;width:100%;max-width:900px;height:calc(100vh - 180px);border-radius:12px;overflow:hidden;animation:imgPop .3s ease;}
 .lb-photo-div{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#0a2a14;transition:background-image .05s;}
-/* gradient scrim for text legibility */
 .lb-photo-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(4,18,10,.82) 0%,rgba(4,18,10,.18) 45%,transparent 70%);border-radius:12px;pointer-events:none;}
-/* overlay text on image */
 .lb-img-text{position:absolute;bottom:0;left:0;right:0;z-index:5;padding:28px 28px 24px;animation:fadeUp .35s ease both;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 .lb-img-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(139,200,58,.22);border:1px solid rgba(139,200,58,.45);color:#a8e060;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:50px;margin-bottom:10px;font-weight:500;}
 .lb-img-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;line-height:1.2;margin-bottom:6px;}
 .lb-img-desc{font-size:13px;color:rgba(255,255,255,.62);line-height:1.6;max-width:480px;}
@@ -112,14 +154,14 @@ h1,h2,h3,.sec-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Di
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ===== NAV ===== -->
 <nav class="nav" id="navbar">
   <div class="nav-logo">
-    <img src="images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img">
+    <img src="../assets/images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img">
     <div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija · Philippines</span></div>
   </div>
   <div class="nav-links">
-    <a href="index.html">Home</a>
+    <a href="../index.html">Home</a>
     <a href="about.html">About</a>
     <div class="dropdown">
       <a href="attractions.html">I-Explore &#9660;</a>
@@ -142,14 +184,17 @@ h1,h2,h3,.sec-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Di
   <button class="hamburger" onclick="toggleMobile()" id="ham"><span></span><span></span><span></span></button>
 </nav>
 
-<!-- MOBILE MENU -->
+<!-- ===== MOBILE MENU ===== -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-head">
-    <div class="nav-logo"><img src="images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img"><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div></div>
+    <div class="nav-logo">
+      <img src="../assets/images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img">
+      <div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div>
+    </div>
     <button class="mobile-menu-close" onclick="toggleMobile()">&#x2715;</button>
   </div>
   <div class="mobile-links">
-    <a href="index.html">Home</a>
+    <a href="../index.html">Home</a>
     <a href="about.html">About Laur</a>
     <a href="attractions.html">Attractions</a>
     <a href="visit.html">Where to Stay / Eat / Shop</a>
@@ -159,7 +204,7 @@ h1,h2,h3,.sec-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Di
   <a href="https://www.facebook.com/profile.php?id=61580579025346" class="mobile-fb" target="_blank" rel="noopener">Find us on Facebook</a>
 </div>
 
-<!-- PAGE HERO -->
+<!-- ===== PAGE HERO ===== -->
 <div class="page-hero">
   <div class="page-hero-img" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1400&q=75')"></div>
   <div class="page-hero-overlay"></div>
@@ -170,9 +215,10 @@ h1,h2,h3,.sec-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Di
   </div>
 </div>
 
+<!-- ===== BANNER STRIP ===== -->
 <div class="banner-strip"></div>
 
-<!-- GALLERY SECTION -->
+<!-- ===== GALLERY SECTION ===== -->
 <section class="sec alt">
   <div class="sec-head">
     <div class="eyebrow anim-block anim-up">Gallery</div>
@@ -240,7 +286,7 @@ h1,h2,h3,.sec-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Di
   </nav>
 </section>
 
-<!-- ── LIGHTBOX ── -->
+<!-- ===== LIGHTBOX ===== -->
 <div class="lb" id="lb" role="dialog" aria-modal="true">
   <!-- Top bar -->
   <div class="lb-top">
@@ -272,7 +318,7 @@ h1,h2,h3,.sec-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Di
   </div>
 </div>
 
-<!-- FOOTER -->
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="footer-top">
     <div class="footer-brand">
@@ -280,8 +326,12 @@ h1,h2,h3,.sec-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Di
       <span>Official Laur Tourism Website</span>
       <p>Promoting the natural beauty, culture, and heritage of Laur, Nueva Ecija, Philippines.</p>
       <div class="social-row">
-        <a href="https://www.facebook.com/profile.php?id=61580579025346" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook"><img src="images/facebook.webp" alt="Facebook"></a>
-        <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener" aria-label="YouTube"><img src="images/youtube.webp" alt="YouTube"></a>
+        <a href="https://www.facebook.com/profile.php?id=61580579025346" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="../assets/images/socmed/facebook.webp" alt="Facebook">
+        </a>
+        <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener" aria-label="YouTube">
+          <img src="../assets/images/socmed/youtube.webp" alt="YouTube">
+        </a>
       </div>
     </div>
     <nav class="footer-col">
@@ -310,7 +360,7 @@ h1,h2,h3,.sec-title,.footer-brand strong,.footer-col h4{font-family:'Playfair Di
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="../assets/js/script.js"></script>
 <script>
 // Scroll animations
 (function(){
@@ -380,7 +430,6 @@ function updateLb(){
   document.getElementById('lbBadge').textContent = el.dataset.catLabel || '';
   document.getElementById('lbTitle').textContent = el.dataset.caption || '';
   document.getElementById('lbDesc').textContent = el.dataset.desc || '';
-  // re-trigger text animation
   var txt = document.getElementById('lbImgText');
   txt.style.animation='none'; void txt.offsetWidth; txt.style.animation='';
   var thumbs = document.querySelectorAll('.lb-thumb');

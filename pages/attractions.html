@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../assets/css/style.css">
 <style>
 *,body{font-family:'DM Sans',sans-serif;}
 .nav-logo-img{width:44px;height:44px;border-radius:50%;object-fit:cover;}
@@ -121,11 +121,11 @@ h1,h2,h3,.sec-title,.slide-content h1,.footer-brand strong,.footer-col h4{font-f
 <!-- NAV -->
 <nav class="nav" id="navbar">
   <div class="nav-logo">
-    <img src="images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img">
+    <img src="../assets/images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img">
     <div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija · Philippines</span></div>
   </div>
   <div class="nav-links">
-    <a href="index.html">Home</a>
+    <a href="../index.html">Home</a>
     <a href="about.html">About</a>
     <div class="dropdown">
       <a href="attractions.html" class="active">I-Explore &#9660;</a>
@@ -151,11 +151,14 @@ h1,h2,h3,.sec-title,.slide-content h1,.footer-brand strong,.footer-col h4{font-f
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-head">
-    <div class="nav-logo"><img src="images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img"><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div></div>
+    <div class="nav-logo">
+      <img src="../assets/images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img">
+      <div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div>
+    </div>
     <button class="mobile-menu-close" onclick="toggleMobile()">&#x2715;</button>
   </div>
   <div class="mobile-links">
-    <a href="index.html">Home</a>
+    <a href="../index.html">Home</a>
     <a href="about.html">About Laur</a>
     <a href="attractions.html">Attractions</a>
     <a href="visit.html">Where to Stay / Eat / Shop</a>
@@ -367,8 +370,12 @@ h1,h2,h3,.sec-title,.slide-content h1,.footer-brand strong,.footer-col h4{font-f
       <span>Official Laur Tourism Website</span>
       <p>Promoting the natural beauty, culture, and heritage of Laur, Nueva Ecija, Philippines.</p>
       <div class="social-row">
-        <a href="https://www.facebook.com/profile.php?id=61580579025346" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook"><img src="images/facebook.webp" alt="Facebook"></a>
-        <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener" aria-label="YouTube"><img src="images/youtube.webp" alt="YouTube"></a>
+        <a href="https://www.facebook.com/profile.php?id=61580579025346" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="../assets/images/socmed/facebook.webp" alt="Facebook">
+        </a>
+        <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener" aria-label="YouTube">
+          <img src="../assets/images/socmed/youtube.webp" alt="YouTube">
+        </a>
       </div>
     </div>
     <nav class="footer-col"><h4>Explore</h4><a href="attractions.html">Attractions</a><a href="visit.html#stay">Where to Stay</a><a href="visit.html#eat">Where to Eat</a><a href="visit.html#shops">Shops &amp; Stores</a></nav>
@@ -402,7 +409,7 @@ h1,h2,h3,.sec-title,.slide-content h1,.footer-brand strong,.footer-col h4{font-f
           <iframe id="modal-map-iframe" src="https://maps.google.com/maps?q=15.557711,121.226314&z=15&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Location Map"></iframe>
         </div>
         <a id="modal-map-link" class="modal-map-link" href="https://www.google.com/maps?q=15.557711,121.226314" target="_blank" rel="noopener">
-          <img src="images/location.webp" alt=""> Buksan sa Google Maps
+          <img src="assets/images/location.webp" alt=""> Buksan sa Google Maps
         </a>
         <div class="modal-acts">
           <button class="m-fb" onclick="window.open('https://www.facebook.com/profile.php?id=61580579025346','_blank')">
@@ -415,8 +422,7 @@ h1,h2,h3,.sec-title,.slide-content h1,.footer-brand strong,.footer-col h4{font-f
   </div>
 </div>
 
-<script src="data.js"></script>
-<script src="script.js"></script>
+<script src="assets/js/script.js"></script>
 <script>
 /* SHOW MORE */
 function showMore(section) {
@@ -466,7 +472,6 @@ function filterCards(btn, section, cat) {
       card.style.display = 'none';
     }
   });
-  /* also show/hide the see-more wrapper */
   var moreWrap = document.getElementById(section + '-more-wrap');
   if (moreWrap) {
     var hasHidden = grid.querySelectorAll('.' + section + '-hidden').length > 0;
@@ -475,16 +480,18 @@ function filterCards(btn, section, cat) {
 }
 
 /* ANIMATIONS */
-var observer = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(e.isIntersecting){
-      e.target.classList.add('in-view');
-      if(e.target.classList.contains('eyebrow'))e.target.classList.add('line-visible');
-      observer.unobserve(e.target);
-    }
-  });
-},{threshold:0.14});
-document.querySelectorAll('.anim-block').forEach(function(el){observer.observe(el);});
+(function(){
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('in-view');
+        if(e.target.classList.contains('eyebrow')) e.target.classList.add('line-visible');
+        observer.unobserve(e.target);
+      }
+    });
+  },{threshold:0.14});
+  document.querySelectorAll('.anim-block').forEach(function(el){observer.observe(el);});
+})();
 </script>
 </body>
 </html>

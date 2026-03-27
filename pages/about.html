@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../assets/css/style.css">
 <style>
 *,body{font-family:'DM Sans',sans-serif;}
 .nav-logo-img{width:44px;height:44px;border-radius:50%;object-fit:cover;}
@@ -99,11 +99,11 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
 <!-- ===== NAV ===== -->
 <nav class="nav" id="navbar">
   <div class="nav-logo">
-    <img src="images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img">
+    <img src="../assets/images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img">
     <div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija · Philippines</span></div>
   </div>
   <div class="nav-links">
-    <a href="index.html">Home</a>
+    <a href="../index.html">Home</a>
     <a href="about.html" class="active">About</a>
     <div class="dropdown">
       <a href="attractions.html">I-Explore &#9660;</a>
@@ -129,11 +129,14 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
 <!-- ===== MOBILE MENU ===== -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-head">
-    <div class="nav-logo"><img src="images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img"><div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div></div>
+    <div class="nav-logo">
+      <img src="../assets/images/tourism-logo.png" alt="Laur Tourism Logo" class="nav-logo-img">
+      <div class="nav-brand"><strong>Laur Tourism</strong><span>Nueva Ecija</span></div>
+    </div>
     <button class="mobile-menu-close" onclick="toggleMobile()">&#x2715;</button>
   </div>
   <div class="mobile-links">
-    <a href="index.html">Home</a>
+    <a href="../index.html">Home</a>
     <a href="about.html">About Laur</a>
     <a href="attractions.html">Attractions</a>
     <a href="visit.html">Where to Stay / Eat / Shop</a>
@@ -178,7 +181,7 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
 <!-- ===== PAGULYAS FESTIVAL ===== -->
 <section class="festival-section" id="pagulyas">
   <div class="festival-inner">
-    <img src="images/pagulyas.webp" alt="Pagulyas Festival, Laur Nueva Ecija" class="festival-portrait anim-block anim-left" loading="lazy">
+    <img src="../assets/images/pagulyas.webp" alt="Pagulyas Festival, Laur Nueva Ecija" class="festival-portrait anim-block anim-left" loading="lazy">
     <div class="festival-body">
       <div class="eyebrow anim-block anim-up">Annual Celebration</div>
       <h2 class="anim-block anim-up delay-1">Ang <em>Pagulyas Festival</em></h2>
@@ -230,10 +233,10 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
       <p>Promoting the natural beauty, culture, and heritage of Laur, Nueva Ecija, Philippines.</p>
       <div class="social-row">
         <a href="https://www.facebook.com/profile.php?id=61580579025346" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">
-          <img src="images/facebook.webp" alt="Facebook">
+          <img src="../assets/images/socmed/facebook.webp" alt="Facebook">
         </a>
         <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener" aria-label="YouTube">
-          <img src="images/youtube.webp" alt="YouTube">
+          <img src="../assets/images/socmed/youtube.webp" alt="YouTube">
         </a>
       </div>
     </div>
@@ -263,11 +266,8 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="assets/js/script.js"></script>
 <script>
-/* =====================================================
-   SCROLL ANIMATIONS — IntersectionObserver
-   ===================================================== */
 (function(){
   var observer = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
