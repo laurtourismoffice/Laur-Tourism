@@ -12,7 +12,7 @@ const attractions = [
     modalImage: "../assets/images/NATURAL/SIMINUBLAN.webp",
     type: "Natural Attraction",
     contact: "",
-    coordinates: "15.608772909420631, 121.23988256136721",
+    coordinates: "15.609612781590693, 121.244807335357",
     fbLink: "https://www.facebook.com/share/r/1HwmxC7zQ6/"
   },
   {
@@ -24,7 +24,7 @@ const attractions = [
     modalImage: "../assets/images/NATURAL/BATO.webp",
     type: "Natural Attraction",
     contact: "",
-    coordinates: "15.553500,121.228886",
+    coordinates: "15.557595762302656, 121.22593021945178",
     fbLink: "https://www.facebook.com/share/r/1CLKMXAqni/"
   },
   {
@@ -36,7 +36,7 @@ const attractions = [
     modalImage: "../assets/images/NATURAL/HIDDEN.webp",
     type: "Natural Attraction",
     contact: "",
-    coordinates: "15.595597,121.215297",
+    coordinates: "15.608927955272971, 121.23989334228568",
     fbLink: "https://www.facebook.com/share/v/18ANsuY9rB/"
   },
   // Man-made Attractions
@@ -49,7 +49,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/CASA.webp",
     type: "Private Resort",
     contact: "09317275295",
-    coordinates: "15.570000,121.230000",
+    coordinates: "15.582662333386175, 121.2238891404082",
     fbLink: "https://www.facebook.com/profile.php?id=61560499366014"
   },
   {
@@ -61,7 +61,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/GREEN.webp",
     type: "Private Pool Resort",
     contact: "09126147056",
-    coordinates: "15.567950197427495, 121.14518685609903",
+    coordinates: "15.568110583807051, 121.1451354521103",
     fbLink: "https://www.facebook.com/greenhouseprivatepool"
   },
   {
@@ -73,7 +73,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/SUNSET.webp",
     type: "Nature Camp",
     contact: "",
-    coordinates: "15.580000,121.219997",
+    coordinates: "15.465950561135436, 121.12669309946334",
     fbLink: "https://www.facebook.com/SunsetPeakNatureCamp"
   },
   {
@@ -85,7 +85,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/SIERRAN.webp",
     type: "Resort",
     contact: "09484172382",
-    coordinates: "15.574997,121.230000",
+    coordinates: "15.583332117802039, 121.22522119622953",
     fbLink: "https://www.facebook.com/sierranminiresort"
   },
   {
@@ -97,7 +97,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/MVR.webp",
     type: "Resort",
     contact: "09386293261",
-    coordinates: "15.573000,121.231997",
+    coordinates: "15.588244444444445, 121.22548055555556",
     fbLink: "https://www.facebook.com/profile.php?id=100094369557902"
   },
   {
@@ -109,7 +109,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/CAMILLA.webp",
     type: "Farm Resort",
     contact: "09176388948",
-    coordinates: "15.560000,121.250000",
+    coordinates: "15.60018611111111, 121.1645888888889",
     fbLink: "https://www.facebook.com/camilafarmresort"
   },
   {
@@ -121,7 +121,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/FOUR.webp",
     type: "Private Resort",
     contact: "09199996710",
-    coordinates: "15.571997,121.231000",
+    coordinates: "15.580772222222222, 121.22316111111111",
     fbLink: "https://www.facebook.com/profile.php?id=100086448053905"
   },
   {
@@ -133,7 +133,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/LELO.webp",
     type: "Mountain Resort",
     contact: "09171446213",
-    coordinates: "15.550000,121.209997",
+    coordinates: "15.527483333333334, 121.15571666666668",
     fbLink: "https://www.facebook.com/lelosmountainresort"
   },
   {
@@ -145,7 +145,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/CLARENG.webp",
     type: "Farm Resort",
     contact: "09105493608",
-    coordinates: "15.570000,121.260000",
+    coordinates: "15.540275, 121.15361944444444",
     fbLink: "https://www.facebook.com/profile.php?id=61559128866365"
   }
 ];
@@ -160,7 +160,7 @@ const stays = [
     modalImage: "../assets/images/STAY/CASA.webp",
     type: "Private Resort",
     contact: "09317275295",
-    coordinates: "15.570000,121.230000",
+    coordinates: "15.582662333386175, 121.2238891404082",
     fbLink: "https://www.facebook.com/profile.php?id=61560499366014"
   },
   {
@@ -172,7 +172,7 @@ const stays = [
     modalImage: "../assets/images/STAY/FOUR.webp",
     type: "Private Pool Resort",
     contact: "09126147056",
-    coordinates: "15.564997,121.240000",
+    coordinates: "15.568110583807051, 121.1451354521103",
     fbLink: "https://www.facebook.com/greenhouseprivatepool"
   },
   {
@@ -184,7 +184,7 @@ const stays = [
     modalImage: "../assets/images/STAY/SUNSET.webp",
     type: "Nature Camp",
     contact: "",
-    coordinates: "15.580000,121.219997",
+    coordinates: "15.465950561135436, 121.12669309946334",
     fbLink: "https://www.facebook.com/SunsetPeakNatureCamp"
   },
   {
@@ -196,7 +196,7 @@ const stays = [
     modalImage: "../assets/images/STAY/SIERRAN.webp",
     type: "Resort",
     contact: "09484172382",
-    coordinates: "15.574997,121.230000",
+    coordinates: "15.583332117802039, 121.22522119622953",
     fbLink: "https://www.facebook.com/sierranminiresort"
   },
   {
@@ -208,7 +208,7 @@ const stays = [
     modalImage: "../assets/images/STAY/MVR.webp",
     type: "Resort",
     contact: "09386293261",
-    coordinates: "15.573000,121.231997",
+    coordinates: "15.588244444444445, 121.22548055555556",
     fbLink: "https://www.facebook.com/profile.php?id=100094369557902"
   },
   {
@@ -220,7 +220,7 @@ const stays = [
     modalImage: "../assets/images/STAY/CAMILLA.webp",
     type: "Farm Resort",
     contact: "09176388948",
-    coordinates: "15.560000,121.250000",
+    coordinates: "15.60018611111111, 121.1645888888889",
     fbLink: "https://www.facebook.com/camilafarmresort"
   },
   {
@@ -232,7 +232,7 @@ const stays = [
     modalImage: "../assets/images/STAY/FOUR.webp",
     type: "Private Resort",
     contact: "09199996710",
-    coordinates: "15.571997,121.231000",
+    coordinates: "15.580772222222222, 121.22316111111111",
     fbLink: "https://www.facebook.com/profile.php?id=100086448053905"
   },
   {
@@ -244,7 +244,7 @@ const stays = [
     modalImage: "../assets/images/STAY/LELO.webp",
     type: "Mountain Resort",
     contact: "09171446213",
-    coordinates: "15.550000,121.209997",
+    coordinates: "15.527483333333334, 121.15571666666668",
     fbLink: "https://www.facebook.com/lelosmountainresort"
   },
   {
@@ -256,7 +256,7 @@ const stays = [
     modalImage: "../assets/images/STAY/CLARENG.webp",
     type: "Farm Resort",
     contact: "09105493608",
-    coordinates: "15.570000,121.260000",
+    coordinates: "15.540275, 121.15361944444444",
     fbLink: "https://www.facebook.com/profile.php?id=61559128866365"
   }
 ];

@@ -148,7 +148,7 @@ h1,h2,h3,.sec-title,.slide-content h1,.footer-brand strong,.footer-col h4{font-f
     <div class="slide-content">
       <div class="slide-tag">Natural Attractions</div>
       <h1>Kamangha-manghang<br><em>Kalikasan</em></h1>
-      <p>Tuklasin ang mga kagubatan, ilog, at magandang tanawin ng bundok na makikita lamang sa Laur.</p>
+      <p>Tuklasin ang mga berdeng tanawin at mga agos sa ilog na makikita lamang sa Laur.</p>
       <div class="slide-btns">
         <a href="pages/attractions.html" class="btn-yellow">See Nature Spots</a>
         <a href="pages/about.html" class="btn-ghost">Learn More</a>
@@ -195,9 +195,9 @@ h1,h2,h3,.sec-title,.slide-content h1,.footer-brand strong,.footer-col h4{font-f
 <!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stat anim-block anim-scale delay-1"><div class="stat-n">17</div><div class="stat-l">Barangay</div></div>
-  <div class="stat anim-block anim-scale delay-2"><div class="stat-n">13+</div><div class="stat-l">Attractions</div></div>
-  <div class="stat anim-block anim-scale delay-3"><div class="stat-n">9+</div><div class="stat-l">Resort at Accommodation</div></div>
-  <div class="stat anim-block anim-scale delay-4"><div class="stat-n">1.5hr</div><div class="stat-l">Mula Cabanatuan</div></div>
+  <div class="stat anim-block anim-scale delay-2"><div class="stat-n">—</div><div class="stat-l">Attractions</div></div>
+  <div class="stat anim-block anim-scale delay-3"><div class="stat-n">—</div><div class="stat-l">Resort at Accommodation</div></div>
+  <div class="stat anim-block anim-scale delay-4"><div class="stat-n">—</div><div class="stat-l">Mula Cabanatuan</div></div>
 </div>
 
 <div class="banner-strip"></div>
@@ -227,39 +227,8 @@ h1,h2,h3,.sec-title,.slide-content h1,.footer-brand strong,.footer-col h4{font-f
     <h2 class="sec-title anim-block anim-up delay-1">Mga Piling <em>Attraction</em></h2>
     <p class="sec-sub anim-block anim-up delay-2">Isang sulyap sa naghihintay sa iyo sa Laur, Nueva Ecija.</p>
   </div>
-  <div class="grid3">
-    <article class="card anim-block anim-fade delay-1" onclick="openModal('Seminublan Falls','Natural Attraction','Brgy. San Fernando, Laur, Nueva Ecija','','','assets/images/NATURAL/SIMINUBLAN.webp','','15.595597,121.215297')">
-      <div class="card-img" style="background-image:url('assets/images/NATURAL/SIMINUBLAN.webp')"></div>
-      <div class="card-overlay">
-        <div class="card-title">Seminublan Falls</div>
-        <div class="card-desc">Kamangha-manghang talon sa kaibuturan ng Brgy. San Fernando.</div>
-        <div class="card-pills"><span class="cpill green">Natural</span><span class="cpill">Brgy. San Fernando</span></div>
-      </div>
-    </article>
-    <article class="card anim-block anim-fade delay-2" onclick="openModal('Hidden Falls','Natural Attraction','Brgy. San Fernando, Laur, Nueva Ecija','','','assets/images/NATURAL/HIDDEN.webp','','15.595597,121.215297')">
-      <div class="card-img" style="background-image:url('assets/images/NATURAL/HIDDEN.webp')"></div>
-      <div class="card-overlay">
-        <div class="card-title">Hidden Falls</div>
-        <div class="card-desc">Nakatagong talon na naghihintay sa kaibuturan ng Brgy. San Fernando.</div>
-        <div class="card-pills"><span class="cpill green">Natural</span><span class="cpill">Brgy. San Fernando</span></div>
-      </div>
-    </article>
-    <article class="card anim-block anim-fade delay-3" onclick="openModal('Casa Celestine','Private Resort','Brgy. Siclong, Laur, Nueva Ecija','','','assets/images/STAY/CASA.webp','09317275295','15.570000,121.230000')">
-      <div class="card-img" style="background-image:url('assets/images/STAY/CASA.webp')"></div>
-      <div class="card-overlay">
-        <div class="card-title">Casa Celestine</div>
-        <div class="card-desc">Magandang private resort sa Brgy. Siclong para sa pahinga at mga event.</div>
-        <div class="card-pills"><span class="cpill green">Man-made</span><span class="cpill">Brgy. Siclong</span></div>
-      </div>
-    </article>
-    <article class="card anim-block anim-fade delay-4" onclick="openModal('Sierra Madre Range','Natural Attraction','Laur, Nueva Ecija','','','assets/images/NATURAL/BATO.webp','','15.557711,121.226314')">
-      <div class="card-img" style="background-image:url('assets/images/NATURAL/BATO.webp')"></div>
-      <div class="card-overlay">
-        <div class="card-title">Bato Ferry</div>
-        <div class="card-desc">Kahanga-hangang malaking bato sa gitna ng ilog.</div>
-        <div class="card-pills"><span class="cpill green">Natural</span><span class="cpill">Brgy. San Felipe</span></div>
-      </div>
-    </article>
+  <div class="grid3" id="attr-grid">
+    <!-- Populated from attractions[] in data.js -->
   </div>
   <div class="anim-block anim-up delay-4" style="text-align:center;margin-top:2.5rem">
     <a href="pages/attractions.html" class="btn-green">Tingnan Lahat ng Attraction</a>
@@ -275,39 +244,8 @@ h1,h2,h3,.sec-title,.slide-content h1,.footer-brand strong,.footer-col h4{font-f
     <h2 class="sec-title anim-block anim-up delay-1">Saan <em>Matutulog</em></h2>
     <p class="sec-sub anim-block anim-up delay-2">Komportableng resort, inn, at homestay — naghihintay sa iyo sa Laur.</p>
   </div>
-  <div class="grid3">
-    <article class="card anim-block anim-fade delay-1" onclick="openModal('Sierran Resort','Resort','Brgy. Siclong, Laur, Nueva Ecija','','','assets/images/STAY/SIERRAN.webp','09484172382','15.574997,121.230000')">
-      <div class="card-img" style="background-image:url('assets/images/STAY/SIERRAN.webp')"></div>
-      <div class="card-overlay">
-        <div class="card-title">Sierran Resort</div>
-        <div class="card-desc">Nakakarelax na resort na may magandang tanawin ng bundok.</div>
-        <div class="card-pills"><span class="cpill green">Resort</span><span class="cpill">Brgy. Siclong</span></div>
-      </div>
-    </article>
-    <article class="card anim-block anim-fade delay-2" onclick="openModal('Mountain View Resort','Resort','Brgy. Siclong, Laur, Nueva Ecija','','','assets/images/STAY/MVR.webp','09386293261','15.573000,121.232000')">
-      <div class="card-img" style="background-image:url('assets/images/STAY/MVR.webp')"></div>
-      <div class="card-overlay">
-        <div class="card-title">Mountain View Resort</div>
-        <div class="card-desc">I-enjoy ang magandang tanawin ng bundok at magagandang pasilidad.</div>
-        <div class="card-pills"><span class="cpill green">Inn</span><span class="cpill">Brgy. Siclong</span></div>
-      </div>
-    </article>
-    <article class="card anim-block anim-fade delay-3" onclick="openModal('Camila Farm Resort','Farm Resort','Brgy. Betania, Laur, Nueva Ecija','','','assets/images/STAY/CAMILLA.webp','09176388948','15.560000,121.250000')">
-      <div class="card-img" style="background-image:url('assets/images/STAY/CAMILLA.webp')"></div>
-      <div class="card-overlay">
-        <div class="card-title">Camila Farm Resort</div>
-        <div class="card-desc">Farm resort na nag-aalok ng kalikasan, pahinga, at sariwang hangin.</div>
-        <div class="card-pills"><span class="cpill green">Homestay</span><span class="cpill">Brgy. Betania</span></div>
-      </div>
-    </article>
-    <article class="card anim-block anim-fade delay-4" onclick="openModal('Pine Forest Retreat','Retreat','Brgy. San Juan, Laur, Nueva Ecija','','','assets/images/STAY/LELO.webp','','15.565000,121.220000')">
-      <div class="card-img" style="background-image:url('assets/images/STAY/LELO.webp')"></div>
-      <div class="card-overlay">
-        <div class="card-title">Pine Forest Retreat</div>
-        <div class="card-desc">Maaliwalas na retreat sa gitna ng kagubatan — perpekto para mag-unwind.</div>
-        <div class="card-pills"><span class="cpill green">Retreat</span><span class="cpill">Brgy. San Juan</span></div>
-      </div>
-    </article>
+  <div class="grid3" id="stay-grid">
+    <!-- Populated from stays[] in data.js -->
   </div>
   <div class="anim-block anim-up delay-4" style="text-align:center;margin-top:2.5rem">
     <a href="pages/visit.html#stay" class="btn-green">Tingnan Lahat ng Accommodation</a>
@@ -366,7 +304,16 @@ h1,h2,h3,.sec-title,.slide-content h1,.footer-brand strong,.footer-col h4{font-f
 </div>
 
 <script src="assets/js/components.js" defer></script>
-<script src="assets/js/data.js" defer></script>
+<script src="assets/js/data.js"></script>
+<script>
+// Fix ../assets/ paths → assets/ so images work from root index.html
+// (data.js uses ../assets/ for /pages/ context; root needs no ../)
+var _fixPath = function(p){ return p ? p.replace(/^\.\.\//,'') : p; };
+[].concat(attractions, stays).forEach(function(item){
+  item.image      = _fixPath(item.image);
+  item.modalImage = _fixPath(item.modalImage);
+});
+</script>
 <script src="assets/js/script.js" defer></script>
 </body>
 </html>
