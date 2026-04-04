@@ -161,6 +161,26 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
 .m-fb:hover{background:#f0f6ff;border-color:#1877f2;}
 #modal-hrs-row,#modal-fee-row{display:none}
 #modal-hrs-row.visible,#modal-fee-row.visible{display:block}
+
+/* ── NO-MAP MODAL (Eat & Shop) ── */
+.modal-nomap .modal-inner{min-height:340px;}
+.modal-nomap .modal-photo{min-height:340px;}
+.modal-nomap .modal-right{
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:stretch;
+  padding:2rem;overflow-y:auto;gap:1.5rem;
+}
+.modal-nomap .modal-body{padding:0;flex:0 0 auto;}
+.modal-nomap .mrow{
+  margin-bottom:0;padding:1rem 0;
+  border-bottom:1px solid #f2f2f2;
+}
+.modal-nomap .mrow:first-child{padding-top:0;}
+.modal-nomap .mrow:last-child{border-bottom:none;padding-bottom:0;}
+.modal-nomap .mlbl{font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;font-weight:600;}
+.modal-nomap .mval{font-size:15px;font-weight:500;color:#1a1a1a;line-height:1.5;}
+.modal-nomap .modal-acts{padding:0;flex:0 0 auto;}
+
 @media(max-width:640px){
   .modal-inner{grid-template-columns:1fr;grid-template-rows:260px auto}
   .modal-photo{min-height:260px}
@@ -168,6 +188,8 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
   .modal-map-embed{margin:0 1.2rem .5rem;height:140px;}
   .modal-map-link{margin:0 1.2rem .5rem;}
   .modal-acts{padding:0 1.2rem 1.2rem}
+  .modal-nomap .modal-body{padding:1.2rem 1.2rem .8rem;}
+  .modal-nomap .modal-acts{padding:0 1.2rem 1.2rem;}
 }
 </style>
 </head>
@@ -220,7 +242,7 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
 
     <article class="card anim-block anim-fade delay-1"
       onclick="openModal('Calle Dos Cafe','Cafe','Brgy. II, Laur, Nueva Ecija','','',
-        '../assets/images/EAT/CALLE.webp','','15.566697,121.215000')">
+        '../assets/images/EAT/CALLE.webp','','15.566697,121.215000',true)">
       <div class="card-img" style="background-image:url('../assets/images/EAT/CALLE.webp')"></div>
       <div class="card-overlay">
         <div class="card-title">Calle Dos Cafe</div>
@@ -231,7 +253,7 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
 
     <article class="card anim-block anim-fade delay-2"
       onclick="openModal('Mountain View Restaurant','Restaurant','Brgy. San Juan, Laur, Nueva Ecija','','',
-        '../assets/images/EAT/MOUNTAIN.webp','','15.566697,121.206453')">
+        '../assets/images/EAT/MOUNTAIN.webp','','15.566697,121.206453',true)">
       <div class="card-img" style="background-image:url('../assets/images/EAT/MOUNTAIN.webp')"></div>
       <div class="card-overlay">
         <div class="card-title">Mountain View Restaurant</div>
@@ -242,7 +264,7 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
 
     <article class="card anim-block anim-fade delay-3"
       onclick="openModal('Geng-Geng Kambingan','Kambingan / Grill','Brgy. San Josep, Laur, Nueva Ecija','','',
-        '../assets/images/EAT/GENGGENG.webp','','15.564997,121.240000')">
+        '../assets/images/EAT/GENGGENG.webp','','15.564997,121.240000',true)">
       <div class="card-img" style="background-image:url('../assets/images/EAT/GENGGENG.webp')"></div>
       <div class="card-overlay">
         <div class="card-title">Geng-Geng Kambingan</div>
@@ -253,7 +275,7 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
 
     <article class="card anim-block anim-fade delay-4"
       onclick="openModal('Tanbayan','Eatery','Brgy. I, Laur, Nueva Ecija','','',
-        '../assets/images/EAT/TANBAYAN.webp','','15.566697,121.215000')">
+        '../assets/images/EAT/TANBAYAN.webp','','15.566697,121.215000',true)">
       <div class="card-img" style="background-image:url('../assets/images/EAT/TANBAYAN.webp')"></div>
       <div class="card-overlay">
         <div class="card-title">Tanbayan</div>
@@ -265,7 +287,7 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
     <!-- HIDDEN -->
     <article class="card eat-hidden" style="display:none"
       onclick="openModal('Riya\'s Foodies','Food Stall','Brgy. I, Laur, Nueva Ecija','','',
-        '../assets/images/STAY/RIYA.webp','09690190210','15.566697,121.215000')">
+        '../assets/images/STAY/RIYA.webp','09690190210','15.566697,121.215000',true)">
       <div class="card-img" style="background-image:url('../assets/images/STAY/RIYA.webp')"></div>
       <div class="card-overlay">
         <div class="card-title">Riya's Foodies</div>
@@ -276,7 +298,7 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
 
     <article class="card eat-hidden" style="display:none"
       onclick="openModal('Café Noir','Cafe','Brgy. I, Laur, Nueva Ecija','','',
-        '../assets/images/EAT/CAFE.webp','','15.566697,121.215000')">
+        '../assets/images/EAT/CAFE.webp','','15.566697,121.215000',true)">
       <div class="card-img" style="background-image:url('../assets/images/EAT/CAFE.webp')"></div>
       <div class="card-overlay">
         <div class="card-title">Café Noir</div>
@@ -287,7 +309,7 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
 
     <article class="card eat-hidden" style="display:none"
       onclick="openModal('E&amp;J Food Park','Food Park','Brgy. San Vicente, Laur, Nueva Ecija','','',
-        '../assets/images/EAT/ENJ.webp','','15.566697,121.215000')">
+        '../assets/images/EAT/ENJ.webp','','15.566697,121.215000',true)">
       <div class="card-img" style="background-image:url('../assets/images/EAT/ENJ.webp')"></div>
       <div class="card-overlay">
         <div class="card-title">E&amp;J Food Park</div>
@@ -321,56 +343,56 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
 
     <div class="shop-card anim-block anim-fade delay-1" data-cat="souvenir"
       onclick="openModal('LAFACO','Laur Farmers Cooperative','Brgy. San Juan, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/LAFACO.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/LAFACO.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/LAFACO.webp')"></div>
       <div class="shop-info"><div class="shop-name">LAFACO</div><div class="shop-type">Laur Farmers Coop · Brgy. San Juan</div></div>
     </div>
 
     <div class="shop-card anim-block anim-fade delay-2" data-cat="souvenir"
       onclick="openModal('OFC','Store','Brgy. III, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/OFC.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/OFC.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/OFC.webp')"></div>
       <div class="shop-info"><div class="shop-name">OFC</div><div class="shop-type">Store · Brgy. III</div></div>
     </div>
 
     <div class="shop-card anim-block anim-fade delay-3" data-cat="souvenir"
       onclick="openModal('De Dios','Store','Brgy. I, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/DEDIOS.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/DEDIOS.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/DEDIOS.webp')"></div>
       <div class="shop-info"><div class="shop-name">De Dios</div><div class="shop-type">Store · Brgy. I</div></div>
     </div>
 
     <div class="shop-card anim-block anim-fade delay-4" data-cat="souvenir"
       onclick="openModal('Erlinda Store','Sari-Sari Store','Brgy. I, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/ERLINDA.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/ERLINDA.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/ERLINDA.webp')"></div>
       <div class="shop-info"><div class="shop-name">Erlinda Store</div><div class="shop-type">Store · Brgy. I</div></div>
     </div>
 
     <div class="shop-card anim-block anim-fade delay-1" data-cat="pharmacy"
       onclick="openModal('Sicat Drugstore','Drugstore','Brgy. II, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/SICAT.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/SICAT.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/SICAT.webp')"></div>
       <div class="shop-info"><div class="shop-name">Sicat Drugstore</div><div class="shop-type">Drugstore · Brgy. II</div></div>
     </div>
 
     <div class="shop-card anim-block anim-fade delay-2" data-cat="pharmacy"
       onclick="openModal('E.N. Rivera Drug Store','Drugstore','Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/RIVERA.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/RIVERA.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/RIVERA.webp')"></div>
       <div class="shop-info"><div class="shop-name">E.N. Rivera Drug Store</div><div class="shop-type">Drugstore · Laur</div></div>
     </div>
 
     <div class="shop-card anim-block anim-fade delay-3" data-cat="pharmacy"
       onclick="openModal('Bloom Pharmacy','Pharmacy','Brgy. I, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/BLOOM.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/BLOOM.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/BLOOM.webp')"></div>
       <div class="shop-info"><div class="shop-name">Bloom Pharmacy</div><div class="shop-type">Pharmacy · Brgy. I</div></div>
     </div>
 
     <div class="shop-card anim-block anim-fade delay-4" data-cat="pharmacy"
       onclick="openModal('Fortis Pharmacy','Pharmacy','Brgy. II, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/FORTIS.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/FORTIS.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/FORTIS.webp')"></div>
       <div class="shop-info"><div class="shop-name">Fortis Pharmacy</div><div class="shop-type">Pharmacy · Brgy. II</div></div>
     </div>
@@ -378,84 +400,84 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
     <!-- HIDDEN SHOPS -->
     <div class="shop-card shop-hidden" style="display:none" data-cat="pharmacy"
       onclick="openModal('Esteban Pharmacy and General Merchandise','Pharmacy &amp; General Merchandise','Brgy. II, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/ESTEBAN.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/ESTEBAN.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/ESTEBAN.webp')"></div>
       <div class="shop-info"><div class="shop-name">Esteban Pharmacy</div><div class="shop-type">Pharmacy &amp; Gen. Merch. · Brgy. II</div></div>
     </div>
 
     <div class="shop-card shop-hidden" style="display:none" data-cat="market"
       onclick="openModal('Public Market','Public Market','Brgy. II, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/PUBLICMARKET.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/PUBLICMARKET.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/PUBLICMARKET.webp')"></div>
       <div class="shop-info"><div class="shop-name">Public Market</div><div class="shop-type">Market · Brgy. II</div></div>
     </div>
 
     <div class="shop-card shop-hidden" style="display:none" data-cat="grocery"
       onclick="openModal('O!save','Convenience Store','Brgy. I, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/OSAVE.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/OSAVE.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/OSAVE.webp')"></div>
       <div class="shop-info"><div class="shop-name">O!save</div><div class="shop-type">Convenience Store · Brgy. I</div></div>
     </div>
 
     <div class="shop-card shop-hidden" style="display:none" data-cat="grocery"
       onclick="openModal('Alfamart','Minimart','Brgy. I, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/ALFAMART1.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/ALFAMART1.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/ALFAMART1.webp')"></div>
       <div class="shop-info"><div class="shop-name">Alfamart</div><div class="shop-type">Minimart · Brgy. I</div></div>
     </div>
 
     <div class="shop-card shop-hidden" style="display:none" data-cat="grocery"
       onclick="openModal('Alfamart','Minimart','Brgy. II, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/ALFAMART2.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/ALFAMART2.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/ALFAMART2.webp')"></div>
       <div class="shop-info"><div class="shop-name">Alfamart</div><div class="shop-type">Minimart · Brgy. II</div></div>
     </div>
 
     <div class="shop-card shop-hidden" style="display:none" data-cat="grocery"
       onclick="openModal('7-Eleven','Convenience Store','Brgy. I, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/7ELEVEN.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/7ELEVEN.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/7ELEVEN.webp')"></div>
       <div class="shop-info"><div class="shop-name">7-Eleven</div><div class="shop-type">Convenience Store · Brgy. I</div></div>
     </div>
 
     <div class="shop-card shop-hidden" style="display:none" data-cat="grocery"
       onclick="openModal('High Fly Consumer Good Store','Grocery Store','Brgy. I, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/HIGHFLY.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/HIGHFLY.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/HIGHFLY.webp')"></div>
       <div class="shop-info"><div class="shop-name">High Fly Store</div><div class="shop-type">Consumer Goods · Brgy. I</div></div>
     </div>
 
     <div class="shop-card shop-hidden" style="display:none" data-cat="grocery"
       onclick="openModal('Jac-Ma Grocery Store','Grocery','Brgy. I, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/JACKMA.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/JACKMA.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/JACKMA.webp')"></div>
       <div class="shop-info"><div class="shop-name">Jac-Ma Grocery</div><div class="shop-type">Grocery Store · Brgy. I</div></div>
     </div>
 
     <div class="shop-card shop-hidden" style="display:none" data-cat="grocery"
       onclick="openModal('Producers Bank','Bank','Brgy. II, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/PRODUCER.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/PRODUCER.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/PRODUCER.webp')"></div>
       <div class="shop-info"><div class="shop-name">Producers Bank</div><div class="shop-type">Bank · Brgy. II</div></div>
     </div>
 
     <div class="shop-card shop-hidden" style="display:none" data-cat="grocery"
       onclick="openModal('Chooks to Go','Food Shop','Brgy. II, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/CHOOKS.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/CHOOKS.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/CHOOKS.webp')"></div>
       <div class="shop-info"><div class="shop-name">Chooks to Go</div><div class="shop-type">Food Shop · Brgy. II</div></div>
     </div>
 
     <div class="shop-card shop-hidden" style="display:none" data-cat="grocery"
       onclick="openModal('Tatang\'s Lechon / Sisig','Food Stall','Brgy. I, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/JAMES.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/JAMES.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/JAMES.webp')"></div>
       <div class="shop-info"><div class="shop-name">Tatang's Lechon/Sisig</div><div class="shop-type">Food Stall · Brgy. I</div></div>
     </div>
 
     <div class="shop-card shop-hidden" style="display:none" data-cat="grocery"
       onclick="openModal('James and Josh Lechon Manok Sisig','Food Stall','Brgy. II, Laur, Nueva Ecija','','',
-        '../assets/images/SHOP/JAMES.webp','','15.566697,121.215000')">
+        '../assets/images/SHOP/JAMES.webp','','15.566697,121.215000',true)">
       <div class="shop-img" style="background-image:url('../assets/images/SHOP/JAMES.webp')"></div>
       <div class="shop-info"><div class="shop-name">James &amp; Josh Lechon Manok</div><div class="shop-type">Food Stall · Brgy. II</div></div>
     </div>

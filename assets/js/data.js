@@ -12,7 +12,7 @@ const attractions = [
     modalImage: "../assets/images/NATURAL/SIMINUBLAN.webp",
     type: "Natural Attraction",
     contact: "",
-    coordinates: "15.595597,121.215297"
+    coordinates: "15.609612781590693,121.244807335357"
   },
   {
     title: "Bato Ferry",
@@ -23,7 +23,7 @@ const attractions = [
     modalImage: "../assets/images/NATURAL/BATO.webp",
     type: "Natural Attraction",
     contact: "",
-    coordinates: "15.553500,121.228886"
+    coordinates: "15.557595762302656,121.22593021945178"
   },
   {
     title: "Hidden Falls",
@@ -34,7 +34,7 @@ const attractions = [
     modalImage: "../assets/images/NATURAL/HIDDEN.webp",
     type: "Natural Attraction",
     contact: "",
-    coordinates: "15.595597,121.215297"
+    coordinates: "15.608927955272971,121.23989334228568"
   },
   // Man-made Attractions
   {
@@ -46,7 +46,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/CASA.webp",
     type: "Private Resort",
     contact: "09317275295",
-    coordinates: "15.570000,121.230000"
+    coordinates: "15.582662333386175,121.2238891404082"
   },
   {
     title: "Green House Private Pool",
@@ -57,7 +57,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/FOUR.webp",
     type: "Private Pool Resort",
     contact: "09126147056",
-    coordinates: "15.564997,121.240000"
+    coordinates: "15.568110583807051,121.1451354521103"
   },
   {
     title: "Sunsetpeak Nature Camp",
@@ -68,7 +68,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/SUNSET.webp",
     type: "Nature Camp",
     contact: "",
-    coordinates: "15.580000,121.219997"
+    coordinates: "15.465950561135436,121.12669309946334"
   },
   {
     title: "Sierran Resort",
@@ -79,7 +79,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/SIERRAN.webp",
     type: "Resort",
     contact: "09484172382",
-    coordinates: "15.574997,121.230000"
+    coordinates: "15.583332117802039,121.22522119622953"
   },
   {
     title: "Mountain View Resort",
@@ -90,7 +90,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/MVR.webp",
     type: "Resort",
     contact: "09386293261",
-    coordinates: "15.573000,121.231997"
+    coordinates: "15.588244444444445,121.225480555555563"
   },
   {
     title: "Camila Farm Resort",
@@ -101,7 +101,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/CAMILLA.webp",
     type: "Farm Resort",
     contact: "09176388948",
-    coordinates: "15.560000,121.250000"
+    coordinates: "15.600186111111110,121.164588888888900"
   },
   {
     title: "Four Queens & Private Resort",
@@ -112,7 +112,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/FOUR.webp",
     type: "Private Resort",
     contact: "09199996710",
-    coordinates: "15.571997,121.231000"
+    coordinates: "15.580772222222222,121.223161111111111"
   },
   {
     title: "Lelo's Mountain Resort",
@@ -123,7 +123,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/LELO.webp",
     type: "Mountain Resort",
     contact: "09171446213",
-    coordinates: "15.550000,121.209997"
+    coordinates: "15.527483333333334,121.155716666666677"
   },
   {
     title: "Clareng's Farm Resort",
@@ -134,7 +134,7 @@ const attractions = [
     modalImage: "../assets/images/STAY/CLARENG.webp",
     type: "Farm Resort",
     contact: "09105493608",
-    coordinates: "15.570000,121.260000"
+    coordinates: "15.540274999999999,121.153619444444445"
   }
 ];
 
@@ -148,7 +148,7 @@ const stays = [
     modalImage: "../assets/images/STAY/CASA.webp",
     type: "Private Resort",
     contact: "09317275295",
-    coordinates: "15.570000,121.230000"
+    coordinates: "15.582662333386175,121.2238891404082"
   },
   {
     title: "Green House Private Pool",
@@ -159,7 +159,7 @@ const stays = [
     modalImage: "../assets/images/STAY/FOUR.webp",
     type: "Private Pool Resort",
     contact: "09126147056",
-    coordinates: "15.564997,121.240000"
+    coordinates: "15.568110583807051,121.1451354521103"
   },
   {
     title: "Sunsetpeak Nature Camp",
@@ -170,7 +170,7 @@ const stays = [
     modalImage: "../assets/images/STAY/SUNSET.webp",
     type: "Nature Camp",
     contact: "",
-    coordinates: "15.580000,121.219997"
+    coordinates: "15.465950561135436,121.12669309946334"
   },
   {
     title: "Sierran Resort",
@@ -181,7 +181,7 @@ const stays = [
     modalImage: "../assets/images/STAY/SIERRAN.webp",
     type: "Resort",
     contact: "09484172382",
-    coordinates: "15.574997,121.230000"
+    coordinates: "15.583332117802039,121.22522119622953"
   },
   {
     title: "Mountain View Resort",
@@ -192,7 +192,7 @@ const stays = [
     modalImage: "../assets/images/STAY/MVR.webp",
     type: "Resort",
     contact: "09386293261",
-    coordinates: "15.573000,121.231997"
+    coordinates: "15.588244444444445,121.225480555555563"
   },
   {
     title: "Camila Farm Resort",
@@ -203,7 +203,7 @@ const stays = [
     modalImage: "../assets/images/STAY/CAMILLA.webp",
     type: "Farm Resort",
     contact: "09176388948",
-    coordinates: "15.560000,121.250000"
+    coordinates: "15.600186111111110,121.164588888888900"
   },
   {
     title: "Four Queens & Private Resort",
@@ -214,7 +214,7 @@ const stays = [
     modalImage: "../assets/images/STAY/FOUR.webp",
     type: "Private Resort",
     contact: "09199996710",
-    coordinates: "15.571997,121.231000"
+    coordinates: "15.580772222222222,121.223161111111111"
   },
   {
     title: "Lelo's Mountain Resort",
@@ -225,7 +225,7 @@ const stays = [
     modalImage: "../assets/images/STAY/LELO.webp",
     type: "Mountain Resort",
     contact: "09171446213",
-    coordinates: "15.550000,121.209997"
+    coordinates: "15.527483333333334,121.155716666666677"
   },
   {
     title: "Clareng's Farm Resort",
@@ -236,7 +236,7 @@ const stays = [
     modalImage: "../assets/images/STAY/CLARENG.webp",
     type: "Farm Resort",
     contact: "09105493608",
-    coordinates: "15.570000,121.260000"
+    coordinates: "15.540274999999999,121.153619444444445"
   }
 ];
 

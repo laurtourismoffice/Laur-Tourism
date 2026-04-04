@@ -59,7 +59,7 @@ function toggleMobile(){
 
 // MODAL
 /* ── MODAL ── */
-function openModal(title,type,loc,hrs,fee,img,contact,coords){
+function openModal(title,type,loc,hrs,fee,img,contact,coords,noMap){
   document.getElementById('modal-title').textContent=title;
   document.getElementById('modal-type').textContent=type;
   document.getElementById('modal-loc').textContent=loc;
@@ -70,9 +70,21 @@ function openModal(title,type,loc,hrs,fee,img,contact,coords){
   if(hrs){document.getElementById('modal-hrs').textContent=hrs;hr.classList.add('visible');}else{hr.classList.remove('visible');}
   var fr=document.getElementById('modal-fee-row');
   if(fee){document.getElementById('modal-fee').textContent=fee;fr.classList.add('visible');}else{fr.classList.remove('visible');}
-  var ll=coords||'15.557711,121.226314';
-  document.getElementById('modal-map-iframe').src='https://maps.google.com/maps?q='+ll+'&z=16&t=m&output=embed&iwloc=near';
-  document.getElementById('modal-map-link').href='https://www.google.com/maps?q='+ll;
+  var box=document.querySelector('.modal-box');
+  var mapEmbed=document.querySelector('.modal-map-embed');
+  var mapLink=document.getElementById('modal-map-link');
+  if(noMap){
+    if(mapEmbed)mapEmbed.style.display='none';
+    if(mapLink)mapLink.style.display='none';
+    if(box)box.classList.add('modal-nomap');
+  }else{
+    if(mapEmbed)mapEmbed.style.display='';
+    if(mapLink)mapLink.style.display='';
+    if(box)box.classList.remove('modal-nomap');
+    var ll=coords||'15.557711,121.226314';
+    document.getElementById('modal-map-iframe').src='https://maps.google.com/maps?q='+ll+'&z=16&t=m&output=embed&iwloc=near';
+    document.getElementById('modal-map-link').href='https://www.google.com/maps?q='+ll;
+  }
   document.getElementById('modal').classList.add('open');
   document.body.style.overflow='hidden';
 }
