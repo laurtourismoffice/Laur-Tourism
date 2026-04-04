@@ -59,37 +59,56 @@ function toggleMobile(){
 
 // MODAL
 /* ── MODAL ── */
-function openModal(title,type,loc,hrs,fee,img,contact,coords,noMap){
-  document.getElementById('modal-title').textContent=title;
-  document.getElementById('modal-type').textContent=type;
-  document.getElementById('modal-loc').textContent=loc;
-  var pi=document.getElementById('modal-photo-img');pi.src=img;pi.alt=title;
-  var cr=document.getElementById('modal-contact-row');
-  if(contact){document.getElementById('modal-contact').textContent=contact;cr.style.display='block';}else{cr.style.display='none';}
-  var hr=document.getElementById('modal-hrs-row');
-  if(hrs){document.getElementById('modal-hrs').textContent=hrs;hr.classList.add('visible');}else{hr.classList.remove('visible');}
-  var fr=document.getElementById('modal-fee-row');
-  if(fee){document.getElementById('modal-fee').textContent=fee;fr.classList.add('visible');}else{fr.classList.remove('visible');}
-  var box=document.querySelector('.modal-box');
-  var mapEmbed=document.querySelector('.modal-map-embed');
-  var mapLink=document.getElementById('modal-map-link');
+function openModal(title, type, loc, hrs, fee, img, contact, coords, noMap, fbLink){
+  document.getElementById('modal-title').textContent = title;
+  document.getElementById('modal-type').textContent = type;
+  document.getElementById('modal-loc').textContent = loc;
+
+  var pi = document.getElementById('modal-photo-img');
+  pi.src = img;
+  pi.alt = title;
+
+  var cr = document.getElementById('modal-contact-row');
+  if(contact){ document.getElementById('modal-contact').textContent = contact; cr.style.display = 'block'; }
+  else { cr.style.display = 'none'; }
+
+  var hr = document.getElementById('modal-hrs-row');
+  if(hrs){ document.getElementById('modal-hrs').textContent = hrs; hr.classList.add('visible'); }
+  else { hr.classList.remove('visible'); }
+
+  var fr = document.getElementById('modal-fee-row');
+  if(fee){ document.getElementById('modal-fee').textContent = fee; fr.classList.add('visible'); }
+  else { fr.classList.remove('visible'); }
+
+  var box = document.querySelector('.modal-box');
+  var mapEmbed = document.querySelector('.modal-map-embed');
+  var mapLink = document.getElementById('modal-map-link');
   if(noMap){
-    if(mapEmbed)mapEmbed.style.display='none';
-    if(mapLink)mapLink.style.display='none';
-    if(box)box.classList.add('modal-nomap');
-  }else{
-    if(mapEmbed)mapEmbed.style.display='';
-    if(mapLink)mapLink.style.display='';
-    if(box)box.classList.remove('modal-nomap');
-    var ll=coords||'15.557711,121.226314';
-    document.getElementById('modal-map-iframe').src='https://maps.google.com/maps?q='+ll+'&z=16&t=m&output=embed&iwloc=near';
-    document.getElementById('modal-map-link').href='https://www.google.com/maps?q='+ll;
+    if(mapEmbed) mapEmbed.style.display = 'none';
+    if(mapLink) mapLink.style.display = 'none';
+    if(box) box.classList.add('modal-nomap');
+  } else {
+    if(mapEmbed) mapEmbed.style.display = '';
+    if(mapLink) mapLink.style.display = '';
+    if(box) box.classList.remove('modal-nomap');
+    var ll = coords || '15.557711,121.226314';
+    document.getElementById('modal-map-iframe').src = 'https://maps.google.com/maps?q=' + ll + '&z=16&t=m&output=embed&iwloc=near';
+    document.getElementById('modal-map-link').href = 'https://www.google.com/maps?q=' + ll;
   }
+
+  // ── SET PER-CARD FB LINK ──
+  var fbBtn = document.querySelector('.m-fb');
+  if(fbBtn){
+    var destination = fbLink || 'https://www.facebook.com/profile.php?id=61580579025346';
+    fbBtn.onclick = function(){ window.open(destination, '_blank'); };
+  }
+
   document.getElementById('modal').classList.add('open');
-  document.body.style.overflow='hidden';
+  document.body.style.overflow = 'hidden';
 }
-function closeModalBtn(){document.getElementById('modal').classList.remove('open');document.body.style.overflow='';}
-function closeModal(e){if(e.target.id==='modal')closeModalBtn();}
+
+function closeModalBtn(){ document.getElementById('modal').classList.remove('open'); document.body.style.overflow = ''; }
+function closeModal(e){ if(e.target.id === 'modal') closeModalBtn(); }
 
 // FILTERS
 /* ── FILTER PILLS ── */
@@ -117,7 +136,7 @@ function filterGallery(btn, cat){
 }
 
 function filterShops(btn, cat) {
-  document.querySelectorAll('.pill').forEach(function(p){p.classList.remove('on');});
+  document.querySelectorAll('.pill').forEach(function(p){ p.classList.remove('on'); });
   btn.classList.add('on');
   var grid = document.getElementById('shop-grid');
   if (!grid) return;
@@ -280,45 +299,34 @@ var observer = new IntersectionObserver(function(entries){
   entries.forEach(function(e){
     if(e.isIntersecting){
       e.target.classList.add('in-view');
-      if(e.target.classList.contains('eyebrow'))e.target.classList.add('line-visible');
+      if(e.target.classList.contains('eyebrow')) e.target.classList.add('line-visible');
       observer.unobserve(e.target);
     }
   });
 },{threshold:0.14});
-document.querySelectorAll('.anim-block').forEach(function(el){observer.observe(el);});
+document.querySelectorAll('.anim-block').forEach(function(el){ observer.observe(el); });
 
 // DATA-DRIVEN CONTENT
 /* ── POPULATE ATTRACTIONS ── */
 function populateAttractions() {
   const grid = document.getElementById('attr-grid');
-  if (!grid) {
-    console.error('attr-grid not found');
-    return;
-  }
-  if (typeof attractions === 'undefined') {
-    console.error('attractions array not defined. Check if data.js loaded properly.');
-    return;
-  }
+  if (!grid) { console.error('attr-grid not found'); return; }
+  if (typeof attractions === 'undefined') { console.error('attractions array not defined. Check if data.js loaded properly.'); return; }
 
-  // Clear existing content
   grid.innerHTML = '';
 
-  // Create visible cards (first 4: natural attractions)
-  const visibleAttractions = attractions.slice(0, 4);
-  visibleAttractions.forEach((attr, index) => {
+  attractions.slice(0, 4).forEach((attr, index) => {
     const card = createAttractionCard(attr, index + 1);
     grid.appendChild(card);
-    observer.observe(card); // ← FIX: observe after appending so animation triggers
+    observer.observe(card);
   });
 
-  // Create hidden cards (remaining attractions)
-  const hiddenAttractions = attractions.slice(4);
-  hiddenAttractions.forEach((attr, index) => {
+  attractions.slice(4).forEach((attr, index) => {
     const card = createAttractionCard(attr, index + 5);
     card.classList.add('attr-hidden');
     card.style.display = 'none';
     grid.appendChild(card);
-    observer.observe(card); // ← FIX: observe after appending so animation triggers on showMore
+    observer.observe(card);
   });
 }
 
@@ -329,15 +337,18 @@ function createAttractionCard(attr, delayNum) {
 
   const categoryLabel = attr.category === 'natural' ? 'Natural' : 'Man-made';
 
+  // ── Pass attr.fbLink as the 10th argument ──
   article.onclick = () => openModal(
     attr.title,
     attr.type,
     attr.location + ', Laur, Nueva Ecija',
-    '', // hours
-    '', // fee
+    '',               // hours
+    '',               // fee
     attr.modalImage,
     attr.contact,
-    attr.coordinates
+    attr.coordinates,
+    false,            // noMap
+    attr.fbLink       // ← per-card Facebook link
   );
 
   article.innerHTML = `
@@ -358,34 +369,23 @@ function createAttractionCard(attr, delayNum) {
 /* ── POPULATE STAYS ── */
 function populateStays() {
   const grid = document.getElementById('stay-grid');
-  if (!grid) {
-    console.error('stay-grid not found');
-    return;
-  }
-  if (typeof stays === 'undefined') {
-    console.error('stays array not defined. Check if data.js loaded properly.');
-    return;
-  }
+  if (!grid) { console.error('stay-grid not found'); return; }
+  if (typeof stays === 'undefined') { console.error('stays array not defined. Check if data.js loaded properly.'); return; }
 
-  // Clear existing content
   grid.innerHTML = '';
 
-  // Create visible cards (first 4 stays)
-  const visibleStays = stays.slice(0, 4);
-  visibleStays.forEach((stay, index) => {
+  stays.slice(0, 4).forEach((stay, index) => {
     const card = createStayCard(stay, index + 1);
     grid.appendChild(card);
-    observer.observe(card); // ← FIX: observe after appending so animation triggers
+    observer.observe(card);
   });
 
-  // Create hidden cards (remaining stays)
-  const hiddenStays = stays.slice(4);
-  hiddenStays.forEach((stay, index) => {
+  stays.slice(4).forEach((stay, index) => {
     const card = createStayCard(stay, index + 5);
     card.classList.add('stay-hidden');
     card.style.display = 'none';
     grid.appendChild(card);
-    observer.observe(card); // ← FIX: observe after appending so animation triggers on showMore
+    observer.observe(card);
   });
 }
 
@@ -394,18 +394,21 @@ function createStayCard(stay, delayNum) {
   article.className = `card anim-block anim-fade delay-${delayNum}`;
 
   const categoryLabel = stay.category === 'resort' ? 'Resort' :
-                       stay.category === 'camp' ? 'Camp' :
-                       stay.category === 'farm-resort' ? 'Farm Resort' : 'Stay';
+                        stay.category === 'camp' ? 'Camp' :
+                        stay.category === 'farm-resort' ? 'Farm Resort' : 'Stay';
 
+  // ── Pass stay.fbLink as the 10th argument ──
   article.onclick = () => openModal(
     stay.title,
     stay.type,
     stay.location + ', Laur, Nueva Ecija',
-    '', // hours
-    '', // fee
+    '',               // hours
+    '',               // fee
     stay.modalImage,
     stay.contact,
-    stay.coordinates
+    stay.coordinates,
+    false,            // noMap
+    stay.fbLink       // ← per-card Facebook link
   );
 
   article.innerHTML = `
@@ -429,7 +432,6 @@ document.addEventListener('DOMContentLoaded', function(){
   var mc = document.querySelector('.modal-close');
   if(mc) mc.addEventListener('click', closeModalBtn);
 
-  // Populate data-driven content
   populateAttractions();
   populateStays();
 
@@ -444,7 +446,6 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   });
 
-  // Lightbox events
   var lb = document.getElementById('lb');
   if(lb) lb.addEventListener('click', function(e){ if(e.target===this) closeLb(); });
   document.addEventListener('keydown', function(e){

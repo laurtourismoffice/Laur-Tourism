@@ -170,7 +170,7 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
 
 <!-- ===== PAGE HERO ===== -->
 <div class="page-hero">
-  <div class="page-hero-img" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1400&q=75')"></div>
+  <div class="page-hero-img" style="background-image:url('../assets/images/NATURAL/SIMINUBLAN.webp')"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
     <div class="eyebrow" style="color:#E8A838">Photo Gallery</div>
@@ -195,59 +195,96 @@ h1,h2,h3,.sec-title,.card-title,.footer-brand strong,.footer-col h4{font-family:
     <button class="pill" onclick="filterGallery(this,'natural')">Natural</button>
     <button class="pill" onclick="filterGallery(this,'manmade')">Man-made</button>
     <button class="pill" onclick="filterGallery(this,'culture')">Culture</button>
-    <button class="pill" onclick="filterGallery(this,'food')">Food</button>
   </div>
 
   <div class="gallery-grid" id="galleryGrid">
-    <div class="gimg anim-block anim-fade delay-1" data-cat="natural" data-caption="Sierra Madre" data-cat-label="Natural" data-desc="A breathtaking view of the Sierra Madre mountain range, the longest mountain range in the Philippines.">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=700&q=75')"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">Sierra Madre</span></div>
+
+    <!-- ── VISIBLE (first 5) ── -->
+
+    <!-- 1. Seminublan Falls — big 2×2 featured slot -->
+    <div class="gimg anim-block anim-fade delay-1" data-cat="natural" data-caption="Seminublan Falls" data-cat-label="Natural" data-desc="A stunning waterfall nestled in Brgy. San Fernando — one of Laur's most breathtaking natural treasures.">
+      <div class="gimg-inner" style="background-image:url('../assets/images/NATURAL/SIMINUBLAN.webp')"></div>
+      <div class="gimg-overlay"><span class="gimg-caption">Seminublan Falls</span></div>
       <div class="gimg-pill"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View</div>
     </div>
-    <div class="gimg anim-block anim-fade delay-2" data-cat="natural" data-caption="Forest" data-cat-label="Natural" data-desc="Dense forest canopy sheltering the rich biodiversity found throughout Laur's protected areas.">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=400&q=75')"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">Forest</span></div>
+
+    <!-- 2 -->
+    <div class="gimg anim-block anim-fade delay-2" data-cat="natural" data-caption="Bato Ferry" data-cat-label="Natural" data-desc="A scenic river crossing in San Felipe — a unique and memorable local experience.">
+      <div class="gimg-inner" style="background-image:url('../assets/images/NATURAL/BATO.webp')"></div>
+      <div class="gimg-overlay"><span class="gimg-caption">Bato Ferry</span></div>
       <div class="gimg-pill"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View</div>
     </div>
-    <div class="gimg anim-block anim-fade delay-3" data-cat="natural" data-caption="River" data-cat-label="Natural" data-desc="Crystal-clear river waters flowing through Laur's scenic landscape, perfect for nature lovers.">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=75')"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">River</span></div>
+
+    <!-- 3 -->
+    <div class="gimg anim-block anim-fade delay-3" data-cat="natural" data-caption="Hidden Falls" data-cat-label="Natural" data-desc="A hidden waterfall deep within Brgy. San Fernando — waiting to be discovered by adventurous visitors.">
+      <div class="gimg-inner" style="background-image:url('../assets/images/NATURAL/HIDDEN.webp')"></div>
+      <div class="gimg-overlay"><span class="gimg-caption">Hidden Falls</span></div>
       <div class="gimg-pill"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View</div>
     </div>
-    <div class="gimg anim-block anim-fade delay-4" data-cat="natural" data-caption="Nature" data-cat-label="Natural" data-desc="The untouched natural beauty of Laur, where wildlife thrives in its natural habitat.">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&q=75')"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">Nature</span></div>
+
+    <!-- 4 -->
+    <div class="gimg anim-block anim-fade delay-4" data-cat="manmade" data-caption="Sunsetpeak Nature Camp" data-cat-label="Man-made" data-desc="Experience nature camping with stunning sunset views in Brgy. Nauzon.">
+      <div class="gimg-inner" style="background-image:url('../assets/images/STAY/SUNSET.webp')"></div>
+      <div class="gimg-overlay"><span class="gimg-caption">Sunsetpeak Nature Camp</span></div>
       <div class="gimg-pill"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View</div>
     </div>
-    <div class="gimg anim-block anim-fade delay-1" data-cat="manmade" data-caption="Heritage Church" data-cat-label="Man-made" data-desc="A centuries-old heritage church standing as a testament to Laur's rich colonial and cultural history.">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=400&q=75')"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">Heritage Church</span></div>
+
+    <!-- 5 -->
+    <div class="gimg anim-block anim-fade delay-1" data-cat="manmade" data-caption="Casa Celestine" data-cat-label="Man-made" data-desc="A beautiful private resort in Brgy. Siclong — perfect for relaxation and special events.">
+      <div class="gimg-inner" style="background-image:url('../assets/images/STAY/CASA.webp')"></div>
+      <div class="gimg-overlay"><span class="gimg-caption">Casa Celestine</span></div>
       <div class="gimg-pill"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View</div>
     </div>
-    <div class="gimg anim-block anim-fade delay-2" data-cat="culture" data-caption="Local Culture" data-cat-label="Culture" data-desc="Vibrant traditions and festivals that celebrate the unique cultural identity of the people of Laur.">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=75')"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">Local Culture</span></div>
+
+    <!-- ── HIDDEN (shown after clicking the button) ── -->
+
+    <!-- 6 -->
+    <div class="gimg gallery-hidden anim-block anim-fade delay-2" style="display:none" data-cat="manmade" data-caption="Sierran Resort" data-cat-label="Man-made" data-desc="A relaxing resort in Brgy. Siclong surrounded by beautiful mountain scenery.">
+      <div class="gimg-inner" style="background-image:url('../assets/images/STAY/SIERRAN.webp')"></div>
+      <div class="gimg-overlay"><span class="gimg-caption">Sierran Resort</span></div>
       <div class="gimg-pill"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View</div>
     </div>
-    <div class="gimg anim-block anim-fade delay-3" data-cat="food" data-caption="Local Restaurant" data-cat-label="Food" data-desc="Authentic local cuisine served fresh, showcasing the flavors and culinary traditions of Nueva Ecija.">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=75')"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">Local Restaurant</span></div>
+
+    <!-- 7 -->
+    <div class="gimg gallery-hidden anim-block anim-fade delay-3" style="display:none" data-cat="manmade" data-caption="Mountain View Resort" data-cat-label="Man-made" data-desc="Enjoy stunning mountain views and resort facilities in Brgy. Siclong.">
+      <div class="gimg-inner" style="background-image:url('../assets/images/STAY/MVR.webp')"></div>
+      <div class="gimg-overlay"><span class="gimg-caption">Mountain View Resort</span></div>
       <div class="gimg-pill"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View</div>
     </div>
-    <div class="gimg anim-block anim-fade delay-4" data-cat="natural" data-caption="Farmland" data-cat-label="Natural" data-desc="Vast rice paddies and farmlands that define Laur's agricultural heritage as part of the rice granary of the Philippines.">
-      <div class="gimg-inner" style="background-image:url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=400&q=75')"></div>
-      <div class="gimg-overlay"><span class="gimg-caption">Farmland</span></div>
+
+    <!-- 8 -->
+    <div class="gimg gallery-hidden anim-block anim-fade delay-4" style="display:none" data-cat="manmade" data-caption="Camila Farm Resort" data-cat-label="Man-made" data-desc="Farm resort in Brgy. Betania — offering nature, rest, and fresh air.">
+      <div class="gimg-inner" style="background-image:url('../assets/images/STAY/CAMILLA.webp')"></div>
+      <div class="gimg-overlay"><span class="gimg-caption">Camila Farm Resort</span></div>
       <div class="gimg-pill"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View</div>
     </div>
+
+    <!-- 9 -->
+    <div class="gimg gallery-hidden anim-block anim-fade delay-1" style="display:none" data-cat="manmade" data-caption="Lelo's Mountain Resort" data-cat-label="Man-made" data-desc="A beautiful mountain resort in Brgy. San Isidro with stunning natural surroundings.">
+      <div class="gimg-inner" style="background-image:url('../assets/images/STAY/LELO.webp')"></div>
+      <div class="gimg-overlay"><span class="gimg-caption">Lelo's Mountain Resort</span></div>
+      <div class="gimg-pill"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View</div>
+    </div>
+
+    <!-- 10 -->
+    <div class="gimg gallery-hidden anim-block anim-fade delay-2" style="display:none" data-cat="manmade" data-caption="Clareng's Farm Resort" data-cat-label="Man-made" data-desc="A beautiful farm resort in Brgy. Sagana — offering a true farm-to-table experience.">
+      <div class="gimg-inner" style="background-image:url('../assets/images/STAY/CLARENG.webp')"></div>
+      <div class="gimg-overlay"><span class="gimg-caption">Clareng's Farm Resort</span></div>
+      <div class="gimg-pill"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View</div>
+    </div>
+
+    <!-- 11 — CULTURE: Pagulyas -->
+    <div class="gimg gallery-hidden anim-block anim-fade delay-3" style="display:none" data-cat="culture" data-caption="Pagulyas Festival" data-cat-label="Culture" data-desc="Pagulyas is Laur's vibrant local festival — a celebration of culture, harvest, and community pride unique to Nueva Ecija.">
+      <div class="gimg-inner" style="background-image:url('../assets/images/pagulyas.webp')"></div>
+      <div class="gimg-overlay"><span class="gimg-caption">Pagulyas Festival</span></div>
+      <div class="gimg-pill"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View</div>
+    </div>
+
   </div>
 
-  <nav class="pagination anim-block anim-up">
-    <button class="pg-btn" onclick="changePage(-1)">&#8249;</button>
-    <button class="pg-btn active" onclick="goPage(1)" aria-current="page">1</button>
-    <button class="pg-btn" onclick="goPage(2)">2</button>
-    <button class="pg-btn" onclick="goPage(3)">3</button>
-    <button class="pg-btn" onclick="changePage(1)">&#8250;</button>
-  </nav>
+  <div class="anim-block anim-up delay-4" style="text-align:center;margin-top:2.5rem" id="gallery-more-wrap">
+    <button class="btn-green" onclick="showMore('gallery')">Tingnan Lahat ng Larawan</button>
+  </div>
 </section>
 
 <!-- ===== LIGHTBOX ===== -->

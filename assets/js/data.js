@@ -12,7 +12,8 @@ const attractions = [
     modalImage: "../assets/images/NATURAL/SIMINUBLAN.webp",
     type: "Natural Attraction",
     contact: "",
-    coordinates: "15.609612781590693,121.244807335357"
+    coordinates: "15.595597,121.215297",
+    fbLink: "https://www.facebook.com/share/r/1HwmxC7zQ6/"
   },
   {
     title: "Bato Ferry",
@@ -23,7 +24,8 @@ const attractions = [
     modalImage: "../assets/images/NATURAL/BATO.webp",
     type: "Natural Attraction",
     contact: "",
-    coordinates: "15.557595762302656,121.22593021945178"
+    coordinates: "15.553500,121.228886",
+    fbLink: "https://www.facebook.com/share/r/1CLKMXAqni/"
   },
   {
     title: "Hidden Falls",
@@ -34,7 +36,8 @@ const attractions = [
     modalImage: "../assets/images/NATURAL/HIDDEN.webp",
     type: "Natural Attraction",
     contact: "",
-    coordinates: "15.608927955272971,121.23989334228568"
+    coordinates: "15.595597,121.215297",
+    fbLink: "https://www.facebook.com/share/v/18ANsuY9rB/"
   },
   // Man-made Attractions
   {
@@ -46,7 +49,8 @@ const attractions = [
     modalImage: "../assets/images/STAY/CASA.webp",
     type: "Private Resort",
     contact: "09317275295",
-    coordinates: "15.582662333386175,121.2238891404082"
+    coordinates: "15.570000,121.230000",
+    fbLink: "https://www.facebook.com/profile.php?id=61560499366014"
   },
   {
     title: "Green House Private Pool",
@@ -57,7 +61,8 @@ const attractions = [
     modalImage: "../assets/images/STAY/FOUR.webp",
     type: "Private Pool Resort",
     contact: "09126147056",
-    coordinates: "15.568110583807051,121.1451354521103"
+    coordinates: "15.564997,121.240000",
+    fbLink: "https://www.facebook.com/greenhouseprivatepool"
   },
   {
     title: "Sunsetpeak Nature Camp",
@@ -68,7 +73,8 @@ const attractions = [
     modalImage: "../assets/images/STAY/SUNSET.webp",
     type: "Nature Camp",
     contact: "",
-    coordinates: "15.465950561135436,121.12669309946334"
+    coordinates: "15.580000,121.219997",
+    fbLink: "https://www.facebook.com/SunsetPeakNatureCamp"
   },
   {
     title: "Sierran Resort",
@@ -79,7 +85,8 @@ const attractions = [
     modalImage: "../assets/images/STAY/SIERRAN.webp",
     type: "Resort",
     contact: "09484172382",
-    coordinates: "15.583332117802039,121.22522119622953"
+    coordinates: "15.574997,121.230000",
+    fbLink: "https://www.facebook.com/sierranminiresort"
   },
   {
     title: "Mountain View Resort",
@@ -90,7 +97,8 @@ const attractions = [
     modalImage: "../assets/images/STAY/MVR.webp",
     type: "Resort",
     contact: "09386293261",
-    coordinates: "15.588244444444445,121.225480555555563"
+    coordinates: "15.573000,121.231997",
+    fbLink: "https://www.facebook.com/profile.php?id=100094369557902"
   },
   {
     title: "Camila Farm Resort",
@@ -101,7 +109,8 @@ const attractions = [
     modalImage: "../assets/images/STAY/CAMILLA.webp",
     type: "Farm Resort",
     contact: "09176388948",
-    coordinates: "15.600186111111110,121.164588888888900"
+    coordinates: "15.560000,121.250000",
+    fbLink: "https://www.facebook.com/camilafarmresort"
   },
   {
     title: "Four Queens & Private Resort",
@@ -112,7 +121,8 @@ const attractions = [
     modalImage: "../assets/images/STAY/FOUR.webp",
     type: "Private Resort",
     contact: "09199996710",
-    coordinates: "15.580772222222222,121.223161111111111"
+    coordinates: "15.571997,121.231000",
+    fbLink: "https://www.facebook.com/profile.php?id=100086448053905"
   },
   {
     title: "Lelo's Mountain Resort",
@@ -123,7 +133,8 @@ const attractions = [
     modalImage: "../assets/images/STAY/LELO.webp",
     type: "Mountain Resort",
     contact: "09171446213",
-    coordinates: "15.527483333333334,121.155716666666677"
+    coordinates: "15.550000,121.209997",
+    fbLink: "https://www.facebook.com/lelosmountainresort"
   },
   {
     title: "Clareng's Farm Resort",
@@ -134,7 +145,8 @@ const attractions = [
     modalImage: "../assets/images/STAY/CLARENG.webp",
     type: "Farm Resort",
     contact: "09105493608",
-    coordinates: "15.540274999999999,121.153619444444445"
+    coordinates: "15.570000,121.260000",
+    fbLink: "https://www.facebook.com/profile.php?id=61559128866365"
   }
 ];
 
@@ -148,7 +160,8 @@ const stays = [
     modalImage: "../assets/images/STAY/CASA.webp",
     type: "Private Resort",
     contact: "09317275295",
-    coordinates: "15.582662333386175,121.2238891404082"
+    coordinates: "15.570000,121.230000",
+    fbLink: "https://www.facebook.com/profile.php?id=61560499366014"
   },
   {
     title: "Green House Private Pool",
@@ -159,7 +172,8 @@ const stays = [
     modalImage: "../assets/images/STAY/FOUR.webp",
     type: "Private Pool Resort",
     contact: "09126147056",
-    coordinates: "15.568110583807051,121.1451354521103"
+    coordinates: "15.564997,121.240000",
+    fbLink: "https://www.facebook.com/greenhouseprivatepool"
   },
   {
     title: "Sunsetpeak Nature Camp",
@@ -170,7 +184,8 @@ const stays = [
     modalImage: "../assets/images/STAY/SUNSET.webp",
     type: "Nature Camp",
     contact: "",
-    coordinates: "15.465950561135436,121.12669309946334"
+    coordinates: "15.580000,121.219997",
+    fbLink: "https://www.facebook.com/SunsetPeakNatureCamp"
   },
   {
     title: "Sierran Resort",
@@ -181,7 +196,8 @@ const stays = [
     modalImage: "../assets/images/STAY/SIERRAN.webp",
     type: "Resort",
     contact: "09484172382",
-    coordinates: "15.583332117802039,121.22522119622953"
+    coordinates: "15.574997,121.230000",
+    fbLink: "https://www.facebook.com/sierranminiresort"
   },
   {
     title: "Mountain View Resort",
@@ -192,7 +208,8 @@ const stays = [
     modalImage: "../assets/images/STAY/MVR.webp",
     type: "Resort",
     contact: "09386293261",
-    coordinates: "15.588244444444445,121.225480555555563"
+    coordinates: "15.573000,121.231997",
+    fbLink: "https://www.facebook.com/profile.php?id=100094369557902"
   },
   {
     title: "Camila Farm Resort",
@@ -203,7 +220,8 @@ const stays = [
     modalImage: "../assets/images/STAY/CAMILLA.webp",
     type: "Farm Resort",
     contact: "09176388948",
-    coordinates: "15.600186111111110,121.164588888888900"
+    coordinates: "15.560000,121.250000",
+    fbLink: "https://www.facebook.com/camilafarmresort"
   },
   {
     title: "Four Queens & Private Resort",
@@ -214,7 +232,8 @@ const stays = [
     modalImage: "../assets/images/STAY/FOUR.webp",
     type: "Private Resort",
     contact: "09199996710",
-    coordinates: "15.580772222222222,121.223161111111111"
+    coordinates: "15.571997,121.231000",
+    fbLink: "https://www.facebook.com/profile.php?id=100086448053905"
   },
   {
     title: "Lelo's Mountain Resort",
@@ -225,7 +244,8 @@ const stays = [
     modalImage: "../assets/images/STAY/LELO.webp",
     type: "Mountain Resort",
     contact: "09171446213",
-    coordinates: "15.527483333333334,121.155716666666677"
+    coordinates: "15.550000,121.209997",
+    fbLink: "https://www.facebook.com/lelosmountainresort"
   },
   {
     title: "Clareng's Farm Resort",
@@ -236,13 +256,45 @@ const stays = [
     modalImage: "../assets/images/STAY/CLARENG.webp",
     type: "Farm Resort",
     contact: "09105493608",
-    coordinates: "15.540274999999999,121.153619444444445"
+    coordinates: "15.570000,121.260000",
+    fbLink: "https://www.facebook.com/profile.php?id=61559128866365"
+  }
+];
+
+const dine = [
+  {
+    title: "Calle Dos Café",
+    fbLink: "https://www.facebook.com/profile.php?id=61581674370181"
+  },
+  {
+    title: "Mountain View Restaurant",
+    fbLink: "https://www.facebook.com/share/p/1B899WxYeX/"
+  },
+  {
+    title: "Geng-Geng Kambingan",
+    fbLink: "https://www.facebook.com/share/v/1CA7S6AgXE/"
+  },
+  {
+    title: "Tanbayan",
+    fbLink: "https://www.facebook.com/tanbayancarinderiaph"
+  },
+  {
+    title: "Riya's Foodies",
+    fbLink: "https://www.facebook.com/RiyasFoodiesRiyaPinedaFB"
+  },
+  {
+    title: "Café Noìr",
+    fbLink: "https://www.facebook.com/profile.php?id=100064061771450"
+  },
+  {
+    title: "ENJ Food Park",
+    fbLink: "https://www.facebook.com/profile.php?id=61574163141839"
   }
 ];
 
 var LAUR_DATA = {
   barangays:     17,
-  attractions:   attractions.length,   // total cards in #attr-grid (attractions.html)
-  stays:          stays.length,   // total cards in #stay-grid (visit.html)
+  attractions:   attractions.length,
+  stays:          stays.length,
   distanceHours: '1.5hr'
 };
