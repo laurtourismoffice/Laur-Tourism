@@ -36,17 +36,6 @@ const attractions = [
     contact: "",
     coordinates: "15.595597,121.215297"
   },
-  {
-    title: "Jampol River",
-    category: "natural",
-    location: "Brgy. San Juan",
-    description: "A peaceful river in Brgy. San Juan — perfect for relaxation and nature walks.",
-    image: "../assets/images/NATURAL/SIMINUBLAN.webp",
-    modalImage: "../assets/images/NATURAL/SIMINUBLAN.webp",
-    type: "Natural Attraction",
-    contact: "",
-    coordinates: "15.566697,121.206453"
-  },
   // Man-made Attractions
   {
     title: "Casa Celestine",

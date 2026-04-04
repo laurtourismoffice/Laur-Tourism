@@ -105,9 +105,6 @@
         <a href="https://www.facebook.com/profile.php?id=61580579025346" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">
           <img src="${r}assets/images/socmed/facebook.webp" alt="Facebook" style="width:22px;height:22px;object-fit:contain;">
         </a>
-        <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener" aria-label="YouTube">
-          <img src="${r}assets/images/socmed/youtube.webp" alt="YouTube" style="width:22px;height:22px;object-fit:contain;">
-        </a>
       </div>
     </div>
     <nav class="footer-col">
